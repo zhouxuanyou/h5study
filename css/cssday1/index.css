@@ -1,0 +1,46 @@
+div{
+  color: #b3d4fc;
+  font-weight: bold;
+  font-size: 100px;
+}
+p{
+  color: greenyellow;
+  font-size: 68px;
+}
+.cls{
+  color: red;
+  font-size: 100px;
+}
+#test{
+  color: greenyellow;
+  font-size: 100px;
+  font-weight: bold;
+}
+.box{
+  color: blue;
+  font-size: 50px;
+}
+.cls{
+  color: greenyellow;
+  font-size: 50px;
+}
+.father div{
+  color: yellow;
+  font-size: 50px;
+}
+.aa>p{
+  color: yellow;
+  font-size: 69px;
+}
+.BOX,.gg{
+  color: yellow;
+}
+.gg{
+  background: red;
+}
+h2~p{
+  color: red;
+}
+p+p{
+  font-size: 10px;
+}

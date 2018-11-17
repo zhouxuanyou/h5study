@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style>
+        /*div{*/
+          /*font-family: "Kaiti SC",serif;*/
+          /*color: #82ff5b;*/
+          /*font-size: 50px;*/
+          /*font-weight: bolder;*/
+        /*}*/
+        /*!*通用选择器*!*/
+        /**{*/
+          /*color: greenyellow;*/
+        /*}*/
+        /*!*标签选择器*!*/
+        /*p{*/
+          /*font-size: 200px;*/
+        /*}*/
+        /*!*类选择器*!*/
+        /*.test{*/
+          /*font-size: 100px;*/
+        /*}*/
+        /*!*ID选择器*!*/
+        /*#last{*/
+          /*font-size: 20px;*/
+        /*}*/
+        /*!*层次选择器*!*/
+        /*!*包含选择器*!*/
+        /*div p{*/
+          /*color: red;*/
+        /*}*/
+        /*!*子选择符*!*/
+        /*.test>#last{*/
+          /*font-size: 50px;*/
+        /*}*/
+        /*!*相邻选择符*!*/
+        /*#last+#oast{*/
+          /*color: greenyellow;*/
+        /*}*/
+        /*!*兄弟选择符*!*/
+        /*div~p{*/
+          /*color: yellow;*/
+          /*font-size: 10px;*/
+        /*}*/
+        /*伪类选择器*/
+        /*动态伪类选择器*/
+        /*访问前的状态*/
+        a:link{
+          background: #82ff5b;
+          text-decoration: blink;
+
+        }
+        /*访问后的状态*/
+        a:visited{
+          background: yellow;
+        }
+        /*鼠标悬停的状态*/
+        a:hover{
+          background:gold;
+          font-size: 50px;
+        }
+        /*焦点*/
+        input:focus{
+          color: #82ff5b;
+        }
+        /*修改input默认框的样式*/
+        input::placeholder{
+          color: #82ff5b;
+        }
+        /*目标伪类选择器*/
+        #你:target{
+          color: blue;
+          font-size: 20px;
+          background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+        <p id="last">你好啊，我是你爸爸</p>
+        <p id="oast">你好啊，我是你爸爸</p>
+        <p id="bast">你好啊，我是你爸爸</p>
+        <p id="dast">你好啊，我是你爸爸</p>
+    </div>
+    <ul>
+      <a href="#你">我大家大家啊啊吉林大街离我近点就的</a>
+      <a href="###">我大家大家啊啊吉林大街离我近点就的</a>
+      <a href="####">我大家大家啊啊吉林大街离我近点就的</a>
+      <a href="#####">我大家大家啊啊吉林大街离我近点就的</a>
+      <p id="你">测试</p>
+    </ul>
+    <input type="text" name="用户名" title="你好" placeholder="请输入用户名">
+</body>
+</html>
