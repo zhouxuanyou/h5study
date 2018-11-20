@@ -110,15 +110,12 @@
 /*内容样式*/
 #content{
     width: 1200px;
-    height: 1000px;
     margin: 0 auto;
-    background: #00a7ea;
 }
 /*新闻盒子*/
 #content .news{
     width: 850px;
-    height: 800px;
-    background: #82ff5b;
+    height: 2114px;
 }
 /*左边导航盒子*/
 #content .navl{
@@ -128,16 +125,15 @@
 }
 /*下部分页盒子*/
 #content .huanye{
-    width: 382px;
-    height: 50px;
-    background: #ff6600;
+    width: 440px;
+    margin-top: -222px;
+    margin-left: 234px;
 }
 /*新闻盒子*/
 #content .news .newss{
     width: 842px;
     height: 190px;
     margin: 0 auto;
-    background: #ff6600;
 }
 /*新闻图片样式*/
 #content .news .newss .imga .imgaaa{
@@ -151,6 +147,67 @@
 #content .news .newss .new-cnt{
     width: 588px;
     height: 165px;
-    background: paleturquoise;
     margin: 6px auto auto 14px;
+}
+/*新闻标题样式*/
+#content .news .newss .new-cnt .biaoti,.dianji,.zhengwen{
+    width: 586px;
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+/*点击图标样式*/
+#content .news .newss .new-cnt .dianji .dianjibox1,.dianjibox2,.dianjibox3,.dianjibox4{
+    margin-right: 14px;
+    text-indent: 15px;
+}
+#content .news .newss .new-cnt .dianji{
+}
+/*图片精灵调动*/
+#content .news .newss .new-cnt .dianji .dianjibox1{
+    background-image: url("../images/icon.png");
+    background-position: 0 6px ;
+}
+#content .news .newss .new-cnt .dianji .dianjibox2{
+    background-image: url("../images/icon.png");
+    background-position: 0 -13px ;
+}
+#content .news .newss .new-cnt .dianji .dianjibox3{
+    background-image: url("../images/icon.png");
+    background-position: 0 -45px ;
+}
+#content .news .newss .new-cnt .dianji .dianjibox4{
+    background-image: url("../images/icon.png");
+    background-position: 0 -28px ;
+}
+/*换页样式*/
+ul.fenye {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.fenye li {display: inline;}
+
+ul.fenye li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    border-radius: 5px;
+}
+
+ul.fenye li a.fenye1 {
+    background-color: #00a7ea;
+    color: white;
+    border: 1px solid #00a7ea;
+}
+
+ul.fenye li a:hover:not(.fenye1){
+    background-color: #00a7ea;
+    color: white;
 }
