@@ -1,0 +1,43 @@
+/* 主要用于制作公用样式 
+
+注意:
+
+    所有的选择器都不要从共用样式上过
+
+    都使用层级选择器,尽量不要超过5层
+
+
+*/
+
+/* 版心
+作用:
+
+    主要用于固定宽度,水平居中
+
+*/
+
+.wrapper{
+    width:1200px;
+    /* 固定宽度的盒子水平居中 */
+    margin:0 auto;
+}
+
+/* 设置浮动 */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+
+/* 清除浮动 */
+
+.clear{
+    clear: both;
+}
+
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+}

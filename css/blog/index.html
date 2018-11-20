@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!-- 1.样式引入
+        顺序:
+
+            先引入reset.css  样式重置表,作用:清除所有标签默认样式,一般不要修改  目的:按需来设置样式
+    -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--公用样式 -->
+    <link rel="stylesheet" href="./styles/common.css">
+    <!-- 首页的样式 -->
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+
+    <!-- 头部开始-->
+    <div id="header">
+       <!-- 1.顶部 -->
+       <div class="top">
+           <div class="wrapper">
+               欢迎访问源宝博客!
+               <div class="fr">
+                    <a href="#">关于我们</a>
+                    <a href="#">联系我们</a>
+               </div>
+           </div>
+       </div>
+       <!--导航栏-->
+       <div id="nav">
+           <div class="wrapper">
+               <!--logo图-->
+               <div class="logo">
+               </div>
+               <!--导航栏-->
+               <ul class="daohang">
+                   <li><a href="#">首页</a></li>
+                   <li><a href="#">互联网</a></li>
+                   <li><a href="#">好货推荐</a></li>
+                   <li><a href="#">技术宅</a></li>
+                   <li><a href="#">数码</a></li>
+                   <li><a href="#">民生</a></li>
+                   <li><a href="#">影像</a></li>
+                   <li><a href="#">游记</a></li>
+                   <li><a href="#">心情随笔</a></li>
+                   <li><a href="#">留言本</a></li>
+               </ul>
+
+               <!--搜索栏-->
+               <div class="sousuo">
+                   <div class="search">
+                       <form action="#" method="get">
+                           <input type="search" placeholder="search">
+                           <input type="submit" class="tijiao" value="">
+                       </form>
+                   </div>
+
+               </div>
+               <div class="clear"></div>
+           </div>
+
+       </div>
+    </div>
+    <!--banner背景-->
+    <div id="yuanbao">
+        <!--背景详情盒子-->
+        <div class="fontsss">
+            <!--内容-->
+            <div class="yuanbaoneirong">
+                <div class="yuanbaoboke fl">源宝博客</div>
+                <div class="guanzhu fl">+关注</div>
+                <div class="yuanchuang fl">原创独立博客个人网站</div>
+            </div>
+        </div>
+    </div>
+    <!--内容开始-->
+    <div id="content">
+        <!--左边新闻盒子-->
+        <div class="news fl">
+            <div class="newss">
+                <div class="imga fl"><img src="./images/pic1.jpg" alt="#" class="imgaaa"></div>
+                <div class="new-cnt fl"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--右边导航盒子-->
+        <div class="navl fl"></div>
+        <!--底部分页盒子-->
+        <div class="huanye fl"></div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* 头部样式 */
+#header .top{
+    background: #444444;
+    height:25px;
+    line-height: 25px;
+    color:#aaaaaa;
+}
+#header .top a{
+    color:#aaaaaa;
+}
+/*导航栏样式*/
+#header .nav{
+    width: 1200px;
+    height: 60px;
+}
+/*背景图样式*/
+#header #nav .logo{
+    float: left;
+    width: 153px;
+    height: 50px;
+    margin-top: 14px;
+    background-image: url(../images/logo.png);
+    background-position: 0 -13px;
+}
+/*导航栏详细样式*/
+#header #nav .daohang{
+    float: left;
+    width: 782px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 14px;
+    
+}
+/*导航字体样式*/
+#header #nav .daohang li{
+    float: left;
+    margin: auto 20px auto 20px;
+}
+/*浮动*/
+#header #nav .daohang a{
+    float: left;
+}
+/*搜索栏样式*/
+#header #nav .sousuo{
+    float: right;
+    width: 200px;
+    height: 36px;
+    margin-top: 20px;
+}
+/*input栏样式*/
+#header #nav .search input{
+    float: left;
+    margin-top: 8px;
+    border: 1px #7e6b5a solid;
+}
+/*搜索栏图标样式*/
+#header #nav .search input.tijiao{
+    background-image: url("../images/search.png");
+    float: left;
+    width: 60px;
+    margin-top: 8px;
+    margin-left: 2px;
+    border: none;
+    /*背景图片移动*/
+    background-position: 0 24px;
+}
+
+
+/*头部背景样式*/
+#yuanbao{
+    background-image: url("../images/banner.png");
+    padding: 1px;
+}
+/*背景详情盒子样式*/
+#yuanbao .fontsss{
+    height: 96px;
+    width: 1200px;
+    margin-left: 30px;
+    margin-top: 38px;
+}
+/*元宝内容*/
+#yuanbao .fontsss .yuanbaoneirong{
+    height: 76px;
+    width: 166px;
+    margin-left: 86px;
+}
+/*内容样式*/
+#yuanbao .fontsss .yuanbaoneirong .yuanbaoboke{
+    height: 32px;
+    width: 106px;
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+#yuanbao .fontsss .yuanbaoneirong .guanzhu{
+    height: 22px;
+    width: 40px;
+    font-size: 12px;
+    color: #00a7ea;
+}
+#yuanbao .fontsss .yuanbaoneirong .yuanchuang{
+    height: 20px;
+    width: 154px;
+    font-size: 12px;
+    color: #ffffff;
+}
+/*内容样式*/
+#content{
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    background: #00a7ea;
+}
+/*新闻盒子*/
+#content .news{
+    width: 850px;
+    height: 800px;
+    background: #82ff5b;
+}
+/*左边导航盒子*/
+#content .navl{
+    width: 328px;
+    height: 800px;
+    background: red;
+}
+/*下部分页盒子*/
+#content .huanye{
+    width: 382px;
+    height: 50px;
+    background: #ff6600;
+}
+/*新闻盒子*/
+#content .news .newss{
+    width: 842px;
+    height: 190px;
+    margin: 0 auto;
+    background: #ff6600;
+}
+/*新闻图片样式*/
+#content .news .newss .imga .imgaaa{
+    width: 206px;
+    height: 165px;
+    display: inline-block;
+    margin: 6px auto auto 6px;
+
+}
+/*新闻内容样式*/
+#content .news .newss .new-cnt{
+    width: 588px;
+    height: 165px;
+    background: paleturquoise;
+    margin: 6px auto auto 14px;
+}
