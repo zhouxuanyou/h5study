@@ -1,0 +1,44 @@
+/* 设置浮动 */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+
+/* 清除浮动 */
+
+.clear{
+    clear: both;
+}
+
+/*清除固定结构的浮动*/
+.clearfix:after,.clearfix::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+/*版心*/
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*颜色公公共样式*/
+.white{
+    color: #ffffff;
+}
+/*背景公共样式*/
+.bg{
+    background: #252525;
+}
+
+/*居中*/
+.fontcenter{
+    text-align: center;
+}
+/*column通用样式*/
+.colbox{
+    width: 400px;
+    height: 167px;
+    padding-top: 44px;
+}

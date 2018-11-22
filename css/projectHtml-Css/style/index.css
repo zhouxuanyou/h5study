@@ -1,0 +1,77 @@
+/*头部样式*/
+#header .top{
+    height: 45px;
+    line-height: 45px;
+}
+/*间距*/
+#header .top .tel{
+    margin-right: 20px;
+}
+
+/*nav样式*/
+#header .nav{
+    padding: 25px 0;
+}
+
+#header .nav .logo{
+    width: 150px;
+    height: 50px;
+}
+
+#header .nav .menu li{
+    float: left;
+    line-height: 50px;
+    margin: 0 30px;
+}
+
+#header .nav .menu a{
+    font-size: 16px;
+    color: #252525;
+}
+/*鼠标图片样式*/
+#header .nav .menu li.current,#header .nav .menu li:hover{
+    background: url("../images/nav_move.jpg") no-repeat center bottom;
+}
+
+/*banner样式*/
+#banner{
+    background: url("../images/banner1.jpg") no-repeat -240px;
+    padding: 165px 0;
+}
+
+#banner .bannerbox{
+    width: 450px;
+    height: 198px;
+    background: url("../images/border.png") no-repeat;
+    margin: 0 auto;
+    padding-top: 12px;
+}
+#banner .bannerbox h2{
+    font-size: 42px ;
+    line-height: 82px;
+}
+#banner .bannerbox P{
+    font-size: 18px;
+    line-height: 28px;
+}
+/*内容样式*/
+#content .column{
+    margin-top: 28px;
+}
+#content .column .img1{
+    background: url("../images/01.jpg");
+}
+#content .column .img2{
+    background: url("../images/02.jpg");
+}
+#content .column .img3{
+    background: url("../images/03.jpg");
+}
+#content .column h2{
+    font-size: 18px;
+    line-height: 44px;
+}
+#content .column p{
+    font-size: 12px;
+    line-height: 28px;
+}
