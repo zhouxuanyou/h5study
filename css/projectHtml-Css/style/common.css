@@ -42,3 +42,25 @@
     height: 167px;
     padding-top: 44px;
 }
+/*公公共标题*/
+.titile{
+    font-size: 22px;
+    color: #bbb8b5;
+    margin-top: 84px;
+}
+.titile h2{
+    display: inline-block;
+    height: 54px;
+    font-size: 28px;
+    color: #252525;
+    font-weight: normal;
+    background: url("../images/nav_bg02.png") no-repeat bottom left;
+    margin-right: 12px;
+}
+
+/*标题2*/
+.title-sm{
+    line-height: 60px;
+    background: url(../images/nav_bg02.png) no-repeat left bottom;
+    font-weight: normal;
+}
