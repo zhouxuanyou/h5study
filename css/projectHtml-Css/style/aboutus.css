@@ -1,11 +1,10 @@
-/*--头部标题--*/
-#toptitle{
-    margin: 0 auto;
-    height: 33px;
+#banner{
+    background: url("../images/banner5.jpg") no-repeat;
+    padding: 165px 0;
 }
-hr{
-    color: #6a6a6a;
-}
+
+
+
 #toptitle h2{
     font-size: 14px;
     color: #818388;

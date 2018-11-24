@@ -64,3 +64,12 @@
     background: url(../images/nav_bg02.png) no-repeat left bottom;
     font-weight: normal;
 }
+
+/*--头部标题--*/
+#toptitle{
+    margin: 0 auto;
+    height: 33px;
+}
+hr{
+    color: #6a6a6a;
+}
