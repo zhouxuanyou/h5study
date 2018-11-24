@@ -1,0 +1,34 @@
+
+#header .top{
+    height: 45px;
+    line-height: 45px;
+}
+/*间距*/
+#header .top .tel{
+    margin-right: 20px;
+}
+
+/*nav样式*/
+#header .nav{
+    padding: 25px 0;
+}
+
+#header .nav .logo{
+    width: 150px;
+    height: 50px;
+}
+
+#header .nav .menu li{
+    float: left;
+    line-height: 50px;
+    margin: 0 30px;
+}
+
+#header .nav .menu a{
+    font-size: 16px;
+    color: #252525;
+}
+/*鼠标图片样式*/
+#header .nav .menu li.current,#header .nav .menu li:hover{
+    background: url("../images/nav_move.jpg") no-repeat center bottom;
+}

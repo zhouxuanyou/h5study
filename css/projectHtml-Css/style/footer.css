@@ -1,0 +1,98 @@
+/*页脚样式*/
+#footer{
+    background: #141414;
+    padding-bottom: 30px;
+    margin-top: 70px;
+}
+
+#footer .items:first-child{
+    margin-right: 86px;
+}
+
+#footer  .wrapper{
+    padding:70px 0;
+}
+
+#footer .items img{
+    width:156px;
+    height:47px;
+}
+
+#footer .items p{
+    color: #818388;
+    font-size: 14px;
+    line-height: 40px;
+    background: url("../images/icon.jpg") no-repeat left;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+#footer .items ul{
+    width:320px;
+    color: #818388;
+    margin-top: 20px;
+}
+#footer .items a{
+    float:left;
+    width:160px;
+    line-height: 42px;
+    font-size:14px;
+    margin-top: -4px;
+}
+/*搜索框样式*/
+#footer .search{
+    width: 320px;
+    margin-top: 20px;
+}
+
+#footer .textinput,.btn{
+    border: none;
+    line-height: 46px;
+    float: left;
+}
+
+#footer .search .textinput{
+    width:220px;
+    background: #333;
+    color:#939393;
+    text-indent:5px;
+}
+
+#footer .items .search .btn{
+    width:100px;
+    background: #3aa27f;
+    color:#fff;
+
+}
+/*关注样式*/
+#footer .items .focus{
+    color: #818388;
+    font-size:14px;
+    margin-top: 30px;
+}
+#footer .focus  .icon{
+    display: inline-block;
+    width:29px;
+    height:29px;
+    background: url(../images/fenxiang.png) no-repeat;
+}
+
+#footer .focus .icon-wb{
+    background-position: -2px 0;
+
+}
+#footer .focus .icon-wx{
+    background-position: -44px 0;
+
+}
+
+/*垂直对齐图标*/
+#footer .items .focus span{
+    vertical-align: middle;
+}
+
+#footer>p{
+    line-height: 74px;
+    background: #000;
+    color: #818388;
+
+}
