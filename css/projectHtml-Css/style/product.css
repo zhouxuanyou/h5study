@@ -1,0 +1,86 @@
+#banner{
+    background: url("../images/banner5.jpg") no-repeat;
+    padding: 165px 0;
+}
+
+#toptitle h2{
+    font-size: 14px;
+    color: #818388;
+    top: 0;
+    left: 0;
+}
+
+/*内容样式*/
+#content .tit{
+    width: 88px;
+    height: 44px;
+    color: #252525;
+    font-size: 20px;
+    background: url("../images/nav_bg02.png") no-repeat left bottom;
+    margin-top: 36px;
+}
+
+#content .leftsidebar ul{
+    width: 260px;
+    margin-top: 26px;
+}
+
+#content .leftsidebar li{
+    line-height: 48px;
+    font-size: 14px;
+    color: #252525;
+    background: #f2f2f2;
+    margin-bottom: 2px;
+}
+
+/*图片样式*/
+#content .imgs img{
+    width: 260px;
+    height: 260px;
+    margin-top: 22px;
+}
+
+/*展品展示样式*/
+#content .product{
+    width: 900px;
+    margin-top: 25px;
+    margin-left:30px;
+}
+#content .product .items{
+    width: 900px;
+}
+
+
+#content .product .items li {
+    width: 250px;
+    height: 280px;
+    border: 1px solid #6a6a6a;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 8px;
+}
+#content .product .items img{
+    width: 250px;
+    height: 250px;
+}
+#content .product .items a{
+    font-size: 14px;
+    color: #3f3e45;
+}
+/*分页样式*/
+#content .skip ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#content .skip ul.pagination li {
+    display: inline;
+}
+
+#content .skip ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
