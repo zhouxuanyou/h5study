@@ -54,20 +54,4 @@
     margin-top: 20px;
 }
 
-/*分页样式*/
-#content .skip ul.pagination {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
 
-#content .skip ul.pagination li {
-    display: inline;
-}
-
-#content .skip ul.pagination li a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-}

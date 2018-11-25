@@ -67,9 +67,27 @@
 
 /*--头部标题--*/
 #toptitle{
+    border-bottom: 1px solid #f3f3f3;
+    line-height: 48px;
+    height: 48px;
+    color: #818388;
     margin: 0 auto;
-    height: 33px;
 }
-hr{
-    color: #6a6a6a;
+
+#toptitle a{
+    font-size: 14px;
+    color: #818388;
+}
+
+/*分页样式*/
+.skip{
+    margin-top: 40px;
+}
+.skip a{
+    border: 1px solid #f3f3f3;
+    padding: 2px;
+}
+.skip a.current{
+    border: none;
+    color: red;
 }

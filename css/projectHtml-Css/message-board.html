@@ -41,8 +41,8 @@
             <li><a href="./aboutus.html">关于我们</a></li>
             <li><a href="./product.html">产品展示</a></li>
             <li><a href="./news.html">新闻动态</a></li>
-            <li><a href="">在线留言</a></li>
-            <li><a href="">联系我们</a></li>
+            <li><a href="./message-board.html">在线留言</a></li>
+            <li><a href="./contentus.html">联系我们</a></li>
         </ul>
         <!--清除浮动-->
         <div class="clear"></div>
@@ -52,14 +52,13 @@
     <div id="banner"></div>
     <!--大标题-->
     <div id="toptitle">
-    <div class="title wrapper">
-        <h2>首页 >>在线留言</h2>
+        <div class="title wrapper">
+            <a href="#">首页</a> >> 在线留言
+        </div>
     </div>
-    </div>
-    <hr>
     <!--内容-->
     <div id="content">
-    <div class="wrapper">
+        <div class="wrapper">
         <h2 class="tit">关于我们</h2>
         <!--左边导航栏-->
         <div class="leftsidebar fontcenter fl">
@@ -77,27 +76,41 @@
             </div>
         </div>
         <!--右边内容栏-->
-        <div class="form">
+        <div class="form fl">
             <h2>您可以留下您宝贵的意见，我们会在第一时间回复您，谢谢关注！</h2>
             <form action="" method="post">
-                <input type="text" value="您的姓名">
-                <input type="text" value="您的电话">
-                <input type="text" value="您的邮箱">
+                <p>您的姓名*</p>
+                <label>
+                    <input type="text" name="您的姓名">
+                </label>
+                <p>您的电话*</p>
+                <label>
+                    <input type="text" name="您的电话">
+                </label>
+                <p> 您的邮箱* </p>
+                <label>
+                    <input type="text" name="您的邮箱">
+                </label>
+                <p> 咨询项目* </p>
+                <label>
+                    <input type="checkbox">床上用品
+                    <input type="checkbox">家居饰品
+                    <input type="checkbox">居家日用
+                    <input type="checkbox">家居收纳
+                    <input type="checkbox">厨房收纳
+                    <input type="checkbox">厨房餐饮
+                </label>
+                <p>咨询内容*</p>
+                <label>
+                    <input type="text">
+                </label>
+                <br>
+                <label>
+                    <input type="submit">
+                </label>
             </form>
         </div>
         <div class="clear"></div>
-        <!--分页-->
-        <div class="skip fontcenter">
-            共60条记录：
-            <ul class="pagination">
-                <li><a href="#">1</a></li>
-                <li><a class="active" href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">下一页</a></li>
-            </ul>
-        </div>
     </div>
     </div>
     <!--页脚-->

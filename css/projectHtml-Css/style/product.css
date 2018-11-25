@@ -54,7 +54,7 @@
 #content .product .items li {
     width: 250px;
     height: 280px;
-    border: 1px solid #6a6a6a;
+    border: 1px solid #f3f3f3;
     padding: 20px;
     margin-bottom: 20px;
     margin-right: 8px;
@@ -66,21 +66,4 @@
 #content .product .items a{
     font-size: 14px;
     color: #3f3e45;
-}
-/*分页样式*/
-#content .skip ul.pagination {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-
-#content .skip ul.pagination li {
-    display: inline;
-}
-
-#content .skip ul.pagination li a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
 }
