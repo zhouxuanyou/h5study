@@ -1,0 +1,58 @@
+#banner{
+    background: url("../images/banner5.jpg") no-repeat;
+    padding: 165px 0;
+}
+
+#toptitle{
+    border-bottom: 1px solid #f3f3f3;
+    line-height: 48px;
+    color: #818388;
+}
+
+#toptitle a{
+    font-size: 14px;
+    color: #818388;
+    top: 0;
+    left: 0;
+}
+
+/*内容样式*/
+#content .tit{
+    width: 88px;
+    height: 44px;
+    color: #252525;
+    font-size: 20px;
+    background: url("../images/nav_bg02.png") no-repeat left bottom;
+    margin-top: 36px;
+}
+
+#content .leftsidebar ul{
+    width: 260px;
+    margin-top: 26px;
+}
+
+#content .leftsidebar li{
+    line-height: 48px;
+    font-size: 14px;
+    color: #252525;
+    background: #f2f2f2;
+    margin-bottom: 2px;
+}
+
+/*图片样式*/
+#content .imgs img{
+    width: 260px;
+    height: 260px;
+    margin-top: 22px;
+}
+
+/*留言板样式*/
+#content .form{
+    width: 800px;
+    height: 100px;
+}
+
+
+#content .form input{
+    width: 800px;
+}
