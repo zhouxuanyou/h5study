@@ -46,13 +46,18 @@
     margin-top: 22px;
 }
 
-/*留言板样式*/
-#content .form{
-    width: 800px;
-    height: 100px;
+/*右边内容*/
+#content .contentus{
+    margin-top: 40px;
 }
 
+#content .contentus .cntimg{
+    width: 100%;
+}
 
-#content .form input{
-    width: 800px;
+#content .contentus .cnt{
+    line-height: 40px;
+    border: 1px solid #f3f3f3;
+    padding: 20px;
+    margin-top: 20px;
 }

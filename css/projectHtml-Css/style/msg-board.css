@@ -49,10 +49,28 @@
 /*留言板样式*/
 #content .form{
     width: 800px;
-    height: 100px;
+    line-height: 50px;
+    margin-left: 28px;
 }
 
 
-#content .form input{
+#content .form .box{
     width: 800px;
+    height: 41px;
+}
+
+#content .form .box1{
+    width: 800px;
+    height: 80px;
+}
+
+#content .form .btn{
+    width: 800px;
+    height: 40px;
+    background:#21bcd8;
+    margin-top: 40px;
+}
+
+#content .form p>span{
+    color: red;
 }
