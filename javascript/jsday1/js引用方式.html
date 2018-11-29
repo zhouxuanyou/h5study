@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--外联式-->
+    <script src="demo1.js"></script>
+    <!---->
+    <!--内嵌式-->
+    <script type="text/javascript">
+        alert('hello world');
+        //网页输出
+        document.write('nihao');
+        //控制台输出
+        console.log('这是控制台输出');
+        var a = null;
+        parseInt(a);//true
+        console.log(a);
+        Boolean(a);//true
+        console.log(a);
+        String(a);//abc
+        console.log(a);
+        var num1 = 'a45px';
+        parseFloat(num1);
+        console.log(num1);
+    </script>
+</head>
+<body>
+    <!--标签式-->
+    <div onclick="alert('这是标签式')">
+        哈哈
+    </div>
+    <!--A标签式-->
+    <a href="javascript:alert('这是a标签式')">这是一个a标签</a>
+</body>
+</html>

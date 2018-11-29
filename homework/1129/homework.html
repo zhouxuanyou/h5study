@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1、简答题：JS是什么？
+基于对象和事件驱动，并且具有相对安全性的解释型的客户端脚本语言
+
+
+2、JS代码可以编写的位置，并说出区别？
+Javascript可以写在script标签内；Javascript可以写在单独的文件中；
+JavaScript可以写在HTML标签的事件属性中；Javascript可以A标签的href属性中
+区别：
+1、内嵌方式的Javascript只能够在当前html文件中使用；
+2、外联方式的js文件可以被多个html页面使用；
+3、onclick是一个事件（发现什么什么后）属性，只有发现后才执行；
+4、a标签本身是超链接，但是我们一旦指定javascript:协议后，点击这个超链接，就告诉浏览器需要执行一段javascript代码。与onclick一样都是点击后执行。
+
+3、什么是变量，变量来干嘛？
+变：变化   量：数据，  变量用于存储程序中变化的数据；
+变量就是让我们告诉计算机我们需要在内存中开辟一块存储空间，用于数据的保存。
+
+4、变量的名称命名规则？
+变量由字母、数字、字符组成（_，$）,首字母不能以数字开头；
+变量一般首字母小写；
+变量名尽量使用有意义的单词；
+变量名可以使用驼峰命名法；
+
+5、写出0、“”、false、undefined、null、NaN的含义 ？
+0代表数字，为true；""代表空的字符串，为false；false代表为假，否定，undefined代表未定义，占位，null代表空值，清除变量；NaN代表出错；
+
+
+6、请描述++i，i++区别；
+++表示为前置加加，在运算中，先自增1，然后在运算；
+i++为后置加加，在运算中，先运算，在自增；
+
+
+
+7、类型转换分为几种？将以下各数据分别转成数值型、布尔型、字符型
+var a='abc'
+parseInt(a)//abc
+Boolean(a)//true
+String(a)//abc
+var a = '123'
+parseInt(a)//123
+Boolean(a)//true
+String(a)//123
+var a = true;
+parseInt(a)//true
+Boolean(a)//true
+String(a)//true
+var a = undefined;
+parseInt(a)//undefined
+Boolean(a)//undefined
+String(a)//undefined
+var a = null;
+parseInt(a)//null
+Boolean(a)//null
+String(a)//null
+类型转换有两种，分别为强制转换，和自动转换
+
+8、将以下数据转换成数值型
+var num1 = “10px”  parseInt() parseFloat();
+parseInt();//10
+parseFloat();//10px
+
+var num2 = “0.123”;  parseFloat()
+parseFloat()//0.123
+var num3 = “a45px”;  parseInt() parseFloat();
+parseInt();//45
+parseFloat();//a45px
+
+
+9、计算以下结果
+var a =10;
+var b = 2;
+var c = “4”;
+var result = a+ b*c;
+result = 18;
+
+10、计算以下结果（每一步执行后a,b,c的值）
+var a = 1,b=2,c;
+①　c = a++ + b;//c = 3
+②　c = --a + b;//c = 3
+③　a = c-- + (++b);//a = 5
+④　b = a-- + (++c);//b = 8
+注意：把第1步执行后的结果带入到第2步...依次类推
+</body>
+</html>

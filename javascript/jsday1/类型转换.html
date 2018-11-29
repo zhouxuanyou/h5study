@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //类型转换
+        //转化为整数
+        var a = '123';
+        a = parseInt(a);
+        console.log(a);
+
+        //转换为float
+        var a = '12.12';
+        a = parseFloat(a);
+        console.log(a);
+
+        var a = 3, b = 4,c;
+        c = a++ + b--; // c = 7 a = 4 b = 3
+        b = ++a - --c; // a = 5 b = -1 c = 6
+        c = b++ + --a; // a = 4 b = 0 c = 3
+        a = ++c - b++; // a = 4 b = 1 c = 4
+
+        //转换为字符串
+        var a = 123;
+        a = String(a);
+        console.log(a);
+
+        //转换为布尔类型
+        var c = 0;
+        c = Boolean(c);
+        console.log(c);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
