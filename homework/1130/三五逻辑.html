@@ -9,12 +9,12 @@
         // 出“三五”。
         for (let i = 0; i<=100 ;i++){
             //判断是否是三的整数
-            if (i%3 ===0){
-                document.write('三<br>');
+            if (i%3 === 0 && i%5 === 0){
+                document.write('三五<br>');
             }else if (i%5 === 0){
                 document.write('五<br>');
-            }else if (i%5 === 0 && i%3 === 0 ){
-                document.write('三五<br>');
+            }else if (i%3 === 0){
+                document.write('三<br>');
             }else {
                 document.write(i+'<br>');
             }
