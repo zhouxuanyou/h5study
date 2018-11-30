@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*需求：
+            输入1-100的数
+            能被三整数就返回三
+            能被5整除就返回五
+            否则就返回输出值
+            */
+        //获得输入的值
+        let num = prompt('请输入值',0);
+        //判断语句
+        if (num%3 === 0) {
+            console.log('三');
+        }else if (num%5 === 0) {
+            console.log('五');
+        }else if (num%3 === 0 && num%3 === 0) {
+            console.log('三五');
+        }else {
+            console.log(num);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
