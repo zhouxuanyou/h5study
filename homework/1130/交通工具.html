@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 根据一个人的存款的多少决定使用什么交通工具：如果我有10万元以
+        // 上，就买小汽车上班或者如果我有5000元以上，我就买摩托上班，或者如果我有300元
+        // 以上，我就买自行车上班，或者如果我有20元以上，我就坐公交上班，否则，我就只好
+        // 步行上班提示：使用一个变量表示其存款数，对该变量进行判断以输出所采用的交通工
+        // 具；
+        //定义一个变量存储输入的值
+        let money = prompt("请输入你的存款");
+        if (money>100000){
+            document.write('你可以买汽车上班');
+        }else if (money>5000) {
+            document.write('你可以买摩托车上班');
+        }else if (money>300) {
+            document.write('你可以买自行车上班');
+        }else if (money>20) {
+            document.write('你可以坐公交车上班');
+        }else{
+            document.write('你只能步行上班');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

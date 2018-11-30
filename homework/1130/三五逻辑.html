@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 写一个程序输出1到100这些数字。但是遇到数字为3的倍数的时
+        // 候，输出“三”替代数字，为5的倍数用“五”代替，既是3的倍数又是5的倍数则输
+        // 出“三五”。
+        for (let i = 0; i<=100 ;i++){
+            //判断是否是三的整数
+            if (i%3 ===0){
+                document.write('三<br>');
+            }else if (i%5 === 0){
+                document.write('五<br>');
+            }else if (i%5 === 0 && i%3 === 0 ){
+                document.write('三五<br>');
+            }else {
+                document.write(i+'<br>');
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
