@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //封装函数,实现返回三个数的最小值
+        //定义函数
+        function min(a,b,c) {
+             if(a<b && a<c){
+                 return a;
+             }else if (c<a && c<b){
+                 return c;
+             }else {
+                 return b;
+             }
+        }
+        let num = min(10,20,3);
+        document.write(num);
+        document.write('<br>');
+        //封装函数,实现返回三个数的最大值
+        function max(a,b,c) {
+            if(a>b && a>c){
+                return a;
+            }else if (c>a && c>b){
+                return c;
+            }else {
+                return b;
+            }
+        }
+        let res = max(10,20,3);
+        document.write(res);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

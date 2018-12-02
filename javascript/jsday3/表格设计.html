@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 1000px;
+            height: 1000px;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        table tr,td{
+            border: 1px solid greenyellow;
+            text-align: center;
+            color: red;
+            font-size: 50px;
+            font-family: "Sinhala Sangam MN",serif;
+        }
+    </style>
+    <script>
+        // //简单实现表格
+        // //表格开始
+        // document.write('<table>');
+        // for (let i = 1 ; i<=3;i++) {
+        //     document.write('<tr>');
+        //     for (let j = 1 ; j<=3;j++){
+        //         document.write('<td>');
+        //             document.write('内容');
+        //         document.write('</td>');
+        //     }
+        //     document.write('</td>');
+        // }
+        // //表格结束
+        // document.write('</table>');
+
+        //封装函数,确定函数名
+        function printtable(rows,cols) {
+            //表格开始
+            document.write('<table>');
+            for (let i = 1 ; i<=rows;i++) {
+                //行开始
+                document.write('<tr>');
+                for (let j = 1 ; j<=cols;j++){
+                    document.write('<td>');
+                    document.write('杀');
+                    document.write('</td>');
+                }
+                //行结束
+                document.write('</tr>');
+            }
+            //表格结束
+            document.write('</table>');
+        }
+        //调用函数,打印
+        printtable(10,10);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //使用函数封装一个四行五列的函数
+        function printstar() {
+            //代码块，列
+            for(let i =0;i<5;i++){
+                //代码块，行
+                for(let j = 0;j<5;j++){
+                    document.write('*')
+                }
+                document.write('<br>')//换行
+            }
+        }
+        printstar();
+        //封装一个打印任意行列的函数
+        function printstar1(row,col) {
+            //代码块，列
+            for(let i =0;i<row;i++){
+                //代码块，行
+                for(let j = 0;j<col;j++){
+                    document.write('*')
+                }
+                document.write('<br>')//换行
+            }
+        }
+        printstar1(10,10);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
