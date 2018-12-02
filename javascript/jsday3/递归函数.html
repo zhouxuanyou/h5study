@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //封装功能为数列求第n项的值
+        function f(n){
+            //递归出口
+            if(n===1 || n===2){
+                return 1;
+            }
+            //递归规律
+            return f(n-1)+f(n-2);
+        }
+        //输出
+        console.log(f(7));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
