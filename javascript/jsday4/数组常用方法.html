@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //数组常用方法1：array.concat,连接两个或者多个数组
+        //定义一个数组
+        var arr = [1,2,3,4,5,5,6,6,6,6,7,7,7,8,];
+        var arr1 = [1,2,3,4,5,5,6,6,6,6,7,7,7,8,];
+        var res = arr.concat(arr1);
+        document.write(res+'<br>');
+        //数组常用方法2：arra.join,把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+        res = arr.join('*');
+        document.write(res+'<br>');
+        //数组常用方法3；array.pop,删除并返回数组的最后一个元素
+        res = arr.pop();
+        document.write(res+'<br>');
+        //数组常用方法4；array.push,向数组的末尾添加一个或更多元素，并返回新的长度。
+        res = arr.push(100,200);
+        document.write(res+'<br>');
+        //数组常用方法5；arra.revers,颠倒数组中元素的顺序。 但该方法不会创建新的数组
+        res = arr.reverse();
+        console.log(res);
+        //数组常用方法6；array.splice(索引，删除几个，添加的元素),删除元素，并向数组添加新元素。
+        res = arr.splice(0,5,100);
+        document.write(res+'<br>');
+        //数组常用方法7；array.shfit(),删除并返回数组的第一个元素
+        res = arr.shift();
+        document.write(res+'<br>');
+        //数组常用方法8；array.sort(),对数组的元素进行排序
+        res = arr.sort();
+        document.write(res+'<br>');
+        //数组常用方法9；array.slice(start,end),对数组的元素进行排序
+        res = arr.slice(1,4);
+        document.write(res+'<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>
