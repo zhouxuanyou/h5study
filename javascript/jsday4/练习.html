@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //需求：[1,3,5,7,24,32,25,48]
+        // 1.求数组奇数的个数和偶数的个数
+        // 2.求出上面数组的平均值
+
+        //得到数组
+        let arr = [1,3,5,7,24,32,25,48];
+        //设置变量,偶数和奇数
+        let odd = 0;
+        let even = 0;
+        //使用循环
+        for (let i = 0; i <arr.length ; i++) {
+            //判断
+            if (arr[i]%2 === 0) {
+                //偶数加1
+                even++;
+            }else {
+                //奇数加1
+                odd++;
+            }
+        }
+        document.write(odd+'<br>',even+'<br>');
+        //需求：求出上面数组的平均值
+        //设置sum变量
+        let sum = 0;
+        //先遍历
+        for (let i = 0; i < arr.length; i++) {
+            //遍历出来的数据相加
+            sum += arr[i];
+        }
+        //求平均值，和除以数组元素的个数
+        let a = sum /arr.length;
+        document.write(a);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
