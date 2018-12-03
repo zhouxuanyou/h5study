@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //需求定义一个数组，输入9个任意的整数，求该数组中奇数的个数和奇数的平均值
+        //定义一个数组
+        let arr = [1,2,3,4,5,6,7,8,9];
+        //定义平均值，奇数个数变量
+        let sumodd = 0;
+        let avgodd = 0;
+        let numodd = 0;
+        for (let i = 0; i <arr.length ; i++) {
+            //判断条件
+            if (arr[i]%2 !==0){
+                numodd++;
+                sumodd += arr[i];
+            }
+        }
+        avgodd = sumodd/numodd;
+        console.log([numodd,avgodd]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

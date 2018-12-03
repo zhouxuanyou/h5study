@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //需求:定义一个数组，并给出8个任意的初始数值，求该数组中大于平均值的数的
+        // 个数，和小于平均值的数的个数。
+        //定义一个数组
+        let arr = [1,2,3,4,5,6,7,8];
+        //定义平均值的变量，大于平均值的个数，小于平均值的个数
+        let avg = 0;
+        let gt = 0;
+        let lt = 0;
+        let sum = 0;
+        //先得到平均值
+        for (let i = 0; i <arr.length ; i++) {
+            sum += arr[i];
+        }
+        avg = sum/arr.length;
+        // console.log(avg);
+        for (let j = 0; j <arr.length ; j++) {
+            //判断大于平均值和小于平均值的个数
+            if (arr[j]>avg){
+                gt++;
+            }else {
+                lt++
+            }
+        }
+        console.log([gt,lt]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
