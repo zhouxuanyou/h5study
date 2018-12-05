@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 判断一个字符（比如”a”）是否出现在另一个字符（比如”2340sadfj2affa2”）中
+        //定义一个方法，确定函数名
+        function checkstr(str,strs) {
+            if (strs.indexOf(str)>=0){//判断是否存在该字符串中
+                console.log('存在');
+            }else {
+                console.log('不存在');
+            }
+        }
+
+
+        //调用
+        checkstr("2","2340sadfj2affa2");
+
+    </script>
+</body>
+</html>

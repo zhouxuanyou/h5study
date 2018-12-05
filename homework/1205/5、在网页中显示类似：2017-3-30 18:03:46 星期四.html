@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //5、在网页中显示类似：2017-3-30 18:03:46 星期四
+    //得到年
+    let date = new Date();
+    let year = date.getFullYear();
+
+    //得到月
+    let month = date.getMonth();
+
+    //得到日
+    let day = date.getDate();
+
+    //得到时
+    let hours = date.getHours();
+
+    //得到分
+    let mintues = date.getMinutes();
+
+    //得到秒
+    let second = date.getSeconds();
+
+    //得到星期几
+    var week = date.getDay();
+    var weekday =['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    week = weekday[week];//得到的日期相当于索引
+
+    console.log(year + '-' + month + '-' + day + ' ' + hours + ':' + mintues + ':' + week );
+</script>
+
+</body>
+</html>

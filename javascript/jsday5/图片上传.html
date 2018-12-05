@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" id="files" ><br>
+
+<input type="button" value="上传图片" onclick="checkfile()">
+
+
+
+    <script>
+    //定义方法chekfile
+    function checkfile() {
+        //获取上传文件对象
+        let file = document.getElementById('files');
+        // console.log(file);
+        //获取上传文件的值
+        let val = file.value;
+        // console.log(val);
+        //找到文件名后缀属性的位置
+        let pos = val.lastIndexOf('.');
+        // console.log(pos);
+        //截取文件后缀名
+        let filename = val.substr(pos+1);
+        // console.log(filename);
+
+        //定义指定图片后缀名
+        let imgname = ['jpg','png','gif'];
+        //设置一个标杆
+        let flag = false;
+        //判断上传文件名和指定后缀名
+        for (i in imgname){
+            if (filename === imgname[i]){
+                flag = true;
+                break;
+            }
+        }
+
+        //判断后缀名提示
+        if (flag){
+            alert(val+'上传成功');
+        }else {
+            alert(val+'上传失败，格式不支持');
+        }
+    }
+
+</script>
+
+</body>
+</html>

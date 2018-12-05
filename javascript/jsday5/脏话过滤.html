@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //需求把脏话过滤点替换成其它
+    function filter(arr,arrs) {
+        for (i in arrs){//遍历出脏话的字符串
+            for ( j in arr) {//遍历敏感词，判断条件替换
+                arrs[i] = arrs[i].replace(arr[j],'*');
+            }
+        }
+        return arrs;
+    }
+    //定义脏话和敏感词
+    let arrs = ['你妈生你时是不是把人扔了把胎盘养大','别跟我说话，我有洁癖。','我忍屎忍尿也忍不下你呀。'];
+    let arr = ['妈','胎盘','屎','尿'];
+    let res = filter(arr,arrs);
+    console.log(res);
+</script>
+</body>
+</html>
