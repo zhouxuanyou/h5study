@@ -19,13 +19,14 @@
 
             // console.log(s1);
             //循环这个数组
-            for ( let i in s1) {
+            for ( let i = 0; i <s1.length; i++) {
 
-                if (i == 0 || i == s1.length-1){
+                if (i === 0 || i === s1.length-1){
                     s1[i] =  s1[i].toUpperCase();//如果是首位字符就转换大写
                 }else {
                     s1[i] = s1[i].toLowerCase();//中间字符小写
                 }
+                // console.log(i,typeof i);
             }
 
             //将数组还原为字符串
@@ -34,7 +35,7 @@
 
             //alert出来
             alert(s1);
-            console.log(s1);
+            console.log(s);
 
 
         }
