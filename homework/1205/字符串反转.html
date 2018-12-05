@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 字符，偏难）利用var s1 = prompt(“请输入任意字符”,””)可以获取用户输入的字符（存到变量s1中了），
+        // 试编程将用户输入的字符“反转顺序”并首尾字母转为大写，其他字母转为小写后alert出来。
+
+        //函数封装，确认函数名
+        function strres() {
+            //得到输入的值
+            var str = prompt('请输入任意字符','');
+
+            //变成数组并反转
+            var s1 = str.split('').reverse();
+
+            // console.log(s1);
+            //循环这个数组
+            for ( let i in s1) {
+
+                if (i == 0 || i == s1.length-1){
+                    s1[i] =  s1[i].toUpperCase();
+                }else {
+                    s1[i] = s1[i].toLowerCase();
+                }
+            }
+
+            //将数组还原为字符串
+            s1 = s1.join('');
+
+
+            //alert出来
+            alert(s1);
+            console.log(s1);
+
+
+        }
+        //调用函数
+        strres();
+    </script>
+</body>
+</html>
