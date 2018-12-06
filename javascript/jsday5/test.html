@@ -6,11 +6,91 @@
 </head>
 <body>
 <script>
-    var a = ['d','b','b','b','b'];
-    for (let i = 0; i <a.length ; i++) {
-        console.log(i,typeof i);
-        console.log(a.length-1,typeof a.length);
+    // var a = ['d','b','b','b','b'];
+    // for (let i = 0; i <a.length ; i++) {
+    //     console.log(i,typeof i);
+    //     console.log(a.length-1,typeof a.length);
+    //
+    // }
+    // var str;
+    // alert(typeof str);
+    // var str = "I am student";
+    // var substr = str.substring(7,11);
+    // console.log(substr);
+    // var str = '32px';
+    // var str1 = str.slice(-2);
+    // alert(str); alert(str1);
+    //
+    //
+    // let arr=[5,-12,34,78,21];
+    // let sum = 0;
+    // for (let i = 0; i <arr.length ; i++) {
+    //     sum += arr[i];
+    // }
+    // let avg = sum/arr.length;
+    // console.log(avg);
+    //
+    // /* 需求、在一个大学的编程选修课班里，我们得到了一组参加该班级的学生数据，分别是姓名、性别、年龄和年级，接下来呢，我们要利用JavaScript的知识挑出其中所有是大一的女生的的名字哦
+    // 学生信息如下：
+    //      ('小A','女',21,'大一'),  ('小B','男',23,'大三'),
+    //     ('小C','男',24,'大四'),  ('小D','女',21,'大一'),
+    //     ('小E','女',22,'大四'),  ('小F','男',21,'大一'),
+    //     ('小G','女',22,'大二'),  ('小H','女',20,'大三'),
+    //     ('小I','女',20,'大一'),  ('小J','男',20,'大三')
+    //
+    //   分析：把数据存在一个数组里，然后先循环出每个数组，然后在里面循环出具体数据，然后把含有指定的值存入一个变量里
+    //
+    // */
+    //
+    // let arr = [
+    //     ['小A','女',21,'大一'],  ['小B','男',23,'大三'],
+    //     ['小C','男',24,'大四'],  ['小D','女',21,'大一'],
+    //     ['小E','女',22,'大四'],  ['小F','男',21,'大一'],
+    //     ['小G','女',22,'大二'],  ['小H','女',20,'大三'],
+    //     ['小I','女',20,'大一'],  ['小J','男',20,'大三']
+    // ];
+    // let arrs = [];
+    //
+    // //将arr的元素循环出来
+    // for (let i = 0; i <arr.length ; i++) {
+    //     //二次循环取出小数组的具体值
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         if (arr[i][j]==='大一') {
+    //             //将符合要求的元素添加到元组里
+    //             arrs.push(arr[i]);
+    //         }
+    //     }
+    // }
+    //
+    // console.log(arrs);
+
+
+    /*
+        需求（偏难）循环产生1---1000之间的随机整数并输出，直到第一次遇到能够被9整除为止（结束循环）
+        输出的结果示例： 834 12 123 99
+
+
+        分析：先得到1-1000之间的随机整数，使用random方法然后乘以范围之间的差加1上最小值就可以得到
+             然后判断得到的数值可以整除9就停止返回数据
+    */
+    //定义函数，确定函数名
+    function ranInt(min,max) {
+        //获取数值之间的差来乘于随机数获得的值加上最小值就是数值之间的随机整数
+        var num = Math.floor(Math.random()*(max - min + 1)) + min;
+        return num;//返回值
     }
+    // let res = ranInt(1,1000);
+    // console.log(res);
+    //用来存放随机产生出的元素
+    let num = [];
+    for (let i = 0; i <1000 ; i++) {
+        let nums = ranInt(1,1000);
+        num.push(nums);
+        if (nums%9 === 0){
+            break;
+        }
+    }
+    console.log(num);
 </script>
 </body>
 </html>

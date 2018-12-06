@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    //选择题
+        1:C 2:B 3:A 4:B 5:A 6:B 7:C 8:C 9:C 10:B
+    //简答题
+
+    1题：{
+        js的基本数据类型有基本数据类型和引用数据类型；比如字符串，数组，数字，布尔类型，undefined，null。
+    }
+
+    2题：{
+        let num = '100px';
+        let res = parseInt(num) + 100;
+        console.log(res+'px');
+    }
+
+    3题:{
+        var a = 3 || undefined || 5  因为3是真的，所为结果就是3
+
+        var b = 4 && undefined && 6  4是真的，但是是&&表示并且的意思，所以第二个undefined值是假，结果为undefined
+    }
+
+    4题:{
+        let arr=[-34,12,62,4,-5,0,81];
+        arr = arr.sort().reverse();
+        console.log(arr);
+    }
+
+    5题:{
+        let arr=['张三','李四','王五','马六','冯七'];
+        arr = arr.splice(2,1);
+        console.log(arr);
+    }
+
+    6题:{
+        let arr = ['number','string','boolean','undefined','null'];
+        arr = arr.concat('object','function');
+        console.log(arr);
+    }
+
+    7题:{
+           <!--
+           //定义数组
+            let arr=[5,-12,34,78,21];
+            //定义一个值来保存和
+            let sum = 0;
+            //循环遍历出数组中的元素
+            for (let i = 0; i <arr.length ; i++) {
+              sum += arr[i];//得到数组元素的总和
+            }
+              let avg = sum/arr.length;//用元素的和处于步长得到平均值
+              console.log(avg);
+           -->
+    }
+
+   8题: {
+        let str = 'MinidxSearchEngine';
+        // str = str.substr(2,4);
+        // console.log(str);
+        str = str.substring(2,6);
+        console.log(str);
+    }
+
+    9题；{
+
+        <!--
+
+            /* 需求、在一个大学的编程选修课班里，我们得到了一组参加该班级的学生数据，分别是姓名、性别、年龄和年级，接下来呢，我们要利用JavaScript的知识挑出其中所有是大一的女生的的名字哦
+    学生信息如下：
+         ('小A','女',21,'大一'),  ('小B','男',23,'大三'),
+        ('小C','男',24,'大四'),  ('小D','女',21,'大一'),
+        ('小E','女',22,'大四'),  ('小F','男',21,'大一'),
+        ('小G','女',22,'大二'),  ('小H','女',20,'大三'),
+        ('小I','女',20,'大一'),  ('小J','男',20,'大三')
+
+      分析：把数据存在一个数组里，然后先循环出每个数组，然后在里面循环出具体数据，然后把含有指定的值存入一个变量里
+
+    */
+
+    let arr = [
+        ['小A','女',21,'大一'],  ['小B','男',23,'大三'],
+        ['小C','男',24,'大四'],  ['小D','女',21,'大一'],
+        ['小E','女',22,'大四'],  ['小F','男',21,'大一'],
+        ['小G','女',22,'大二'],  ['小H','女',20,'大三'],
+        ['小I','女',20,'大一'],  ['小J','男',20,'大三']
+    ];
+    let arrs = [];
+
+    //将arr的元素循环出来
+    for (let i = 0; i <arr.length ; i++) {
+        //二次循环取出小数组的具体值
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j]==='大一') {
+                //将符合要求的元素添加到元组里
+                arrs.push(arr[i]);
+            }
+        }
+    }
+
+    console.log(arrs);
+
+
+
+
+        -->
+    }
+
+
+    10题：{
+        <!--
+
+
+             /*
+        需求（偏难）循环产生1---1000之间的随机整数并输出，直到第一次遇到能够被9整除为止（结束循环）
+        输出的结果示例： 834 12 123 99
+
+
+        分析：先得到1-1000之间的随机整数，使用random方法然后乘以范围之间的差加1上最小值就可以得到
+             然后判断得到的数值可以整除9就停止返回数据
+    */
+    //定义函数，确定函数名
+    function ranInt(min,max) {
+        //获取数值之间的差来乘于随机数获得的值加上最小值就是数值之间的随机整数
+        var num = Math.floor(Math.random()*(max - min + 1)) + min;
+        return num;//返回值
+    }
+    // let res = ranInt(1,1000);
+    // console.log(res);
+    //用来存放随机产生出的元素
+    let num = [];
+    for (let i = 0; i <1000 ; i++) {
+        //得到产生的随机值
+        let nums = ranInt(1,1000);
+        //将产生的随机值保存到数组中
+        num.push(nums);
+        if (nums%9 === 0){
+            break;
+        }
+    }
+    console.log(num);
+
+
+        -->
+    }
+</body>
+</html>
