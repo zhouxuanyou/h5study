@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            color: red;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        /*   1234567
+        *       *    1  空格3
+        *      ***   2  空格2
+        *     *****  3  空格1
+        *    ******* 4  空格0
+        *    行 4
+        *    列 一行比一行等于行数加列数
+        *
+        *
+        *
+        *
+        *i
+        * */
+        for (let i = 1; i <=4 ; i++) {//行
+            for (let k = 1; k <=4-i; k++) {//空格
+                document.write('&emsp;');
+            }
+            for (let j = 1; j <=i+i-1 ; j++) {//列
+                    document.write('杀');
+            }
+            document.write("<br>");
+        }
+
+
+        //函数封装
+        function godta(row) {
+            for (let i = 1; i <=row ; i++) {//行
+                for (let k = 1; k <=row-i; k++) {//空格
+                    document.write('&emsp;');
+                }
+                for (let j = 1; j <=i+i-1 ; j++) {//列
+                    document.write('<span>');
+                    document.write('杀');
+                    document.write('</span>');
+                }
+                document.write("<br>");
+            }
+        }
+
+        godta(40);
+    </script>
+
+</body>
+</html>

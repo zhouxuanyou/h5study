@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            color: #00a7ea;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+        * 列
+        * 行
+        *
+        * */
+        //
+        // for (let i = 0; i <=5 ; i++) {
+        //     for (let j = 0; j <=5 ; j++) {
+        //         if (i <= j){
+        //             document.write('*');
+        //         }
+        //     }
+        //     document.write('<br>');
+        // }
+
+
+        //封装函数
+        function star(row,low) {
+            document.write('<table>');
+            for (let i = 0; i <=row ; i++) {//行
+                for (let j = 0; j <=low; j++) {//列
+                    if (i <= j){//行比列小
+                        document.write('杀');
+                    }
+
+                }
+                document.write('<br>');
+            }
+            document.write('</table>');
+        }
+
+        star(10,10);
+    </script>
+</body>
+</html>

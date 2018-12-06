@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*               1234
+    *      分析     1**** 4
+                   2***  3
+                   3**   2
+                   4*    1
+    *         行 4个
+    *         列4个，第一行的星星个数和第二行的星星个数为递减
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
+
+
+
+    //封装函数
+    function star(row,low) {
+        for (let i = 0; i <=row ; i++) {//行
+            for (let j = 0; j <=low; j++) {//列
+                if (i <= j){//行比列小
+                    document.write('*');
+                }
+
+            }
+        }
+    }
+
+    star(10,10);
+</script>
+
+</body>
+</html>

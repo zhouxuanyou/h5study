@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        #box{
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            font-size: 50px;
+            background: #141414;
+            color: #82ff5b;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        //封装功能为不满10加0的函数
+        function add(num){
+            if(num<10){
+                num = "0"+num
+            }
+            return num;
+        }
+        function timer() {
+            //设置当前时间
+            let nowday = new Date();
+            //设置活动时间
+            let newday = new Date("2019-2-4 00:00:00");
+
+            //计算时间戳
+            let time = newday - nowday;
+            // console.log(time);
+
+            //得到剩余天数
+            let day = Math.floor(time/1000/60/60/24);
+            day = add(day);
+
+            //得到剩余时间
+            let hours = Math.floor(time/1000/60/60%24);
+            hours = add(hours);
+            //得到剩余分钟
+            let miuntes = Math.floor(time/1000/60%60);
+            mintues = add(miuntes);
+            //得到剩余秒
+            let second = Math.floor(time/1000%60);
+            second = add(second);
+
+            //拼接
+            let str = "距离春节还剩"+day+"天"+hours+"时"+mintues+"分"+second+"秒";
+
+            //放入盒子内
+            document.getElementById('box').innerHTML = str;
+
+        }
+
+        //先调用无延迟
+        timer();
+
+        //设置计算器
+        setInterval(timer,1000);
+    </script>
+</body>
+</html>

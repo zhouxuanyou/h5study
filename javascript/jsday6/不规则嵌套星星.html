@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // //简单实现，外部为行数，内部循环为列
+        // for (let i = 1; i <=4 ; i++) {
+        //     for (let j = 1; j <=4 ; j++) {
+        //         if (j <=i){//列数小于等于行数
+        //             document.write('*');
+        //         }
+        //     }
+        //     document.write('<br>');//打印每一行就换行
+        // }
+
+        //封装函数
+        function star(row,low) {
+            for (let i = 1; i <=row ; i++) {
+                for (let j = 1; j <=low; j++) {
+                    if (j <= i){
+                        document.write('*');
+                    }
+
+                }
+                document.write('<br>');
+            }
+        }
+
+        star(100,100);
+    </script>
+</body>
+</html>
