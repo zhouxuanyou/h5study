@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box1" class="box2">这是一个盒子</div>
+    <div>这是一个盒子</div>
+    <div>这是一个盒子</div>
+    <script>
+        // 使用getElementById()方法
+        let box = document.getElementById('box1');
+        //修改它的颜色
+        box.style.color = 'red';
+        //getElementsByTagName()
+        let box1 = document.getElementsByTagName('div');
+        console.log(box1);
+        //getElementsByClassName(类名)
+        let box2 = document.getElementsByClassName('box2');
+        console.log(box2);
+        //h5选择器访问
+        let box3= document.querySelector('div');//返回页面中的第一个元素
+        box3.style.background = 'green';
+        let box4 = document.querySelectorAll('div');//返回页面中所有匹配的元素
+        box4.style.background = 'yellow';
+
+
+    </script>
+
+</body>
+</html>

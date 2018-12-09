@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            font-size: 50px;
+            background: #141414;
+            color: #82ff5b;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <!--定义一个div盒子-->
+    <div id="box"></div>
+
+    <script>
+        //需求实现显示当前日期时间星期几到网页上，每秒钟更新一次
+        //分析先设置一个HTML标签到网页上，然后获取当前日期时间，将时间显示到页面上
+        //封装功能为不满10加0的函数
+        function add(num){
+            if(num<10){
+                num = "0"+num
+            }
+            return num;
+        }
+        function timer() {
+            //设置当前时间
+            let nowday = new Date();
+
+
+            //得到年
+            let year = nowday.getFullYear();
+            year = add(year);
+
+            //得到月
+            let month = nowday.getMonth();
+            month = add(month)+1;
+            // console.log(month);
+            //得到天数
+            let day = nowday.getDate();
+            day = add(day);
+
+            //得时间
+            let hours = nowday.getHours();
+            hours = add(hours);
+            //得到分钟
+            let miuntes = nowday.getMinutes();
+            mintues = add(miuntes);
+            //得到秒
+            let second = nowday.getSeconds();
+            second = add(second);
+
+            //得到星期几
+            var week = nowday.getDay();
+            var weekday =['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+            week = weekday[week];//得到的日期相当于索引
+            //拼接
+            let str = year + '-' + month + '-' + day + ' ' + hours + ':' + mintues+':' +second +':' + week;
+
+            //放入盒子内
+            document.getElementById('box').innerHTML = str;
+
+        }
+
+        //先调用无延迟
+        timer();
+
+        //设置计算器
+        setInterval(timer,1000);
+    </script>
+</body>
+</html>

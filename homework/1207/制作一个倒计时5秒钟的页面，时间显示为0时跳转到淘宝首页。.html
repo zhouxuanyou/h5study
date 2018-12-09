@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <span id="span">5</span>
+        秒之后跳转到淘宝
+    </div>
+
+    <script>
+        //设计倒计时的功能然后跳转页面
+        //分析，先获取到html页面的静态属性，然后把动态值赋值给html
+
+        let num = 5;
+        let timeid = setInterval(function () {
+            num--;
+            //判断将倒计时小于0时停止计时器然后跳转页面
+            if (num < 0){
+                clearTimeout(timeid);//结束计时器
+                location.href = 'https://uland.taobao.com/';//添加跳转路径
+            }else {
+                //把num值赋值给页面中去
+                document.getElementById('span').innerHTML = num;
+            }
+
+        },1000)
+    </script>
+</body>
+</html>

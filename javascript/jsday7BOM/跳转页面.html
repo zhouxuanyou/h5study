@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="./window对象方法.html" onclick="return jump()">页面跳转</a>
+
+    <script>
+        //需求跳转指定页面，弹出提示框确定和取消
+        //分析，把得到的内容返回给a标签，判断是否为真或者假
+
+        //设置方法
+        function jump() {
+            let res = confirm('是否跳转到指定页面');
+            //判断条件
+            if (res === false){
+                return false;//返回结果
+            }
+        }
+
+    </script>
+</body>
+</html>

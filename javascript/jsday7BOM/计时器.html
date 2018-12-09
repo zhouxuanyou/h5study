@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //每隔1秒输出1-10的值
+        //分析，先定义函数
+
+        // //设置计时器
+        // let a = 0;
+        // var timeid = setInterval( function () {
+        //
+        //     a ++;
+        //     //当大于10的时候结束计时器
+        //     if (a>10){
+        //         clearInterval(timeid);
+        //     }else {
+        //         console.log(a);
+        //     }
+        //
+        //
+        //
+        // },1000);
+        //
+
+
+       let num = 0;
+
+       let timeid =  setTimeout(run,1000);
+       function run() {
+            num++;
+            //判断执行条件
+            if (num>10){
+                clearTimeout(timeid)
+            }else {
+                console.log(num);
+
+                //开启计时器
+                setTimeout(run,1000);
+                document.write('杀'+'<br>');
+            }
+        }
+    </script>
+
+</body>
+</html>

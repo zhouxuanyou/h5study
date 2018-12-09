@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //console.log(window.navigator);
+        //console.log(navigator);
+
+
+        //需求： 判断当前浏览器是哪个浏览器，
+        //是Chrome， 输出A
+        //是firefox , 输出B
+        //是IE, 输出C
+        //其他浏览器： 输出D
+
+
+        //获取用户代理
+        let uAgent = navigator.userAgent.toLowerCase();
+
+        //判断当前是什么浏览器
+        if(uAgent.indexOf("chrome") !== -1){
+
+            alert("A");
+
+        }else if(uAgent.indexOf("firefox") !== -1 ){
+
+            alert("B");
+
+        }else if(uAgent.indexOf("msie") !== -1 || uAgent.indexOf("ie") !== -1 ){
+
+            alert("C");
+        }else{
+            alert("D");
+        }
+
+
+    </script>
+</body>
+</html>

@@ -7,7 +7,7 @@
 </head>
 <body>
     //选择题
-        1:C 2:B 3:A 4:B 5:A 6:B 7:C 8:C 9:C 10:B
+        1:C 2:C 3:A 4:B 5:A 6:B 7:C 8:C 9:C 10:B
     //简答题
 
     1题：{
@@ -96,7 +96,7 @@
     for (let i = 0; i <arr.length ; i++) {
         //二次循环取出小数组的具体值
         for (let j = 0; j < arr[i].length; j++) {
-            if (arr[i][j]==='大一') {
+            if (arr[i][j]==='大一'&& arr[i][j-2]==='女') {
                 //将符合要求的元素添加到元组里
                 arrs.push(arr[i]);
             }
