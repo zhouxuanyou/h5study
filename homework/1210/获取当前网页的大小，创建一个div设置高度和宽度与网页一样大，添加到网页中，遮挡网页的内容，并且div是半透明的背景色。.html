@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">这是蒙城</div>
+    <script>
+        /*
+        * 获取当前网页的大小，创建一个div设置高度和宽度与网页一样大，添加到网页中，遮挡网页的内容，并且div是半透明的背景色。
+        * 分析：
+        *   获取网页的长宽
+        *   创建新节点和网页长宽一样的大小，并且为透明
+        *
+        *
+        * */
+
+        //获得网页的长宽
+        let windheight = document.documentElement.clientHeight;
+        let windwidth = document.documentElement.clientWidth;
+        // console.log(windheight,windwidth);
+
+        //获取div的元素
+        let box = document.getElementById('box');
+        // console.log(box);
+        box.onclick = function(){
+            //设置div样式
+            box.style.backgroundColor = 'rgba(220,38,38,0.5)';
+            box.style.width = windwidth;
+            box.style.height = windheight;
+            box.style.lineHeight = windheight;
+            box.style.textAlign = 'center';
+            box.style.position = 'relative ';
+            // console.log(widt)
+        }
+
+    </script>
+
+</body>
+</html>

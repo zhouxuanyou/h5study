@@ -41,16 +41,23 @@
             //设置规范后缀名
             let imgname = ['jpg','png','gif'];
 
+            //设置一个标杆
+            let flag = false;
+
             //判断条件
             for (let i = 0; i < imgname.length; i++) {
                 if (filename === imgname[i]){
-                    alert('上传成功');
-                    break;
-                } else {
-                    alert('上传失败，请输入指定的格式');
+                    flag = true;
                     break;
                 }
             }
+            //判断后缀名提示
+            if (flag){
+                alert(val+'上传成功');
+            }else {
+                alert(val+'上传失败，格式不支持');
+            }
+
 
         }
 
