@@ -5,7 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-    <div id="box">这是蒙城</div>
+    <div id="box">
+        这是蒙城
+        <div id="box1">弹出框</div>
+    </div>
+
     <script>
         /*
         * 获取当前网页的大小，创建一个div设置高度和宽度与网页一样大，添加到网页中，遮挡网页的内容，并且div是半透明的背景色。
@@ -23,16 +27,25 @@
 
         //获取div的元素
         let box = document.getElementById('box');
+        let box1 = document.getElementById('box1');
         // console.log(box);
         box.onclick = function(){
             //设置div样式
-            box.style.backgroundColor = 'rgba(220,38,38,0.5)';
-            box.style.width = windwidth;
-            box.style.height = windheight;
-            box.style.lineHeight = windheight;
+            box.style.backgroundColor = 'rgba(250,100,255,0.9)';
+            box.style.width = windwidth+'px';
+            box.style.height = windheight+'px';
+            // console.log(hi);
+            // box.style.lineHeight = windheight;
             box.style.textAlign = 'center';
-            box.style.position = 'relative ';
+            // box.style.position = 'relative ';
             // console.log(widt)
+            box1.style.width = '200px';
+            box1.style.height = '200px';
+            box1.style.backgroundColor = 'red';
+            box1.style.margin = '0 auto';
+            box1.style.textAlign = 'center';
+            box1.style.lineHeight = '200px';
+
         }
 
     </script>
