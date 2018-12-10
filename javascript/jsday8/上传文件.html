@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="file" id="img"><br>图片格式仅支持jpg，png，gif<br>
+    <input type="button" value="图片上传" id="btn">
+    <script>
+        //需求,判断上传的文件是否是指定的格式，失败弹出错误，成功弹出成功
+        /*
+        * 分析：
+        *   首先先设置样式
+        *   然后获取标签元素
+        *   截取上传文件的后缀名
+        *   然后设置格式规范
+        *   通过文件后缀名和格式规范做比较判断，如果格式正确就返回true，否则为false
+        *
+        * */
+        //获取标签元素
+        let img = document.getElementById('img');
+        let btn = document.getElementById('btn');
+        // console.log(img,btn);
+        //注册事件
+        btn.onclick = function (){
+            //获取上传文件的值
+            let val = img.value;
+            // console.log(val);
+            //截取后缀名
+            let pos = val.lastIndexOf('.');//找到后缀名位置
+            let filename = val.substr(pos+1).toLocaleLowerCase();
+            // console.log(filename);
+
+            //设置规范后缀名
+            let imgname = ['jpg','png','gif'];
+
+            //判断条件
+            for (let i = 0; i < imgname.length; i++) {
+                if (filename === imgname[i]){
+                    alert('上传成功');
+                    break;
+                } else {
+                    alert('上传失败，请输入指定的格式');
+                    break;
+                }
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
