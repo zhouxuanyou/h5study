@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#" id="myform">
+        <input type="text" name="username" id="txt"><br>
+        <input type="submit">
+    </form>
+    
+    <script>
+        /*验证注册表单用户名长度是否大于等于6位并且小于等于12位，如果条件成立提交表单到regsiter.html页面，否则弹出提示框注册失败*/
+        //分析，先设置form表单。当数据提交时默认返回的是true，获取标签的元素，然后判断字节大小，不符合条件就返回false
+
+        //获得元素
+        let form = document.getElementById('myform');
+        let user = document.getElementById('txt');
+
+        //注册事件
+        form.onsubmit = function () {
+            //获取输入的值
+            let val = user.value;
+            // console.log(val);
+            if (val.length >= 6 && val.length <= 12) {
+                alert('注册成功');
+            }else {
+                alert('注册失败，请输入大于6小于12的数据');
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>

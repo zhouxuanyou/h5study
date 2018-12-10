@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="inp" value="">
+    <script>
+        //获取标签属性
+        let inp = document.getElementById('inp');
+
+        //注册事件
+        inp.onkeyup = function () {
+            //获取文本框的文字内容
+            let val = inp.value;
+            if (val.length > 6){
+                //如果文本字符大于6就禁止输入
+                inp.value = val.substr(0,6);
+            }
+            console.log(val);
+        }
+    </script>
+
+</body>
+</html>

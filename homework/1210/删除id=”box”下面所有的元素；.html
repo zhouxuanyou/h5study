@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="parent">
+        <p>1</p>
+        <p id="two">1</p>
+        <p>1</p>
+        <p>1</p>
+    </div>
+    <script>
+        //获取所有元素
+        let child = parent.childNodes;
+        // //倒删
+        // for (let i = child.length-1; i >= 0 ; i--) {
+        //     parent.removeChild(child[i]);
+        // }
+        //正删
+        let len = child.length-1;
+        for (let i = 0; i <len ; i++) {
+            parent.removeChild(child[0]);
+        }
+        console.log(parent);
+    </script>
+
+</body>
+</html>

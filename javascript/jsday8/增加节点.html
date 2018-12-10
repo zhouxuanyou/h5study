@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="parent">
+        <p>1</p>
+        <p id="two">1</p>
+        <p>1</p>
+        <p>1</p>
+    </div>
+    <script>
+        //创建新节点
+        //获取父节点
+        let parent = document.getElementById('parent');
+        let pele = document.createElement('p');
+        //设置属性
+        pele.setAttribute('class','name');
+        pele.innerText='nihao';
+        console.log(pele);
+        //追加元素
+        parent.appendChild(pele);
+        console.log(parent);
+        //追加到指定位置
+        let two = document.getElementById('two');
+        parent.insertBefore(pele,two);
+    </script>
+</body>
+</html>

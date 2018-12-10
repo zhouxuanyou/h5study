@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="parent">
+        <p>1</p>
+        <p id="two">1</p>
+        <p>1</p>
+        <p>1</p>
+    </div>
+    <script>
+        //获取元素
+        let parent = document.getElementById('parent');
+        let two = document.getElementById('two');
+
+        //创建新节点
+        let pele = document.createElement('p');
+        //设置属性
+        pele.className = 'xxx';
+        pele.innerText = 'wohao';
+        console.log(pele);
+        //替换节点
+        parent.replaceChild(pele,two);
+
+    </script>
+
+</body>
+</html>

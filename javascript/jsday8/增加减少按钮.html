@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            /*text-align: center;*/
+            width: 350px;
+            height: 350px;
+            margin: 0;
+            display: inline-block;
+            clear: left;
+
+        }
+        #num {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            float: left;
+
+
+        }
+        #add,#reduce{
+            width: 100px;
+            height: 100px;
+            float: left;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <input id="num" type="text" value="0">
+        <button id="add">+</button>
+        <button id="reduce">_</button>
+    </div>
+
+    <script>
+        //需求点击加好数字增加，点击减号数字减少
+
+        //获取属性
+        let num = document.getElementById('num');
+        let add = document.getElementById('add');
+        let reduce = document.getElementById('reduce');
+
+        //事件注册
+        add.onclick = function () {
+            let shopnum = num.value;
+            shopnum++;
+            // console.log(shopnum);
+            num.value = shopnum;
+            if (shopnum > 0){
+                reduce.style.cursor = 'default';
+            }
+        };
+        
+        reduce.onclick = function () {
+            let shopnum = num.value;
+            shopnum--;
+            // console.log(shopnum);
+            num.value = shopnum;
+            if (shopnum <= 0){
+                num.value = 0;
+                reduce.style.cursor = 'not-allowed';
+            }
+        }
+
+    </script>
+</body>
+</html>

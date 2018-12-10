@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <p>1</p>
+        <p id="two">2</p>
+        <p>3</p>
+        <p>4</p>
+    </div>
+    <script>
+        // <!--属性	parentNode	父节点
+        let two = document.getElementById('two');
+        let parent = two.parentNode;
+        console.log(parent);
+
+        // firstChild	列表中的第一个节点
+        let firs = parent.firstChild;
+        console.log(firs);
+
+        // lastChild	列表中的最后一个节点
+        let last = parent.lastChild;
+        console.log(last);
+
+        // childNodes	所有子节点的列表（空格换行也是）数组
+        let child = parent.childNodes;
+        console.log(child);
+
+        // previousSibling	上一个兄弟节点
+        let pre = two.previousSibling;
+        console.log(pre);
+
+        // // nextSibling	下一个兄弟节点-->
+        let next = two.nextElementSibling;
+        console.log(next);
+
+    </script>
+
+</body>
+</html>

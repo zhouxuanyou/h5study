@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box"></div>
+<style>
+    #box{
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+    }
+</style>
+
+    <script>
+        //获取对象
+        let box = document.getElementById('box');
+
+        //注册事件
+        //移入事件
+        box.onmouseover = function () {
+            box.style.backgroundColor = 'red';
+        };
+        //溢出事件
+        box.onmouseout = function () {
+            box.style.backgroundColor = '';
+        }
+    </script>
+
+</body>
+</html>
