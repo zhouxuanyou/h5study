@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+    aaa
     <div id="box">
         这是蒙城
         <div id="box1">弹出框</div>
@@ -37,17 +38,23 @@
             // console.log(hi);
             // box.style.lineHeight = windheight;
             box.style.textAlign = 'center';
-            // box.style.position = 'relative ';
+            box.style.position = 'absolute ';
+            box.style.left = "0";
+            box.style.top = "0";
             // console.log(widt)
             box1.style.width = '200px';
             box1.style.height = '200px';
-            box1.style.backgroundColor = 'red';
+            box1.style.backgroundColor = 'rgba(0,0,0,0.5)';
             box1.style.margin = '0 auto';
             box1.style.textAlign = 'center';
             box1.style.lineHeight = '200px';
 
         }
+        
+        //wind事件
+        window.onresize = function () {
 
+        }
     </script>
 
 </body>
