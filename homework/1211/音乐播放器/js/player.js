@@ -121,10 +121,11 @@ window.onload = function () {
         num ++;
 
         //判断索引条件
-        if (num > musicpath.length-1 ){
+        if (num === musicpath.length ){
             num = 0;
         }
         audio.src = musicpath[num];
+
 
         //调用播放
         flag = true;
