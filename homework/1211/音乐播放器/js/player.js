@@ -18,6 +18,9 @@
 *   播放列表模块
 *   分析，需要设置当前歌曲给与状态
 *       首先确认事件源，然后获取元素对象，赋值给元素,播放的列表遍历出来，首先需要将所有列表的类名清空，然后赋值给当前状态的class
+*   音乐图片模块
+*   分析：
+*       方法和音乐路径类似
 *
 *
 *
@@ -44,6 +47,8 @@ window.onload = function () {
     let presentTime = document.querySelector("#presentTime");
     //获取播放列表
     let musiclist = document.querySelectorAll('#playerList li');
+    //获取图片元素
+    let musicimg = document.querySelector('#musicimg');
 
     // //获得总时间和当前时间
     // let musictime = audio.duration;
@@ -52,10 +57,12 @@ window.onload = function () {
     // console.log(musictime,musicnowtime);
 
 
-    // console.log(curProgrees);
+    // console.log(musicimg);
 
     //定义数组
     let musicpath = ['./video/1.mp3','./video/2.mp3','./video/3.mp3'];
+    //定义音乐图片路径
+    let musicimgpath = ['./images/musicimg/1.jpg','./images/musicimg/2.jpg','./images/musicimg/3.jpg'];
     //定义索引
     let num = 0;
 
@@ -120,6 +127,7 @@ window.onload = function () {
         flag = true;
         thePlay();
         theChancelist();
+        theImg();
     }//上一曲
 
     function thePrev() {
@@ -140,7 +148,8 @@ window.onload = function () {
         flag = true;
         thePlay();
         theChancelist();
-    }//上一曲
+        theImgpre();
+    }
 
     //停止歌曲
     function theStop() {
@@ -220,5 +229,25 @@ window.onload = function () {
         }
         //因为播放列表的索引和音频路径索引是相同的可以直接调用num
         musiclist[num].className = 'active';
+    }
+
+    //音乐图片模块
+    function theImg() {
+        num ++;
+
+        //判断索引条件
+        if (num > musicimgpath.length-1 ){
+            num = 0;
+        }
+        musicimg.src = musicimgpath[num];
+    }
+    function theImgpre() {
+        num --;
+
+        //判断索引条件
+        if (num < 0){
+            num = musicimgpath.length-1;
+        }
+        musicimg.src = musicimgpath[num];
     }
 };
