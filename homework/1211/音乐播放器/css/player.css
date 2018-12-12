@@ -16,7 +16,7 @@ body{ padding:50px 0;
 
 #player{width:600px; height:400px; background:#130519de;margin:0 auto;}
 #playerControl{position:relative;height:200px;}
-#playerControl .playerImg{padding:25px; box-sizing: border-box;}
+#playerControl .playerImg{padding:25px; box-sizing: border-box;opacity: 0.5;}
 
 /*播放控制界面*/
 #pcontrol{position: absolute;left:300px; top:85px;}

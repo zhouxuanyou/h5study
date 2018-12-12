@@ -125,13 +125,14 @@ window.onload = function () {
             num = 0;
         }
         audio.src = musicpath[num];
+        musicimg.src = musicimgpath[num];
 
 
         //调用播放
         flag = true;
         thePlay();
         theChancelist();
-        theImg();
+        // theImg();
     }
 
     //上一曲
@@ -148,12 +149,13 @@ window.onload = function () {
             num = musicpath.length-1;
         }
         audio.src = musicpath[num];
+        musicimg.src = musicimgpath[num];
 
         //调用播放
         flag = true;
         thePlay();
         theChancelist();
-        theImgpre();
+        // theImgpre();
     }
 
     //停止歌曲
@@ -236,25 +238,25 @@ window.onload = function () {
         musiclist[num].className = 'active';
     }
 
-    //音乐图片模块
-    function theImg() {
-        num ++;
-
-        //判断索引条件
-        if (num > musicimgpath.length-1 ){
-            num = 0;
-        }
-        musicimg.src = musicimgpath[num];
-    }
-    function theImgpre() {
-        num --;
-
-        //判断索引条件
-        if (num < 0){
-            num = musicimgpath.length-1;
-        }
-        musicimg.src = musicimgpath[num];
-    }
+    // //音乐图片模块
+    // function theImg() {
+    //     num ++;
+    //
+    //     //判断索引条件
+    //     if (num > musicimgpath.length-1 ){
+    //         num = 0;
+    //     }
+    //     musicimg.src = musicimgpath[num];
+    // }
+    // function theImgpre() {
+    //     num --;
+    //
+    //     //判断索引条件
+    //     if (num < 0){
+    //         num = musicimgpath.length-1;
+    //     }
+    //     musicimg.src = musicimgpath[num];
+    // }
 
     //背景图片切换
     function theBgimg() {
