@@ -5,7 +5,14 @@
 .mr10{margin-right:10px;}
 ul{list-style: none;}
 .clearfix:after{content: ""; height:0; line-height: 0; visibility: hidden;display: block; clear:both;}
-body{background:#262626; padding:50px 0; color:#fff; }
+body{ padding:50px 0;
+    color:#fff;
+    background-image: url("../images/bfimg/pap.er/5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;}
 
 #player{width:600px; height:400px; background:#130519de;margin:0 auto;}
 #playerControl{position:relative;height:200px;}
