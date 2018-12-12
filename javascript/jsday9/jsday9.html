@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            /*background:#82ff5b;*/
+            background-image: url("../../css/projectHtml-Css/images/01.jpg")  ;
+            position: absolute;
+            line-height: 100px;
+            font-size: 50px;
+            color: red;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">龍杀</div>
+    <script>
+        //需求，设置一个div盒子跟随鼠标的移动而移动
+        //分析:
+        /*
+        * 获取事件源：document
+        * 事件对象：onmousemove
+        *   先设置一个div盒子，设置样式，和布局
+        *   注册事件，然后鼠标的坐标
+        *   获取div元素，将鼠标坐标赋值给div
+        *
+        * */
+        document.onmousemove = function (event) {
+            //先判断兼容性
+            var e = event || window.event;
+            //获取鼠标坐标
+            let x = e.clientX;
+            let y = e.clientY;
+
+            // console.log(x,y);
+
+            //获取div对象
+            let box = document.querySelector('#box');
+            //将鼠标的坐标赋值给box
+            box.style.top = y-50 + 'px';
+            box.style.left = x-50 + 'px';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            text-align: center;
+            background: #4b4b4a;
+            width: 100px;
+            list-style: none;
+            line-height: 100px;
+            position: absolute ;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        /*
+        * 需求：自定义一个浏览器右键菜单，单击右键是显示它
+        * 分析:
+        *   先制作右键菜单，默认样式为隐藏
+        *   确认事件源
+        *   确实事件类型
+        *   获取对象元素
+        *   注册事件
+        *
+        *
+        *
+        * */
+        //注册鼠标左键掉价事件
+        document.oncontextmenu = function () {
+            let ul = document.querySelector('ul');
+            ul.style.display = 'block';
+
+            //住址浏览器默认性能
+            return false;
+        }
+    </script>
+</body>
+</html>

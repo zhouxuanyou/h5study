@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            text-align: center;
+            background: #4b4b4a;
+            width: 100px;
+            list-style: none;
+            line-height: 100px;
+            position: absolute ;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        //需求鼠标右键显示列表，然后跟随移动，左键隐藏
+        //分析，事件源是document，事件类型oncontextmenu
+
+        document.oncontextmenu = function (event) {
+            //兼容性
+            let e = event || window.event;
+
+            ///获取鼠标右键坐标
+            //获取鼠标坐标
+            let x = e.clientX;
+            let y = e.clientY;
+
+            // console.log(x,y);
+
+            //赋值给div
+            let ul = document.querySelector('ul');
+            ul.style.top = y + 'px';
+            ul.style.left = x + 'px';
+            ul.style.display = 'block';
+
+            //诅咒默认值浏览行为
+            e.preventDefault();
+        };
+        
+        //注册鼠标左键掉价事件
+        document.onclick = function () {
+            let ul = document.querySelector('ul');
+            ul.style.display = 'none';
+        }
+
+    </script>
+</body>
+</html>

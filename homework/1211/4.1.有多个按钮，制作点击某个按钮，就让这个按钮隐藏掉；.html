@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>点击1</button>
+    <button>点击2</button>
+    <button>点击3</button>
+
+    <script>
+        /*
+        * 需求：有多个按钮，制作点击某个按钮，就让这个按钮隐藏掉；
+        *
+        * 分析：
+        *   首先设置几个按钮
+        *   然后获取按钮的属性
+        *   注册事件监听
+        *   找到事件源
+        *   找到事件类型
+        *
+        *
+        * */
+
+        //获取btn按钮
+        let btn = document.querySelectorAll('button');
+        // console.log(btn);
+        for (let i = 0; i <btn.length ; i++) {
+            // btn[i].style.display = 'none';
+            //注册事件
+            btn[i].onclick = function () {
+
+                btn[i].style.display = 'none';
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>
