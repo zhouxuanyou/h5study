@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 500px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        #box #meu{
+            width: 400px;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #box #meu li{
+            width: 100px;
+            height: 50px;
+            float: left;
+            background: #ccc;
+            text-align: center;
+            line-height: 50px;
+            box-sizing: border-box;
+            border: 1px solid yellow;
+            cursor: pointer;
+        }
+        #box #meu li.active{
+            background: red;
+        }
+        #box #cont{
+            position: relative;
+        }
+        #box #cont p{
+            width: 400px;
+            height: 400px;
+            background: green;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 100px;
+            line-height: 400px;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #box #cont p.on{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="meu">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div id="cont">
+            <p class="on">1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </div>
+    </div>
+    <script>
+        //鼠标点击菜单 菜单和内容都激活
+        //注册点击事件
+        //获取li 先获取ul
+        let meu = document.querySelector("#meu");
+        let limeu = meu.querySelectorAll("li");
+        //内容也跟着变化
+        // 得到cont
+        let cont = document.querySelector("#cont");
+        //得到p
+        let pele = cont.querySelectorAll("p");
+        //遍历得到每一个li
+        for(let i = 0; i < limeu.length; i++){
+            //注册点击事件
+            limeu[i].onclick = function(){
+                //先干点所有的active 和on
+                for(let j = 0; j < limeu.length; j++){
+                    limeu[j].className = "";
+                    pele[j].className = "";
+                }
+                //再救活一个
+                limeu[i].className = "active";
+                pele[i].className = "on";
+            }
+        }
+    </script>
+
+</body>
+</html>
