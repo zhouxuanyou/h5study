@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*定义字体*/
+        @font-face
+        {
+            font-family: "字体图标";
+            src: url('fonts/font_1451959379_8626566.eot'),
+            url('fonts/font_1451959379_8626566.ttf'),
+            url('fonts/font_1451959379_8626566.woff'),
+            url('fonts/font_1451959379_8626566.svg')
+        }
+
+        #login{
+            width:300px;
+            height:200px;
+            margin:0 auto;
+        }
+        #login div{
+            width:300px; height:42px; border:1px solid red;
+            box-sizing: border-box; margin: 40px 0;
+            position: relative;
+        }
+        #login div input{
+            width:296px;
+            height:36px;
+            position: absolute;
+            left:-1px;
+            top:-1px;
+            text-indent: 45px;
+        }
+        #login div .iconfont{
+            position: absolute;
+            display: inline-block;
+            width:40px; height:40px;
+            background:#999;
+            top:0px;
+            font-family: "字体图标";
+            text-align: center;
+            line-height: 40px;
+            color:#fff;
+            font-size:20px;
+        }
+        #login div #del{
+            position: absolute;
+            right:10px;
+            top:12px;
+            font-family: "字体图标";
+            display: none;
+            cursor: pointer;
+        }
+
+        #login div b{
+            position:absolute;
+            bottom : -42px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="login">
+    <form action="#">
+        <div>
+            <input id="user" type="text" placeholder="会员名/邮箱/手机号"><b id="userMsg"></b>
+            <span class="iconfont">&#xe601</span>
+            <span id="del">&#xe613</span>
+        </div>
+        <div>
+            <input id="pwd" type="password">
+            <b id="pwdMsg"></b>
+            <span class="iconfont">&#xe600</span>
+        </div>
+        <input type="submit" value="登录">
+    </form>
+</div>
+    <script>
+        /*
+        * 需求:
+        *   用户名和密码框实现字符集的验证功能，验证用户名的长度和规则，用户名输入框需要有删除按钮，输入文字的时候可以删除并且显示效果，当null的时候隐藏
+        *
+        *   分析：
+        *       确认事件源
+        *       确认事件对象
+        *
+        *       验证效果分析：
+        *           首先确认事件类型为焦点事件
+        *           当离开焦点，开始判断用户输入的内容是否合法
+        *
+        *
+        *
+        *
+        * */
+
+        //用户框文字输入显示和隐藏删除按钮
+        //获取元素对象
+        let user = document.querySelector('#user');
+        let del = document.querySelector('#del');
+        let msg = document.querySelector('#userMsg');
+
+        // console.log(user,msg);
+
+        //注册事件
+        user.onkeyup = function () {
+            //先获取user的输入文字
+            let val = user.value;
+            // console.log(val);
+
+            //判断输入文字是否有值
+            if (val.length > 0){
+                del.style.display = 'block';
+            }
+            
+
+        };
+        
+        //注册del框点击事件
+        del.onclick = function () {
+            user.value = '';
+        };
+        
+        
+        //注册焦点事件
+        user.onblur = function () {
+            let val = user.value;
+
+            //定义验证规则
+            let reg = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;//5-16位字母开始，其他字符是字母数字下划线
+
+            let res = reg.test(val);
+
+            //判断条件
+            if (res === false){
+                msg.innerHTML = '请输入有效的内容，不得小于5个大于6个，首字母必须是字母开头'
+            }
+        };
+
+        //注册密码验证
+        //获取元素对象
+        let pwd = document.querySelector('#pwd');
+        let pwdmsg = document.querySelector('#pwdMsg');
+
+        pwd.onblur = function () {
+            let pwds = pwd.value;
+
+            //定义验证规则
+            let reg = /^[0-9]{5,12}$/;//只能是数字，5-12位；
+
+            let res = reg.test(pwds);
+
+            //判断条件
+            if (res === false){
+                pwdmsg.innerHTML = '密码必须是村数字，切大于5小于12';
+            }
+
+        }
+
+    </script>
+</body>
+</html>

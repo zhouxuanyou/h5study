@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #rstop{
+            width: 50px;
+            height: 50px;
+            background: red;
+            line-height: 50px;
+            text-align: center;
+            position: fixed;
+            right: 50px;
+            margin-top: 300px;
+            display: none;
+        }
+    </style>
+</head>
+<body style="height: 5000px;">
+    <div id="rstop">Top</div>
+
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+    <p>1111111111111111111111111</p>
+
+    <script>
+        /*
+        * 需求：当返回顶部盒子的top大于多少显示，默认隐藏
+        *       点击返回顶部盒子页滚动条距离减小
+        *       确认事件源
+        *       确认事件类型
+        *       分析：首先先设置一个计时器，然后获取当前的距离，设置一个时间来每隔多少秒用当前距离减去多少距离，直到为0 时关闭计时器
+        *
+        * */
+
+        //获取对象
+        let srtop = document.querySelector('#rstop');
+        // console.log(srtop);
+
+        //注册事件
+        window.onscroll = function () {
+            //h获得当前滚动条的距离
+            let scr = document.documentElement.scrollTop || document.body.scrollTop;
+            // console.log(scr);
+
+            //当距离大于多少就显示
+            if (scr >300){
+                srtop.style.display = 'block';
+            }else {
+                srtop.style.display = 'none';
+            }
+        };
+        
+        //注册点击事件
+        srtop.onclick = function () {
+            //设置一个计时器
+            let timer = null;
+
+            timer = setInterval(function () {
+                //h获得当前滚动条的距离
+                let scr = document.documentElement.scrollTop || document.body.scrollTop;
+
+                //关闭计时器
+                if (scr<=0){
+                    clearInterval(timer);
+                }
+
+                //将每隔多少秒减轻的距离赋值给滚动条
+                document.documentElement.scrollTop = scr - 100;
+                document.body.scrollTop = scr -100;
+
+
+            },30)
+        }
+    </script>
+
+</body>
+</html>
