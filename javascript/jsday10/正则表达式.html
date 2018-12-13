@@ -6,15 +6,78 @@
 </head>
 <body>
     <script>
-        //正则表达式
-        let reg = new RegExp('2');//字符串、元字符，模式修饰符
+        // //正则表达式
+        // var reg = new RegExp('2');//字符串、元字符，模式修饰符
+        //
+        // var regs = /'字符串，元字符，模式修饰符'/;
+        //
+        // var str = 'wwewewe2swwq';
+        //
+        // //验证字符串是否含有数字
+        // let res = reg.test(str);
+        //
+        //
+        // //结束符
+        // var str = "google";
+        //
+        // //定义规则    A
+        // var reg = /^google$/;//以A开始，以A结束，必须是同一个A
+        //
+        // //验证
+        // var result = reg.test(str);
+        // console.log(result);
+        //
+        // //一类字符
+        //
+        // //验证str中是否含有a,b,c中任何一个字符
+        // var str = "wwwwwwwfwwwwwwwwww";
+        // var reg = /[abc]/;
+        // var result = reg.test(str);
+        // console.log(result);//false
+        //
+        // //验证str中是否含有0-9的数字
+        // var str = "wwwwwwwfww7wwwwwwww";
+        // var reg = /[0-9]/;
+        // var result = reg.test(str);
+        // console.log(result);//true;
+        //
+        // //验证str中是否含有a-z的数字
+        // var str = "3712382b7827";
+        // var reg = /[a-z]/;
+        // var result = reg.test(str);
+        // console.log(result);//true;
+        //
+        // //验证str中是否含有a-z的数字
+        // var str = "3712382D7827";
+        // //var reg = /[a-zA-Z]/;
+        // var reg = /[A-z]/;
+        // var result = reg.test(str);
+        // console.log(result);//true;
+        //math方法
+        // //在str中提取box
+        // var str = "wwwwboxwwwwboxwwwwww";
+        // //var reg = /box/;//["box", index: 4, input: "wwwwboxwwwwboxwwwwww", groups: undefined]
+        // var reg = /box/g;//["box", "box"]
+        // var result = str.match(reg);
+        // console.log(result);
+        //反向引用
+        // var str = "ww111www222www333www123wwwwwww";
+        // var reg = /(\d)\1\1/g;//RegExp:$1 -- 1
+        // var result = str.match(reg);
+        // console.log(result);
+        //
+        //
+        // //需求： 匹配ABAB格式的数字.例如:1212  3434
+        // var str = "ww1212www2323www3434www1234wwwwwww";
+        // var reg = /(\d)(\d)\1\2/g
+        // var result = str.match(reg);
+        // console.log(result);
 
-        let regs = /'字符串，元字符，模式修饰符'/;
-
-        let str = 'wwewewe2swwq';
-
-        //验证字符串是否含有数字
-        let res = reg.test(str);
+        //需求： 匹配ABBA格式的数字.例如:1221  3443
+        var str = "ww1221www2332www3443www1234wwwwwww";
+        var reg = /(\d)(\d)\2\1/g;
+        var result = str.match(reg);
+        console.log(result);
     </script>
 </body>
 </html>

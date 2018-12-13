@@ -7,7 +7,7 @@
         #rstop{
             width: 50px;
             height: 50px;
-            background: red;
+            background: rgba(255, 0, 0, 0.37);
             line-height: 50px;
             text-align: center;
             position: fixed;
@@ -67,6 +67,27 @@
             }
         };
         
+        // //注册点击事件
+        // srtop.onclick = function () {
+        //     //设置一个计时器
+        //     let timer = null;
+        //
+        //     timer = setInterval(function () {
+        //         //h获得当前滚动条的距离
+        //         let scr = document.documentElement.scrollTop || document.body.scrollTop;
+        //
+        //         //关闭计时器
+        //         if (scr<=0){
+        //             clearInterval(timer);
+        //         }
+        //
+        //         //将每隔多少秒减轻的距离赋值给滚动条
+        //         document.documentElement.scrollTop = scr - 100;
+        //         document.body.scrollTop = scr -100;
+        //
+        //
+        //     },30)
+
         //注册点击事件
         srtop.onclick = function () {
             //设置一个计时器
@@ -82,8 +103,8 @@
                 }
 
                 //将每隔多少秒减轻的距离赋值给滚动条
-                document.documentElement.scrollTop = scr - 100;
-                document.body.scrollTop = scr -100;
+                document.documentElement.scrollTop = scr - 30*scr/1000;
+                document.body.scrollTop = scr - 30*scr/1000;
 
 
             },30)
