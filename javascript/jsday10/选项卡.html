@@ -49,7 +49,7 @@
             top: 0;
             left: 0;
         }
-        #box #cont p.on{
+        #box #cont p.active{
             display: block;
         }
     </style>
@@ -63,7 +63,7 @@
             <li>4</li>
         </ul>
         <div id="cont">
-            <p class="on">1</p>
+            <p class="active">1</p>
             <p>2</p>
             <p>3</p>
             <p>4</p>
@@ -89,9 +89,9 @@
                     limeu[j].className = "";
                     pele[j].className = "";
                 }
-                //再救活一个
+                //赋值类名
                 limeu[i].className = "active";
-                pele[i].className = "on";
+                pele[i].className = "active";
             }
         }
     </script>
