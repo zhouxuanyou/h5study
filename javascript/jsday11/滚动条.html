@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 400px;
+            background: #2bf2ff;
+            line-height: 400px;
+            position: absolute;
+            text-align: center;
+            right: 0;
+        }
+    </style>
+</head>
+<body style="height: 5000px">
+    <div id="box">浮动</div>
+    <script>
+        //获取元素对象
+        let box = document.querySelector('#box');
+
+        //获取浏览器的高度
+        let htmltop = document.documentElement.clientHeight ;
+        let boxheight = box.offsetHeight;
+
+        //设置浮动层位置
+        box.style.top = (htmltop-boxheight)/2+'px';
+        
+        //注册一个滚动条
+        window.onscroll = function () {
+            //获取当前位置的滚动条高度
+            let sctop = document.documentElement.scrollTop || document.body.scrollTop;
+
+            //回到的位置
+            target= parseInt((htmltop-boxheight)/2+sctop);
+
+            //运动
+            startmove(target);
+
+        };
+
+        //定义一个计时器
+        let timer = null;
+
+
+        function startmove(target){
+            clearInterval(timer);
+            timer = setInterval(function () {
+                let speed = (target-box.offsetTop)/10;
+
+                //判断速度方向
+                speed = speed > 0?Math.ceil(speed):Math.floor(speed);
+                //关闭计时器
+                if (box.offsetTop ===target){
+                    clearInterval(timer);
+                    // box.style.left = '1000px';
+                }else {
+                    //每隔多少毫秒增加box的定位
+                    box.style.top =box.offsetTop+speed + 'px';
+                }
+
+
+
+            },30)
+        }
+
+
+    </script>
+</body>
+</html>

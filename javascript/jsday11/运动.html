@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: darkorange;
+            margin-top: 50px;
+            position: relative;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点击运动</button>
+    <div id="box"></div>
+    <script>
+        //获取对象元素
+        let btn = document.querySelector('#btn');
+        let box = document.querySelector('#box');
+
+        //设置运动方法
+        //定义一个计时器
+        let timer = null;
+
+        // //注册事件
+        // btn.onclick = function(){
+        //     timer = setInterval(function () {
+        //         //关闭计时器
+        //         if (box.offsetLeft >=1000){
+        //             clearInterval(timer);
+        //         }else {
+        //             //每隔多少毫秒增加box的定位
+        //             box.style.left = box.offsetLeft + 10 +'px';
+        //         }
+        //
+        //
+        //
+        //     },30)
+        // }
+
+        //匀速运动方法
+
+        btn.onclick = startmove;
+        function startmove(){
+            clearInterval(timer);
+            timer = setInterval(function () {
+
+                //关闭计时器
+                if (box.offsetLeft >=1000){
+                    clearInterval(timer);
+                }else {
+                    //每隔多少毫秒增加box的定位
+                    box.style.left = box.offsetLeft + 10 +'px';
+                }
+
+
+
+            },30)
+        }
+
+    </script>
+</body>
+</html>

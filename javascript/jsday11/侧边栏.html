@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 300px;
+            background: #82ff5b;
+            position: absolute;
+            top: 300px;
+            left: -100px;
+        }
+        #spn{
+            width: 30px;
+            line-height: 30px;
+            background: #00a7ea;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"><span id="spn">分享到</span></div>
+    <script>
+        //获取元素对象
+        let box = document.querySelector('#box');
+
+        //注册移入事件
+        box.onmouseover = startmove;
+
+        //定义计时器
+        let timer = null;
+
+        function startmove() {
+
+
+            //关闭计时器
+            clearInterval(timer);
+            timer = setInterval(function () {
+                //设置条件
+                if (box.offsetLeft >= 0){
+                    //关闭计时器
+                    clearInterval(timer);
+                    box.style.left = 0;
+                }else {
+                    //每隔多少毫秒增加box的位置
+                    box.style.left = box.offsetLeft + 10 +'px';
+                }
+
+
+            },30);
+
+        }
+        
+        //注册移出事件
+        box.onmouseout = startout;
+
+        function startout() {
+
+
+            //关闭计时器
+            clearInterval(timer);
+            timer = setInterval(function () {
+                //设置条件
+                if (box.offsetLeft <= -100){
+                    //关闭计时器
+                    clearInterval(timer);
+                    box.style.left = '-100px';
+                }else {
+                    //每隔多少毫秒减少box的位置
+                    box.style.left = box.offsetLeft - 10 +'px';
+                }
+
+
+            },30);
+        }
+    </script>
+</body>
+</html>

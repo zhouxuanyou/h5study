@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:200px; height:50px; background:red; margin-top:50px;
+        }
+
+    </style>
+    <script src="../js/fn.js"></script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        //注册移入移出事件改编盒子的宽度，首先获取事件源，事件类型，事件对象元素
+
+        //获取元素对象
+        let box = document.querySelectorAll('div');
+        // console.log(box);
+
+        //遍历出列表元素
+        for (let i = 0; i <box.length ; i++) {
+            //注册移入事件
+            box[i].onmouseover= function(){
+                startMove(box[i],'width',1000);
+            };
+
+            //注册移出事件
+            box[i].onmouseout= function() {
+                startMove(box[i],'width', 200);
+            }
+        }
+    </script>
+
+</body>
+</html>
