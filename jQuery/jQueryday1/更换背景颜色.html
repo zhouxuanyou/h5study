@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <button id="on">开灯</button>
+    <button id="off">关灯</button>
+
+    <!--//检查jQuery是否引入成功-->
+    <script>
+        // console.log($);
+        //设置开灯效果
+        $('#on').click(function () {
+            $('body').css('backgroundColor','#fff');
+        });
+
+        //设置关灯效果
+        $('#off').click(function () {
+            $('body').css('backgroundColor','#000');
+        })
+    </script>
+
+</body>
+</html>

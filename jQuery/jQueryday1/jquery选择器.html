@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            list-style: none;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .red{
+            color: brown;
+            background: #ccc;
+        }
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <ul>
+        <li>0</li>
+        <li class="red">1</li>
+        <li class="two">2</li>
+        <li>3</li>
+    </ul>
+    <ul>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+
+    <script>
+        //层次选择-兄弟上下全部指定 对象.sibilings("div")
+        // $(".two").siblings("li").css({"background":"red"});
+
+        //基本选择器除id，其他也是数组
+        //层次得到的是数组
+        // console.log($("ul li"));
+
+        //过滤选择器  :first 数组第一个
+        // $("ul li:first").css({"background":"red"});
+        // $("ul li").first().css({"background":"red"});
+
+        //:last   数组最后一个
+        // $("ul li:last").css({"background":"red"});
+        // $("ul li").last().css({"background":"red"});
+
+        //:not(选择器)  除去这一个
+        // $("ul li:not(.two)").css({"background":"red"});
+        // $("ul li").not(".red").css({"background":"red"});
+
+        //:even 索引是偶数
+        // $("ul li:even").css({"background":"red"});
+        // $("ul li").even().css({"background":"red"});//这个不得行
+
+        //:odd  索引是奇数
+        // $("ul li:odd").css({"background":"red"});
+        // $("ul li").odd().css({"background":"red"});//同上不得行
+
+        //:eq    指定索引
+        // $("ul li:eq(5)").css({"background":"red"});
+        // $("ul li").eq(5).css({"background":"red"});
+
+        //:gt    匹配大于索引的元素
+        // $("ul li:gt(4)").css({"background":"red"});
+        // $("ul li").gt(4).css({"background":"red"});//不得行
+
+        //:lt     小于
+        // $("ul li:lt(5)").css({"background":"red"});
+        // $("ul li").lt(5).css({"background":"red"});//不得行
+        <!-- 案例 判断点击添加class -->
+        $("ul li").click(function(){
+            //判断
+            if($(this).hasClass("red")){
+                $(this).removeClass("red");
+            }else{
+                $(this).addClass("red");
+            }
+        });
+
+        //第二种
+        $("ul li").click(function(){
+            $(this).toggleClass("red");
+        })
+
+
+    </script>
+</body>
+</html>

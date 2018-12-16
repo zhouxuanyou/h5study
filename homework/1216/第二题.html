@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            width: 140px;
+            height: 150px;
+            text-align: center;
+            float: left;
+            margin: 20px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        ul{
+            overflow: hidden;
+        }
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <ul>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+        <li>
+            <img src="./images/player.png" alt="">
+            <p>大奶奶</p>
+            <p>￥189</p>
+        </li>
+    </ul>
+    <script>
+        /*将前面3个的产品背景改为蓝色，将第4个产品的名称颜色改为红色，将第6以后的产品价格改为粉色，将最后一个产品的背景改为粉色，将第6个产品的评论字体大小设置为16px；*/
+        //前三li背景为蓝色
+        $("ul li:lt(3)").css("background","blue");
+        //第四个li的第一个p color为红色
+        $("ul li:eq(3) p:first").css("color","red");
+        //第六个li以后的第二个p
+        $("ul li:gt(5) p:nth-child(3)").css("color","pink");
+        //最后一个li背景为粉色
+        $("ul li:last").css("background","pink");
+        //第六个产品名称字体设为20px
+        $("ul li:eq(5) p:nth-child(2)").css("fontSize","20px")
+    </script>
+</body>
+</html>

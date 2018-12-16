@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: #2bf2ff;
+        }
+    </style>
+</head>
+<body>
+    <button>点击运动</button>
+    <div id="box"></div>
+
+
+    <script>
+        //需求更改box的大小
+        //注册点击事件
+        $('button').click(function () {
+            //调用动画效果
+            $('#box').animate({'width':'1000px','height':'1000px'},5000);
+        });
+
+    </script>
+
+</body>
+</html>

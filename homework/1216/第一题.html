@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+
+            margin: 0 auto;
+        }
+        td{
+            width: 200px;
+            text-align: center;
+
+        }
+        .alpha{
+            opacity: 1!important;
+        }
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <table>
+    <tr>
+        <td>序号
+            <input type="checkbox">
+        </td>
+        <td>名称</td>
+        <td>价格</td>
+        <td>数量</td>
+    </tr>
+    <tr>
+        <td>1
+            <input type="checkbox">
+        </td>
+        <td>apple手机</td>
+        <td>5000</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>2
+            <input type="checkbox">
+        </td>
+        <td>HTC手机</td>
+        <td>3000</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>3
+            <input type="checkbox">
+        </td>
+        <td>洛基亚手机</td>
+        <td>2000</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>4
+            <input type="checkbox">
+        </td>
+        <td>三星手机</td>
+        <td>1000</td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td>5
+            <input type="checkbox">
+        </td>
+        <td>黑莓手机</td>
+        <td>5500</td>
+        <td>14</td>
+    </tr>
+</table>
+    <script>
+        //奇数行为淡蓝色
+        $("table tr:even").css({"background":"cornflowerblue","opacity":"0.5"});
+
+        //偶数行为灰色
+        $("table tr:odd").css({"background":"#ccc","opacity":"0.5"});
+
+        //表头颜色为黄色
+        $("table tr:first").css({"background":"yellow","opacity":"0.5"});
+
+        //设置包含黑莓手机的td
+        $("table tr:last td:nth-child(2)").css({"color":"green","fontSize":"14px"});
+
+        //窗口加载
+        $(function(){
+            //鼠标移动到每一行，当前颜色高亮显示
+            $("table  tr").mouseover(function(){
+                $(this).addClass("alpha");
+            });
+            //鼠标移出每一行，当前颜色还原
+            $("table tr").mouseout(function(){
+                $(this).removeClass("alpha");
+            });
+            //点击序号复选框，全选，再点，取消全选
+            // 定义标杆 为true就全选
+            let flag = true;
+            $("table tr:first td input").click(function(){
+                //判断
+                if(flag){
+                    $("table tr td input").prop("checked",true);
+                    flag = false;
+                }else{
+                    $("table tr td input").prop("checked",false);
+                    flag = true;
+                }
+            })
+        })
+
+    </script>
+
+
+</body>
+</html>
