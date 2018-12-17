@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <form action="#">
+        姓名:
+        <input type="text" name="user"><br>
+        性别:
+        <input type="radio" name="sex" value="男">男
+        <input type="radio" name="sex" value="女">女<br>
+        籍贯:
+        <input type="text" name="minzu"><br>
+        介绍:
+        <input type="text" name="msg"><br>
+        <input id="subit" type="button" value="提交">
+    </form>
+    <script>
+        // 一个用户注册表单有： 姓名、性别、籍贯、爱好、个人介绍，使用query取表单元素的值并控制台输出。
+        // 注册表单提交事件
+        $("#subit").click(function(){
+            //获取所有信息
+            // alert(1);
+            $('form input').each(function () {
+                let res = $(this).val();
+                console.log(res);
+            })
+
+        })
+
+
+    </script>
+</body>
+</html>

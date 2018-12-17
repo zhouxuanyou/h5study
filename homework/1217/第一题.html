@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            border:1px solid red;
+        }
+        ul li{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #2bf2ff;
+            list-style: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="./jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <ul>
+        <li>大便1</li>
+        <li>大便2</li>
+        <li>大便3</li>
+        <li>大便4</li>
+        <li>大便5</li>
+    </ul>
+    <div id="box"></div>
+    <script>
+        //利用节点复制实现添加商品到购物车的效果
+
+        //注册点击事件
+        $('ul li').click(function () {
+            //复制商品到box去
+            $(this).clone().appendTo('#box');
+        })
+    </script>
+</body>
+</html>

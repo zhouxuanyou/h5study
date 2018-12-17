@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+    <style>
+        #box{
+            width: 199px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <ul id="parent">
+        <li id="one">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="box"></div>
+    <script>
+        //创建新节点
+        let newli = $('<li>xinjiedian</li>');
+        //增加新节点
+        //在ul的子元素之后增加
+
+        // newli.appendTo('ul');
+        // $('ul').append(newli);
+
+        //在ul的子元素之前增加
+        // $('#parent').prepend(newli);
+        // newli.prependTo('ul');
+
+        //在指定元素之后增加
+        // $('#one').after(newli);
+        // newli.insertAfter('#one');
+
+        //在指定元素之前增加
+        // $('#one').before(newli);
+        // newli.insertBefore('#one');
+
+        //删除元素
+        // newli.remove();
+        //删除元素保留自身
+        // newli.empty();
+
+        // //注册事件
+        // $('#one').click(function () {
+        //    alert(1);
+        // });
+        // //删除元素，保留事件
+        // let res = $('#one').detach();
+        // // let res = $('#one').remove();
+        // res.appendTo('#box');
+
+        //复制
+        //获取元素
+        // $('#one').clone().appendTo('#box');
+
+        //替换节点
+        //创造节点
+        // let newnode = $('<p>1111</p>>');
+        // newnode.replaceAll('ul li');
+    </script>
+
+</body>
+</html>

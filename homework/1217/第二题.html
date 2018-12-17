@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #left,#right{
+            width:150px;
+            height:200px;
+            text-align: center;
+            position:absolute;
+            top:100px;
+        }
+
+        #left{
+            left:200px;
+        }
+
+        #right{
+            left:400px;
+        }
+
+        #btn{
+            position: absolute;
+            top:50px;
+            left:250px
+        }
+    </style>
+    <script src="./jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <div id="btn">
+        <button id="btn1">——></button>
+        <button id="btn2">===></button>
+        <button id="btn3"><——</button>
+        <button id="btn4"><===</button>
+    </div>
+
+    <div>
+        <label for="left"></label><select id="left" size="10" multiple>
+            <option>苹果</option>
+            <option>香蕉</option>
+            <option>梨子</option>
+            <option>橘子</option>
+            <option>柿子</option>
+            <option>萝卜</option>
+            <option>番茄</option>
+        </select>
+        <label for="right"></label><select id="right" size="10" multiple>
+        </select>
+    </div>
+    <script>
+        //点击——>把左边选中的选项添加到右边
+        //注册点击事件
+        $("#btn1").click(function(){
+            //获取被选中的选项追加到box1
+            $("option:selected").appendTo("#right");
+        });
+
+        //点击===>把左边全部的选项添加到右边
+        $("#btn2").click(function(){
+            $("option").appendTo("#right");
+        });
+
+        //点击<——把右边选中的选项添加到左边
+        $("#btn3").click(function(){
+            $("option:selected").appendTo("#left");
+        });
+
+        //点击<===把右边全部的选项添加到左边
+        $("#btn4").click(function(){
+            $("option").appendTo("#left");
+        });
+
+        //双击左边的选项让它自动移动到另外一端
+        $("#left option").dblclick(function(){
+            $("option:selected").appendTo("#right");
+        });
+
+        //双击右边的选项让它自动移动到另外一端
+        $("#right").on('dblclick','option',function(){
+            $("option:selected").appendTo("#left");
+        })
+    </script>
+
+</body>
+</html>

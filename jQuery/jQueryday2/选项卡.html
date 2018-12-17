@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 500px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        #box #meu{
+            width: 400px;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #box #meu li{
+            width: 100px;
+            height: 50px;
+            float: left;
+            background: #ccc;
+            text-align: center;
+            line-height: 50px;
+            box-sizing: border-box;
+            border: 1px solid yellow;
+            cursor: pointer;
+        }
+        #box #meu li.active{
+            background: red;
+        }
+        #box #cont{
+            position: relative;
+        }
+        #box #cont p{
+            width: 400px;
+            height: 400px;
+            background: green;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 100px;
+            line-height: 400px;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #box #cont p.active{
+            display: block;
+        }
+    </style>
+    <script src='../jquery-1.11.3/jquery.js'></script>
+</head>
+<body>
+    <div id="box">
+        <ul id="meu">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div id="cont">
+            <p class="active">1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </div>
+    </div>
+
+    <script>
+        //注册事件
+        $('#meu li').click(function () {
+            // //获取当前元素
+            // $(this).addClass('active');
+            // //其它兄弟元素删除类名
+            // $(this).siblings().removeClass('active');
+            //链式操作
+            $(this).addClass('active').siblings().removeClass('active');
+
+            //获取对象的索引值
+            let index = $(this).index();
+            // console.log(index);
+            //删除兄弟样式
+            // $('#cont p').siblings().removeClass('active');
+            // //获取当前的菜单样式
+            // $('#cont p').eq(index).addClass('active');
+
+            //链式操作
+            $('#cont p').removeClass('active').eq(index).addClass('active');
+
+
+        })
+    </script>
+
+</body>
+</html>
