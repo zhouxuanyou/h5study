@@ -24,10 +24,13 @@
         $("#subit").click(function(){
             //获取所有信息
             // alert(1);
-            $('form input').each(function () {
+            $('form input:text').each(function () {
                 let res = $(this).val();
                 console.log(res);
-            })
+            });
+            //获取性别
+            let sex = $('input:radio:checked').val();
+            console.log(sex);
 
         })
 
