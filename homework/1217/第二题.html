@@ -73,13 +73,18 @@
         });
 
         //双击左边的选项让它自动移动到另外一端
-        $("#left option").dblclick(function(){
-            $("option:selected").appendTo("#right");
-        });
-
-        //双击右边的选项让它自动移动到另外一端
-        $("#right").on('dblclick','option',function () {//事件委派
-            $("option:selected").appendTo("#left");
+       //  $("#left option").dblclick(function(){
+       //      $("option:selected").appendTo("#right");
+       //  });
+       //
+       //  //双击右边的选项让它自动移动到另外一端
+       // $()
+        $('option').dblclick(function () {
+            if ($(this).parent().attr('id') === 'left'){
+                $(this).appendTo("#right");
+            }else {
+                $(this).appendTo("#left");
+            }
         })
 
 

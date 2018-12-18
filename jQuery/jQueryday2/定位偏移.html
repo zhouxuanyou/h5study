@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width:200px; height:100px; background: red; position:absolute; left:10px; top:20px;
+        }
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <div style="width:1000px; height:500px; border: 1px solid blue; margin:0 auto; position: relative">
+        <div id="box"></div>
+    </div>
+    <script>
+        //offset浏览器偏移
+        //获取浏览器的偏移量
+        // let ofo = $('#box').offset();
+        // console.log(ofo.left,ofo.top);
+
+        //获取父元素的偏移量
+        let pos = $('#box').position();
+        console.log(pos.left,pos.top);
+
+    </script>
+</body>
+</html>

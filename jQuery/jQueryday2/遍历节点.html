@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <div id="parent">
+        <p>1111</p>
+        <p class="a">2222</p>
+        <p>3333</p>
+        <p class="a">4444</p>
+        <p>5555</p>
+        <a href="#">aaaaaaaa1</a>
+        <p id="box">6666</p>
+        <p>7777</p>
+        <a href="#">aaaaaaaaa2</a>
+        <a href="#">aaaaaaaaa3</a>
+        <a href="#">aaaaaaaaa4</a>
+        <p>8888</p>
+    </div>
+    <script>
+        //查找parent的所有子元素
+        // $('#parent').children().css('background','red');
+        //查找parent下面的所有p元素
+        // $('#parent').children('p').css('background','yellow');
+        //查找parent下面所有的a标签
+        // $('#parent').children('a').css('background','green');
+        //查找box的下一个元素
+        // $('#box').next().css('background','red');
+        //查找box下面的所有元素
+        // $('#box').nextAll().css('background','red');
+        //查找box下面指定元素
+        // $('#box').nextAll('a').css('background','yellowgreen');
+        //查找p标签的到指定元素为止
+        // $('#parent p:first').nextUntil('#box').css('background','red');
+        // $('#parent p:first').nextUntil('#box','p').css('background','red');
+        // //匹配p的所有兄弟元素
+        // $('p').siblings().css('background','red');
+    </script>
+
+</body>
+</html>

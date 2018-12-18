@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width:200px; height:200px; border:1px solid red; overflow: scroll;
+        }
+        #a{
+            height:5000px; background:green;
+        }
+        #b{
+            height:100px; background: #00b2cc;
+        }
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <div id="box">
+        <div id="a">
+            <div id="b"></div>
+        </div>
+    </div>
+    <button>btn</button>
+
+    <script>
+        //注册点击事件
+        $('button').click(function () {
+            //点击按钮a元素向上移动指定距离
+            $('#box').scrollTop(50);
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width:1000px; line-height: 30px; border-collapse: collapse;
+        }
+        td{
+            border:1px solid #ccc;
+        }
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>商品</td>
+            <td>数量</td>
+            <td>价格</td>
+            <td>小计</td>
+            <td>编辑</td>
+        </tr>
+        <tr>
+            <td>苹果1</td>
+            <td>1</td>
+            <td>2.99</td>
+            <td class="sPrice">2.00</td>
+            <td>删除</td>
+        </tr>
+        <tr>
+            <td>苹果2</td>
+            <td>1</td>
+            <td>2.99</td>
+            <td class="sPrice">2.10</td>
+            <td>删除</td>
+        </tr>
+
+        <tr>
+            <td>苹果3</td>
+            <td>1</td>
+            <td>5.00</td>
+            <td class="sPrice">5.20</td>
+            <td>删除</td>
+        </tr>
+
+        <tr>
+            <td>苹果4</td>
+            <td>1</td>
+            <td>128.99</td>
+            <td class="sPrice">128.01</td>
+            <td>删除</td>
+        </tr>
+    </table>
+    <button>点击计算总价</button>
+    <p>总价：<span id="allPrice">0.00</span></p>
+
+    <script>
+        //注册事件
+        $('button').click(function () {
+            //定义一个商品变量
+            let price = 0;
+            //获取商品价格
+            $('.sPrice').each(function () {
+                //获取每个价格然后相加
+                price += parseFloat($(this).html());
+            });
+            //将总价赋值到页面上
+            $('#allPrice').html(price.toFixed(2));
+        });
+
+    </script>
+
+</body>
+</html>
