@@ -78,9 +78,11 @@
         });
 
         //双击右边的选项让它自动移动到另外一端
-        $("#right").on('dblclick','option',function(){
+        $("#right").on('dblclick','option',function () {//事件委派
             $("option:selected").appendTo("#left");
         })
+
+
     </script>
 
 </body>
