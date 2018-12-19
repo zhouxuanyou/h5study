@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 1000px;
+            line-height: 50px;
+            border-collapse: collapse;
+        }
+        td{
+            border:1px solid #ccc;
+        }
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="allsing"><input type="checkbox">全选</td>
+            <td>商品</td>
+            <td>数量</td>
+            <td>价格</td>
+        </tr>
+        <tr>
+            <td class="sinsel"><input type="checkbox"></td>
+            <td>苹果</td>
+            <td>1</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td class="sinsel"><input type="checkbox"></td>
+            <td>苹果</td>
+            <td>1</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td class="sinsel"><input type="checkbox"></td>
+            <td>苹果</td>
+            <td>1</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="allsing"><input type="checkbox">全选/删除</td>
+        </tr>
+    </table>
+    <script>
+        //点击全选商品也是选择
+        $('.allsing input').change(function () {
+            //获取全选的值
+            let bol = $(this).prop('checked');
+            // console.log(bol);
+            // 把值赋值给商品
+            $('.sinsel input,.allsing input').prop('checked',bol);
+        });
+        //点击商品取消，全选为false
+        $('.sinsel input').change(function () {
+
+
+            //遍历出商品的值
+            $('.sinsel').each(function () {
+                let bol = $(this).prop('checked');
+                // console.log(bol)
+                if (!bol){
+                    $('.allsing input').prop('checked',false);
+                    return false;
+                }
+            });
+            $('.allsing input').prop('checked',true);
+
+        })
+    </script>
+
+</body>
+</html>

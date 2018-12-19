@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            margin: 0 auto;
+            overflow:hidden;
+        }
+        li{
+            width: 100px;
+            border: 1px solid #ccc;
+            float: left;
+            text-align: center;
+            list-style: none;
+        }
+        div{
+            width: 300px;
+            height: 200px;
+        }
+        p{
+            background: green;
+            text-align: center;
+            font-size: 10px;
+            width: 300px;
+            height: 200px;
+            display: none;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+
+    <ul>
+        <li class="active">女人</li>
+        <li>情感</li>
+        <li>亲子</li>
+    </ul>
+    <div>
+        <p style="display: block;">女人好累啊</p>
+        <p>老公晚上不回家，好寂寞啊</p>
+        <p>丈夫两年没回家了，我为她生下了一个女孩，现在刚满月啦</p>
+    </div>
+
+
+    <script>
+        //鼠标移入 显示对象菜单和内容
+        //注册鼠标移入事件
+        $("li").mousemove(function(){
+            //选中的菜单激活，没选中被干掉
+            $(this).addClass("active").siblings().removeClass("active");
+            //获取索引
+            let index = $(this).index();
+            //选中的内容激活，没有的被干掉
+            $("p").stop(true,false).eq(index).slideDown().siblings().slideUp();
+        })
+
+    </script>
+
+</body>
+</html>

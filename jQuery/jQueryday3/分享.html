@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 150px;
+            height: 200px;
+            background: green;
+            position: absolute;
+            left: -150px; top:200px;
+            cursor: pointer;
+        }
+
+        #box span {
+            position: absolute;
+            width: 30px;
+            line-height: 30px;
+            background: #00a7ea;
+            text-align: center;
+            color: #fff;
+            right: -30px;
+            top: 50px;
+        }
+
+    </style>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <div id="box">
+        <span>分享到</span>
+    </div>
+    <script>
+        //注册移入移出效果
+        $('#box').hover(function () {
+            //移入效果
+            $(this).stop(true,false).animate({ "left" : "0"},500);//再开启动画之前停止之前的所有动画
+        },function () {
+            //移出效果
+            $(this).stop(true,false).animate({ "left" : "-150"},500);//再开启动画之前停止之前的所有动画
+            }
+        )
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+    <style>
+        table{
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td><a href="#">增加</a></td>
+    </tr>
+
+
+
+
+</table>
+
+<script>
+    $('table tr:first td:last a').click(function () {
+        let dom = $(this).closest('tr').clone().appendTo('table');
+        dom.find('a').html('删除')
+    });
+
+    //事件委派
+    $('table').on('click','tr:not(:first) td:last-child a',function () {
+        //删除所选择的行
+        $(this).closest('tr').remove();
+    })
+</script>
+
+
+</body>
+</html>

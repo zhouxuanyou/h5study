@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.11.3/jquery.js"></script>
+</head>
+<body>
+    <style>
+        #box{
+            width:300px; height:150px;  margin: 0 auto;
+        }
+        #editDiv{
+            height:100%; background:saddlebrown; color:#fff; padding:10px; box-sizing: border-box;
+        }
+
+        #editText{
+            width:294px; height:146px;display: none;
+    }
+</style>
+    <!--定义编辑的范围-->
+    <div id="box">
+        <div id="editDiv">456</div>
+        <textarea  id="editText"></textarea>
+    </div>
+    <script>
+
+        //需求： 双击div框；div隐藏，textarea显示
+        $("#editDiv").dblclick(function () {
+
+            //div隐藏
+            let val = $(this).hide().html();
+
+            //textarea显示//将焦点放在textarea上
+            $("#editText").fadeIn(500).focus().val(val);
+
+        });
+
+
+        //需求： textarea失去焦点， textarea隐藏 div显示， textarea框内容赋值给div
+        $("#editText").blur(function () {
+
+            //textarea隐藏
+            let val = $(this).hide().val();
+            // console.log( val );
+
+            //div显示
+            $("#editDiv").fadeIn(500).html(val);
+        });
+
+
+    </script>
+
+</body>
+</html>
