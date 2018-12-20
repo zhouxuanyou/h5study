@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Language" content="zh-CN">
+		<script type="text/javascript" src="../jquery1.42.min.js"></script>
+		<script type="text/javascript" src="../jquery.SuperSlide.2.1.1.js"></script>
+	</head>
+
+	<body>
+
+		<style type="text/css">
+			/* css 重置 */
+			
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			body {
+				background: #fff;
+				font: normal 12px/22px 宋体;
+			}
+			
+			img {
+				border: 0;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+			
+			a:hover {
+				color: #1974A1;
+			}
+			/* 本例子css */
+			
+			.main4 .slideTxtBox3 {
+				width: 1200px;
+				border: 1px solid #ddd;
+				text-align: left;
+			}
+			
+			.main4 .slideTxtBox3 .hd {
+				height: 30px;
+				line-height: 30px;
+				background: #f4f4f4;
+				padding: 0 10px 0 20px;
+				border-bottom: 6px solid #FF6600;
+				position: relative;
+			}
+			
+			.main4 .slideTxtBox3 .hd span{
+				color: #FF6600;
+				font-size: 26px;
+			}
+			
+			.main4 .slideTxtBox3 .hd ul {
+				float: left;
+				position: absolute;
+				right: 0;
+				top: -1px;
+				height: 32px;
+				
+			}
+			
+			.main4 .slideTxtBox3 .hd ul li {
+				float: left;
+				line-height: 32px;
+				font-size: 16px;
+				padding: 0 15px;
+				cursor: pointer;
+			}
+			
+			.main4 .slideTxtBox3 .hd ul li.on {
+				height: 30px;
+				color: #fff;
+				background: #ff6600;
+				border: 1px solid #ff6600;				
+			}
+			
+			.main4 .slideTxtBox3 .bd ul {
+				zoom: 1;
+			}
+			
+			.main4 .slideTxtBox3 .bd li {
+				
+			}
+			
+		</style>
+
+		<div class="slideTxtBox3">
+			<div class="hd">
+				<span>图书 电子书</span>
+				<ul>
+					<li>最新上架</li>
+					<li>独家畅销</li>
+					<li>电子书</li>
+				</ul>
+			</div>
+			<div class="bd">
+				<ul>
+					
+				</ul>
+				<ul>
+				
+				</ul>
+				<ul>
+				
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			jQuery(".main4 .slideTxtBox3").slide();
+		</script>
+
+	</body>
+
+</html>

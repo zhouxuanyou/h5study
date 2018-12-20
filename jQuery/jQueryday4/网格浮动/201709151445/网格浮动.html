@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--//引入css样式-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--//引入jQuery-->
+    <script type="text/javascript" src = "./js/jquery-1.11.0.min.js"></script>
+    <!--//引入插件-->
+    <script type="text/javascript" src = "./js/parallax.min.js"></script>
+<body>
+    <section id="scene" data-pointer-events="true" data-x-origin="0.5"
+             data-y-origin="0.5" data-scalar-y="150.0"
+             data-scalar-x="100.0"
+             data-friction-x="0.05"
+             data-friction-y="0.05">
+        <div class="layer main" data-depth="1.0">
+            <div class="col">
+                <a href="#">
+                    <div class="hover">
+                        <div class="pad align-bottom">
+                            <h2>Project Title</h2>
+                        </div>
+                    </div>
+                    <div class="bg-img" style="background-image:url(./img/1.jpg);"></div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="hover">
+                        <div class="pad align-bottom">
+                            <h2>Project Title</h2>
+                        </div>
+                    </div>
+                    <div class="bg-img" style="background-image:url(./img/2.jpg);"></div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="hover">
+                        <div class="pad align-bottom">
+                            <h2>Project Title</h2>
+                        </div>
+                    </div>
+                    <div class="bg-img" style="background-image:url(./img/3.jpg);"></div>
+                </a>
+            </div>
+            ......
+        </div>
+    </section>
+    <script>
+        //初始化插件
+        var makeWinHeight = function(){
+            var vh = $(window).height();
+            var projects = vh/2;
+            $('#scene, .layer.main').height(vh);
+            $('#scene .col a, #scene .col').height(projects);
+        };
+        $(document).ready(function(){
+            makeWinHeight();
+
+        });
+        $(window).resize(function(){
+            makeWinHeight();
+        });
+
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/slider.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/slidebox.js"></script>
+</head>
+<body>
+
+
+
+<div class="pptbox" id="bigFocus">
+	<ul class="innerwrapper">
+		<li><a href="#"><img src="images/11.jpg"/></a></li>
+		<li><a href="#"><img src="images/22.jpg"/></a></li>
+		<li><a href="#"><img src="images/33.jpg"/></a></li>
+		<li><a href="#"><img src="images/44.jpg"/></a></li>
+		<li><a href="#"><img src="images/55.jpg"/></a></li>
+	</ul>
+	<ul class="controls">
+		<li class="current">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>			
+	<span class="btnleft"></span>
+	<span class="btnright"></span>
+</div>
+<script>
+	$(function () {
+	
+		//主图-轮播的参数配置
+		var opts={
+			boxh:420,//盒子的高度
+			w:1000,//图片的宽度
+			h:380,//图片的高度
+			isShow:true,//是否显示控制器
+			isShowBtn:true,//是否显示左右按钮
+			controltop:10,//控制按钮上下偏移的位置,要将按钮向下移动   首先保证boxh 高度>图片 h
+			controlsW:12,//控制按钮宽度
+			controlsH:12,//控制按钮高度
+			radius:6//控制按钮圆角度数
+		};
+		$("#bigFocus").slidebox(opts);
+	})
+</script>
+
+</body>
+</html>

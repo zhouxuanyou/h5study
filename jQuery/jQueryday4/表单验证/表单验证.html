@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--//引入jQuery-->
+    <script src="../js/jquery.js"></script>
+
+    <!--//引入插件-->
+    <script src="../js/jquery.validate.min.js"></script>
+
+    <style>
+        #btn{
+            margin-left: 89px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" id="myform">
+        <label>
+            请输入用户名:
+            <input type="text" name="user">
+        </label>
+        <br>
+        <label>
+            请输入密码:
+            <input type="password" name="pwd">
+        </label>
+        <br>
+        <label>
+            请确认密码:
+            <input type="password" name="pwd2" id="pwd121">
+        </label>
+        <br>
+        <input type="submit" id="btn">
+    </form>
+
+    <script>
+        //注册验证规则
+        //初始化
+        $(function () {
+            $('#myform').validate({
+                rules:{
+                    user :{
+                        required:true,//必填
+                        isuser:true
+                    },
+                    pwd :{
+                        required:true,
+                        minlength:6//最小长读
+                    },
+                    pwd2 :{
+                        equalTo:'#pwd121'//确认密码
+                    }
+                },
+
+                messages:{
+                    user:{
+                        required:'请输出用户名',//必填
+
+                    },
+                    pwd :{
+                        required:'请输入密码',
+                        minlength:'请输入最少6个字符'//最小长读
+                    },
+                    pwd2 :{
+                        equalTo:'两次密码不一致'//确认密码
+                    }
+
+
+                }
+                }
+            );
+
+            //自定义验证方法
+            jQuery.validator.addMethod("isuser", function(value, element) {
+                var postcode= /^[A-z][A-z0-9_]{5,14}$/;
+                return this.optional(element) || (postcode.test(value));
+            }, "请输入字母开头的数字下划线的用户名");
+        })
+    </script>
+
+</body>
+</html>

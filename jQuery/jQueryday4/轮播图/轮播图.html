@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--//引入css样式-->
+    <link rel="stylesheet" href="./css/jquery.slideBox.css">
+    <!--//引入jquery-->
+    <script src="./js/jquery.js"></script>
+    <!--//引入jquery插件-->
+    <script src="./js/jquery.slideBox.js"></script>
+</head>
+<body>
+    <div id="demo1" class="slideBox">
+
+        <ul class="items">
+
+            <li><a href="#" title="这里是测试标题一"><img src="images/1.jpg"></a></li>
+
+            <li><a href="#" title="这里是测试标题二"><img src="images/2.jpg"></a></li>
+
+            <li><a href="#" title="这里是测试标题三"><img src="images/3.jpg"></a></li>
+
+            <li><a href="#" title="这里是测试标题四"><img src="images/4.jpg"></a></li>
+
+            <li><a href="#" title="这里是测试标题五"><img src="images/5.jpg"></a></li>
+
+        </ul>
+
+    </div>
+
+    <script>
+        //初始化插件
+        $('#demo1').slideBox({
+            direction : 'left',//滚动方向
+            duration : 0.6,//过渡动画时间
+            easing : 'linear',//曲线动画
+            delay : 3,//动画暂停时间
+            startIndex : 0,//从第几张图开始
+            hideClickBar : false,//选择按钮显示还是隐藏
+            clickBarRadius : 20,//选择按钮圆角
+            hideBottomBar : false,//底部栏是否隐藏
+            width : 640,//宽度
+            height : 300//高度
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			#nav{
+				width: 500px;
+				height:30px;
+				background-color: darkgreen;
+				margin: 100px;
+			}
+			
+			#nav li{
+				color: white;
+				float:left;
+				width: 100px;
+				height:30px;
+				line-height: 30px;
+				text-align: center;
+			}
+			
+			.submenu{
+				width:100px;
+				background-color:seagreen;
+				display: none;
+			}
+			
+			.submenu a{
+				display: block;
+				text-decoration: none;
+				border-bottom: dashed 1px #ccc;
+				font-size: 12px;
+				color: white;
+			}
+			
+			.submenu a.last{
+				border-bottom:0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul id="nav">
+			<li>关于我们
+				<div  class="submenu">
+					<a href="#">公司简介</a>
+					<a href="#">组织机构</a>
+					<a href="#">企业荣誉</a>
+					<a href="#">免责声明</a>
+					<a href="#" class="last">联系方式</a>
+				</div>
+			</li>
+			<li>新闻中心
+				<div  class="submenu">
+					<a href="#">公司简介</a>
+					<a href="#">组织机构</a>
+					<a href="#">企业荣誉</a>
+					<a href="#">免责声明</a>
+					<a href="#" class="last">联系方式</a>
+				</div>
+			</li>
+			<li>产品介绍
+				<div  class="submenu">
+					<a href="#">公司简介</a>
+					<a href="#">组织机构</a>
+					<a href="#">企业荣誉</a>
+					<a href="#">免责声明</a>
+					<a href="#" class="last">联系方式</a>
+				</div>
+			</li>
+			<li>成功案例
+				<div  class="submenu">
+					<a href="#">公司简介</a>
+					<a href="#">组织机构</a>
+					<a href="#">企业荣誉</a>
+					<a href="#">免责声明</a>
+					<a href="#" class="last">联系方式</a>
+				</div>
+			</li>
+			<li>联系我们
+				<div  class="submenu">
+					<a href="#">公司简介</a>
+					<a href="#">组织机构</a>
+					<a href="#">企业荣誉</a>
+					<a href="#">免责声明</a>
+					<a href="#" class="last">联系方式</a>
+				</div>
+			</li>
+		</ul>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$("#nav>li").hover(function(){
+				//鼠标移动上去做的事情
+				$(this).find(".submenu").slideDown({
+					duration:1000, 
+    				easing: "easeOutBounce" 					
+				});
+				
+			},function(){
+				//鼠标离开li的时候做的事情
+				$(this).find(".submenu").slideUp({
+					duration:1000, 
+    				easing: "easeOutBounce" 
+				});
+				
+			});
+			
+		</script>
+		
+	</body>
+</html>

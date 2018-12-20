@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Language" content="zh-CN">
+		<title>SuperSlide - targetCell基础示例</title>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+	</head>
+
+	<body>
+
+		<style type="text/css">
+			/* css 重置 */
+			
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			body {
+				background: #fff;
+				font: normal 12px/22px 宋体;
+			}
+			
+			img {
+				border: 0;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+			/* 本例子css */
+			
+			.sideMenu {
+				border: 1px solid #ddd;
+				width: 280px;
+			}
+			
+			.sideMenu h3 {
+				width: 280px;
+				height: 32px;
+				line-height: 32px;
+				border-top: 1px solid #e3e3e3;
+				background: #f4f4f4;
+				cursor: pointer;
+				text-align: center;
+				font: normal 14px/32px "Microsoft YaHei";
+			}
+			
+			.sideMenu h3 em {
+				float: right;
+				display: block;
+				width: 40px;
+				height: 32px;
+				background: url(images/icoAdd.png) 16px 12px no-repeat;
+				cursor: pointer;
+			}
+			
+			.sideMenu h3.on em {
+				background-position: 16px -57px;
+			}
+			
+			.sideMenu ul {
+				padding: 8px 25px;
+				color: #999;
+				display: none;
+				/* 默认都隐藏 */
+			}
+			
+			.sideMenu ul li p {
+				display: inline-block;
+				float: left;
+				font-size: 14px;
+				color: #FF6600;
+			}
+			
+			.sideMenu ul li .sma {
+				font-size: 12px;
+				width: 110px;
+				color: #000;
+			}
+		</style>
+
+		<div class="sideMenu">
+			<h3 class="on">新书畅销榜</h3>
+			<ul>
+				<li>
+					<p>
+						1
+					</p>
+					<p>
+						<img src="images/demo-book.jpg" />
+					</p>
+					<p class="sma">
+						从你的全世界路过入选央视"2014中国好书"的80后作品!十年华语畅销小说,王家卫陈国富倾力推荐,1500万次转发,超4亿次阅读.
+					</p>
+
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+			<h3>2、就喜欢你看不惯我  又干不</h3>
+			<ul>
+				<li>
+					<p>
+						2
+					</p>
+					<p>
+						<img src="images/demo-book.jpg" />
+					</p>
+					<p class="sma">
+						从你的全世界路过入选央视"2014中国好书"的80后作品!十年华语畅销小说,王家卫陈国富倾力推荐,1500万次转发,超4亿次阅读.
+					</p>
+
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+			<h3>3、就喜欢你看不惯我  又干不</h3>
+			<ul>
+				<li>
+					<p>
+						3
+					</p>
+					<p>
+						<img src="images/demo-book.jpg" />
+					</p>
+					<p class="sma">
+						从你的全世界路过入选央视"2014中国好书"的80后作品!十年华语畅销小说,王家卫陈国富倾力推荐,1500万次转发,超4亿次阅读.
+					</p>
+
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+			<div style="clear: both;"></div>
+			<h3>4、就喜欢你看不惯我  又干不</h3>
+			<ul>
+				<li>
+					<p>
+						4
+					</p>
+					<p>
+						<img src="images/demo-book.jpg" />
+					</p>
+					<p class="sma">
+						从你的全世界路过入选央视"2014中国好书"的80后作品!十年华语畅销小说,王家卫陈国富倾力推荐,1500万次转发,超4亿次阅读.
+					</p>
+
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+			<div style="clear: both;"></div>
+			<h3>5、就喜欢你看不惯我  又干不</h3>
+			<ul>
+				<li>
+					<p>
+						5
+					</p>
+					<p>
+						<img src="images/demo-book.jpg" />
+					</p>
+					<p class="sma">
+						从你的全世界路过入选央视"2014中国好书"的80后作品!十年华语畅销小说,王家卫陈国富倾力推荐,1500万次转发,超4亿次阅读.
+					</p>
+
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+			<div style="clear: both;"></div>
+			<h3>6、就喜欢你看不惯我  又干不</h3>
+			<ul>
+				<li>
+					<p>
+						6
+					</p>
+					<p>
+						<img src="images/demo-book.jpg" />
+					</p>
+					<p class="sma">
+						从你的全世界路过入选央视"2014中国好书"的80后作品!十年华语畅销小说,王家卫陈国富倾力推荐,1500万次转发,超4亿次阅读.
+					</p>
+
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+		</div>
+		<!-- sideMenu End -->
+
+		<script type="text/javascript">
+			jQuery(".sideMenu").slide({
+				titCell: "h3", //鼠标触发对象
+				targetCell: "ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+				effect: "slideDown", //targetCell下拉效果
+				delayTime: 300, //效果时间
+				triggerTime: 150, //鼠标延迟触发时间（默认150）
+				defaultPlay: true, //默认是否执行效果（默认true）
+				returnDefault: true //鼠标从.sideMen移走后返回默认状态（默认false）
+			});
+		</script>
+
+	</body>
+
+</html>
