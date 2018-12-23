@@ -1,0 +1,153 @@
+/*左侧导航和轮播图*/
+/* 左侧分类导航 */
+/* 左侧分类导航 */
+.menuBanner .menuCategory {
+    width: 200px;
+    height: 434px;
+    background-color: #f3f3f3;
+    position: relative;
+}
+
+.menuBanner .menuCategory > ul > li {
+    height: 31px;
+    line-height: 31px;
+}
+
+.menuBanner .menuCategory > ul > li .categoryTitle {
+    height: 31px;
+    line-height: 31px;
+    font-size: 14px;
+    text-indent: 20px;
+    background-color: #f3f3f3;
+
+    /* 相对定位 */
+    position: relative;
+    /* 标题先设置边框 */
+    border: 1px solid #f3f3f3;
+}
+/* 二级分类菜单 */
+.menuBanner .menuCategory > ul > li .subMenu {
+    font-size: 14px;
+    padding-left: 38px;
+    padding-right: 68px;
+    width: 474px;
+    min-height: 432px;
+    background-color: #ffffff;
+    position: absolute;
+    /* 右边层级底 */
+    z-index: 10;
+    /* 左侧压线 */
+    left: 199px;
+    top: 0;
+    display: none;
+}
+
+.menuBanner .menuCategory > ul > li:hover .subMenu {
+    display: block;
+    border: 1px solid #ff6600;
+}
+
+.menuBanner .menuCategory > ul > li:hover .categoryTitle {
+    background-color: #ffffff;
+    border: 1px solid #ff6600;
+    border-right: none;;
+
+    /* 左侧层级高 */
+    z-index: 100;
+
+    color: #ff6600;
+}
+
+.menuBanner .menuCategory > ul > li .subMenu dl {
+    font-size: 0;
+}
+
+.menuBanner .menuCategory > ul > li .subMenu dl dt {
+    font-size: 14px;
+    color: #ff6600;
+    font-weight: 700;
+    border-bottom: 2px solid #ccc;
+}
+
+.menuBanner .menuCategory > ul > li .subMenu dl dd span {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* 右侧轮播 */
+.menuBanner .pptbox {
+    width: 1000px;
+    height: 434px;
+}
+
+/*今日推荐*/
+.recommend{
+    height: 531px;
+    margin-top: 18px;
+}
+.recommend .ziti{
+
+    height: 24px;
+    line-height: 24px;
+    font-family: SimHei, serif;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #ff6600;
+    border-bottom: 6px solid #f60
+
+}
+.recommend li{
+    width: 196px;
+    float: left;
+    border-left: #f60 2px solid;
+    border-bottom: #f60 2px solid;
+    border-right: white 2px solid;
+    position: relative;
+}
+.recommend li:nth-child(6n){
+    border-right:#f60 2px solid;
+}
+.recommend li i{
+    margin:0 auto;
+    display:block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+.recommend p{
+    padding-left: 8px;
+}
+.recommend .p1{
+    padding: 4px 18px 4px 8px;
+    width:47px;
+    background: #f4290d;
+    color: #fff;
+    position: relative;
+    left: -2px;
+}
+.recommend .p1::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border: 13px solid #fff;
+    border-color: transparent #fff transparent transparent;
+    left: 47px;
+    top: 0;
+}
+.recommend .p2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+.recommend .p3{
+    color: #f4290d;
+    font-size: 14px;
+}
+.recommend .p4{
+    color: #f4290d;
+    margin:4px 0;
+    font-size: 24px;
+}

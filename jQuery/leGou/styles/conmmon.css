@@ -1,0 +1,27 @@
+/* 设置浮动 */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+
+/* 清除浮动 */
+
+.clear{
+    clear: both;
+}
+
+/*清除固定结构的浮动*/
+.clearfix::after{
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+}
+/*版心*/
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}

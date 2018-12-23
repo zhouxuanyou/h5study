@@ -1,0 +1,110 @@
+.header .top{
+    height: 28px;
+    line-height: 28px;
+    background-color: #101010;
+}
+
+/*顶部样式*/
+.header .top .loginRegister{
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 5px;
+    color: #bfbfbf;
+}
+
+.header .top .loginRegister a{
+    color: #ff6600;
+}
+/*搜索框订单购物按钮样式*/
+.header .searchShopCart{
+    height: 36px;
+    margin-top: 5px;
+}
+.header .searchShopCart .searchInput {
+    height: 36px;
+    background-color: #ff6700;
+    width: 440px;
+    margin-right: 34px;
+    font-size: 0;
+}
+
+.header .searchShopCart .searchInput input {
+    height: 36px;
+    border: 2px solid #ff6600;
+    box-sizing: border-box;
+    width: 390px;
+    text-indent: 10px;
+    font-size: 12px;
+}
+
+.header .searchShopCart .searchIcon {
+    width: 50px;
+    height: 36px;
+    display: inline-block;
+    border: 1px solid #ff6600;
+    vertical-align: top;
+    background-color: #ff6600;
+    /* 背景图 */
+    background-image: url("../imags/images/bgicon.png")
+}
+
+.header .searchShopCart > ul > li {
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+}
+
+.header .searchShopCart > ul > li:first-child {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: 1px solid #ff6600;
+    background-image: url("../imags/images/bgicon.png");
+    text-indent: 36px;
+    background-position-y: -43px;
+    font-size: 14px;
+}
+.header .searchShopCart .a1{
+    color: #ffffff;
+}
+
+
+.header .searchShopCart > ul > li:last-child {
+    background-color: #ebebeb;
+
+    border: 1px solid #ccc;
+}
+/*导航栏和logo样式*/
+.header .nav{
+    height: 28px;
+    line-height: 28px;
+    margin-top: 14px;
+    position: relative;
+}
+
+.header .nav .logo{
+    width: 200px;
+    height: 112px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.header .nav ul{
+    height: 28px;
+    line-height: 28px;
+    width: 1000px;
+}
+
+.header .nav > ul > li {
+    font-weight: bold;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    width: 80px;
+    text-align: center;
+}
