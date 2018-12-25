@@ -103,7 +103,6 @@
 .Newbookshelves .NewbookshelvesReft{
     width: 284px;
     height: 504px;
-    background-color: deeppink;
     border: solid 2px #e5e5e5;
 }
 .Newbookshelves .NewbookshelvesLeft ul>li{
@@ -127,3 +126,40 @@
     color: #808080;
 }
 
+.Newbookshelves .NewbookshelvesReft h2{
+    height: 23px;
+    font-size: 22px;
+    text-align: center;
+    color: #808080;
+}
+.Newbookshelves .NewbookshelvesReft ul{
+    margin-top: 10px;
+}
+
+.Newbookshelves .NewbookshelvesReft ul span{
+    display: inline-block;
+    color: red;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.Newbookshelves .NewbookshelvesReft ul li .newbookTitle{
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #ccc;
+    color: #4d4d4d;
+}
+.Newbookshelves .NewbookshelvesReft ul li .newbookDetails{
+    color: #404040;
+    border-bottom: 2px solid #ccc;
+    display: none;
+}
+
+.none{
+    display: none!important;
+}
+.block{
+    display: block!important;
+}

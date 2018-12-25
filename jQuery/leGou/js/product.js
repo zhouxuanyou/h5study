@@ -14,4 +14,14 @@ $(function () {
         controlsCurrentColor: "#ff6600",//当前控制按钮的颜色
         isShowNum: true //是否显示数字
     });
+    //手风琴
+    let $ebrt =  $('.NewbookshelvesReft>ul>li');
+    $ebrt.mouseenter(function () {
+        // alert(1);
+        $('.newbookTitle').removeClass('none');
+        $('.newbookDetails').removeClass('block');
+
+        $('.newbookTitle',this).addClass('none');
+        $('.newbookDetails',this).addClass('block');
+    });
 });
