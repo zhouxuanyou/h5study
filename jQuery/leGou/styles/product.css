@@ -1,0 +1,129 @@
+/* 左侧轮播 */
+.menuBanner .pptbox {
+    width: 1000px;
+    height: 434px;
+}
+.menuBanner .menuShoufen{
+    width: 200px;
+    height: 434px;
+    background: pink;
+}
+.menuBanner .menuShoufen h2{
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #93d46f;
+    color: #fff;
+    text-indent: 5px;
+}
+
+.menuBanner .menuBannerImg{
+    width: 1200px;
+    height: 90px;
+    /*opacity: 0.55;*/
+}
+
+/*电子书*/
+.ebooks{
+    width: 1200px;
+    margin: 20px auto;
+    height: 571px;
+}
+
+.ebooks .ebooksTitle{
+    height: 33px;
+    color: #fff;
+    border-bottom: 6px solid #f60;
+}
+.ebooks .ebooksTitle p{
+    width: 220px;
+    background: #f60;
+    font-size: 24px;
+}
+.ebooks .ebooksContent{
+    height: 520px;
+}
+
+.ebooks .ebooksContent ul>li{
+    width: 210px;
+    height: 258px;
+    background-color: #fff;
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.ebooks .ebooksContent ul>li .p1{
+    text-align: center;
+}
+.ebooks .ebooksContent ul>li .p2{
+    padding: 4px 18px 4px 8px;
+    width:47px;
+    background: #f4290d;
+    color: #fff;
+    position: relative;
+    left: -2px;
+}
+
+.ebooks .ebooksContent ul>li .p2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border: 13px solid #fff;
+    border-color: transparent #fff transparent transparent;
+    left: 47px;
+    top: 0;
+}
+
+/*新书上架样式*/
+.Newbookshelves .NewbookshelvesTitle{
+    width: 905px;
+    height: 44px;
+    font-size: 22px;
+    border-bottom: 6px solid #f60;
+    margin: 0;
+
+}
+.Newbookshelves .NewbookshelvesTitle span{
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+    color: #FFFFFF;
+    background: #f60;
+    padding-bottom: 6px;
+}
+
+.Newbookshelves .NewbookshelvesLeft{
+    width: 904px;
+    height: 500px;
+    border: solid 2px #e6e6e6;
+    border-top: none;
+}
+
+.Newbookshelves .NewbookshelvesReft{
+    width: 284px;
+    height: 504px;
+    background-color: deeppink;
+    border: solid 2px #e5e5e5;
+}
+.Newbookshelves .NewbookshelvesLeft ul>li{
+    width: 170px;
+    height: 220px;
+    float: left;
+    text-indent: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.Newbookshelves .NewbookshelvesLeft ul>li .p1{
+    text-align: center;
+}
+.Newbookshelves .NewbookshelvesLeft ul>li .p2{
+    font-size: 14px;
+}
+.Newbookshelves .NewbookshelvesLeft ul>li .p3{
+    color: #808080;
+}
+.Newbookshelves .NewbookshelvesLeft ul>li .p4{
+    color: #808080;
+}
+

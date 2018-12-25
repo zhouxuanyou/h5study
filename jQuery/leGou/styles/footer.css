@@ -1,0 +1,61 @@
+.footer{
+    width:100%;
+    height: 100px;
+    background-color: #f2f2f2;
+    border-top: 6px solid #f60;
+}
+
+.footer .footerContent{
+    width: 785px;
+    height: 50px;
+    margin: 25px auto;
+}
+
+.footer .footerContent ul>li{
+    float: left;
+    width: 127px;
+    height: 50px;
+    text-align: center;
+}
+.footer .footerContent ul>li:not(:first-child){
+    margin-left: 90px;
+}
+
+.footer .footerYejiao{
+    width: 100%;
+    height: 382px;
+    background-color: #ffffff;
+}
+
+.footer .footerYejiao .footerNei{
+    width: 681px;
+    height: 40px;
+    margin: 50px auto;
+    position: relative;
+}
+.footer .footerYejiao .footerNei img{
+    position: absolute;
+    right: -200px;
+    top: 44px;
+}
+
+.footer .footerYejiao .footerNei ul>li{
+    float: left;
+    width: 112px;
+    height: 130px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.footer .footerYejiao .footerNei ul>li:not(:first-child){
+    margin-left: 30px;
+}
+
+.footer .footerYejiao .footerNx{
+    margin-top: 100px;
+    margin-left: 500px;
+}
+.footer .footerYejiao .fooetNl{
+    margin-left: 620px;
+    margin-top: 20px;
+}

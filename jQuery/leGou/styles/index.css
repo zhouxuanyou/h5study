@@ -376,3 +376,93 @@
     display: none;
 }
 
+/*家居日用样式*/
+.dailyContent .dailyTtile{
+    height: 40px;
+    line-height: 40px;
+    font-size: 28px;
+    border-bottom: 6px solid #f60;
+    margin-top: 30px;
+}
+
+.dailyContent .dailyNeirong{
+    width: 1200px;
+    height: 502px;
+}
+
+.dailyContent .dailyNeirong .dailyLeft{
+    width: 487px;
+    height: 502px;
+    border: solid 2px #cccccc;
+}
+
+.dailyContent .dailyNeirong .dailyRight{
+    width: 709px;
+    height: 502px;
+    background-color: #838383;
+}
+
+.dailyContent .dailyNeirong .dailyRight ul>li{
+    width: 174px;
+    height: 498px;
+    background: #FFFFFF;
+    float: left;
+    margin-left: 2px;
+}
+.dailyContent .dailyNeirong .dailyRight ul>li .p2{
+    border-top: 2px solid #838383;
+    margin-top: 50px;
+}
+/*推广商品样式*/
+.promotion .promotiontitle{
+    height: 40px;
+    line-height: 40px;
+    font-size: 28px;
+    border-bottom: 6px solid #f60;
+    margin-top: 30px;
+}
+
+.promotion .promotiontitle .sp{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #ccc;
+}
+
+.promotion .promotiontitle .sp:first-child{
+    background: #f60;
+}
+
+.promotion .promotionNeirong{
+    width: 1171px;
+    height: 613px;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+
+.promotion .promotionNeirong ul>li{
+    width: 214px;
+    height: 300px;
+    float: left;
+    /*background: red;*/
+    margin-left: 20px;
+
+}
+
+.promotion .promotionNeirong ul>li .p1{
+    text-align: center;
+}
+.promotion .promotionNeirong ul>li .p2{
+    font-size: 14px;
+    text-align: center;
+}
+.promotion .promotionNeirong ul>li .p3{
+    font-size: 14px;
+    text-align: center;
+    color: red;
+}
+.promotion .promotionNeirong ul>li .p4{
+    font-size: 14px;
+    text-align: center;
+}
