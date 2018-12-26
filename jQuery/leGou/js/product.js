@@ -24,4 +24,13 @@ $(function () {
         $('.newbookTitle',this).addClass('none');
         $('.newbookDetails',this).addClass('block');
     });
+    let $sfq =  $('.menuShoufen>ul>li');
+    $sfq.mouseenter(function () {
+        // alert(1);
+        $('.meshoufentitle').removeClass('none');
+        $('.meshoufenDetails').removeClass('block');
+
+        $('.meshoufentitle',this).addClass('none');
+        $('.meshoufenDetails',this).addClass('block');
+    });
 });
