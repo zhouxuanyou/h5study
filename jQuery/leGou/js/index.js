@@ -83,4 +83,52 @@ $(function () {
         isShowNum: false //是否显示数字
     });
 
+    //推广商品样式
+    $('.promotion .promotiontitle .sp').mouseenter(function () {
+        $('.promotion .promotiontitle .sp').removeClass('active');
+        $(this).addClass('active');
+
+        let index = $(this).index();
+        $('.probox').animate({
+            "left": -index * 1170
+        }, 1000)
+    });
+    
+    //顶部搜过蓝
+    $(window).on('scroll',function () {
+        //获取高度
+        let scorllheight = $(this).scrollTop();
+
+        if (scorllheight > 300){
+            $('.topsearchInput').slideDown();
+        }else{
+            $('.topsearchInput').slideUp();
+        }
+    });
+
+    //楼层跳转
+    $('.louceng .loucengul>li').hover(function () {
+        //鼠标移入
+        $(this).css({
+            "background-color": '#93d46f',
+            "background-position-x": -40
+        });
+        $(this).animate({
+            "width": 80
+        }, 300)
+
+    },function () {
+        //鼠标移出
+        $(this).css({
+            "background-color": '',
+            "background-position-x": 0
+        });
+        $(this).animate({
+            "width": 40
+        }, 300)
+        
+    }).click(function () {
+        
+    })
+
 });
