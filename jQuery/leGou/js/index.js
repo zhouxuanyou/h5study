@@ -128,7 +128,13 @@ $(function () {
         }, 300)
         
     }).click(function () {
-        
+        let index = $(this).index();
+        let loucshuju = $('.loucen').eq(index).offset().top;
+        // console.log(loucshuju);
+
+        $("html, body").animate({
+            "scrollTop": loucshuju - 300
+        }, 1000)
     })
 
 });
