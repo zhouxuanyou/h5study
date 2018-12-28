@@ -99,6 +99,8 @@
 }
 
 .formbiaodan .myform .liji{
+    margin-top: 30px;
+    width: 400px;
     text-align: center;
     font-size: 28px;
     background: #f60;
