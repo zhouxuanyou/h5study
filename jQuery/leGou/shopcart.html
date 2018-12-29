@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/conmmon.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/shopcart.css">
+</head>
+<body>
+    <!--头部-->
+    <section class="header">
+        <!--顶部-->
+        <div class="top">
+            <p class="loginRegister wrapper">
+                欢迎光临,
+                <a href="">乐购</a> 请 &nbsp;
+                <a href="">登录</a> \
+                <a href="">注册</a>
+            </p>
+        </div>
+        <!--搜索框和订单购物车按钮-->
+        <div class="searchShopCart clearfix wrapper">
+            <!-- 购物&订单按钮 -->
+            <ul class="fr">
+                <li><a href="" class="a1">购物车  3</a></li>
+                <li><a href="">我的订单</a></li>
+            </ul>
+            <!-- 搜索框 -->
+            <div class="searchInput fr">
+                <input type="text" placeholder="创意文具">
+                <button class="searchIcon"></button>
+            </div>
+        </div>
+        <!--导航-->
+        <div class="nav wrapper clearfix">
+            <div class="logo fl">
+                <img src="./imags/images/logo.jpg" alt="">
+            </div>
+            <!-- 导航列表 -->
+            <ul class="fr ">
+                <li>图书</li>
+                <li>电子书</li>
+                <li>原创文学</li>
+                <li>服装</li>
+                <li>运动户外</li>
+                <li>孕婴童</li>
+                <li>家居</li>
+                <li>创意文具</li>
+                <li>地方特产</li>
+                <li>海外购</li>
+                <li>电器城</li>
+            </ul>
+        </div>
+    </section>
+
+    <!--订单-->
+    <div class="shop wrapper">
+        <h2>填写并核对订单信息</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th width="100">
+                        <input type="checkbox" class="allSelect">全选
+                    </th>
+                    <th width="400">商品</th>
+                    <th width="100">单价</th>
+                    <th width="200">数量</th>
+                    <th width="200">小计</th>
+                    <th width="200">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td width="100">
+                    <input type="checkbox" class="singleSelect">
+                </td>
+                <td width="400">
+                    <img src="./imags/images/22499729-1_l_5.jpg" alt="">
+                    从你的全世界路过
+                </td>
+                <td width="100" class="singlePrice">41.00</td>
+                <td width="200">
+                    <span class="add">+</span><input class="num" type="text" value="1"><span class="reduce">-</span>
+                </td>
+                <td width="200" class="subTotal">
+                    41.00
+                </td>
+                <td width="200" class="del">
+                    删除
+                </td>
+            </tr>
+            <tr>
+                <td width="100">
+                    <input type="checkbox" class="singleSelect">
+                </td>
+                <td width="400">
+                    <img src="./imags/images/22499729-1_l_5.jpg" alt="">
+                    从你的全世界路过
+                </td>
+                <td width="100" class="singlePrice">41.00</td>
+                <td width="200">
+                    <span class="add">+</span><input class="num" type="text" value="1"><span class="reduce">-</span>
+                </td>
+                <td width="200" class="subTotal">
+                    41.00
+                </td>
+                <td width="200" class="del">
+                    删除
+                </td>
+            </tr>
+            <tr>
+                <td width="100">
+                    <input type="checkbox" class="singleSelect">
+                </td>
+                <td width="400">
+                    <img src="./imags/images/22499729-1_l_5.jpg" alt="">
+                    从你的全世界路过
+                </td>
+                <td width="100" class="singlePrice">41.00</td>
+                <td width="200">
+                    <span class="add">+</span><input class="num" type="text" value="1"><span class="reduce">-</span>
+                </td>
+                <td width="200" class="subTotal">
+                    41.00
+                </td>
+                <td width="200" class="del">
+                    删除
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- 结算 -->
+        <div class="account clear">
+            <!-- 左侧 -->
+            <div class="accountLeft fl">
+                <input type="checkbox" class="allSelect">全选 &emsp;&emsp;
+                <span>删除选中商品</span>
+            </div>
+            <!-- 右侧 -->
+            <div class="accountRight fr">
+                已选中 <span class="allNum"> 1 </span> 件商品  &emsp;&emsp;
+                <strong>总价</strong><span class="allPrice"> 41.00 </span>  &emsp;&emsp;
+                <input class="balance" type="button" value="去结算">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--猜你喜欢-->
+    <section class="cainixihuan wrapper">
+        <div class="cainititle wrapper clearfix">
+            <span>猜</span>你喜欢
+            <div class="fr qiehuan">
+                换一批
+            </div>
+        </div>
+        <div class="cainineirong wrapper">
+            <div class="xihuanbox">
+                <!--1-->
+                <ul class="clearfix">
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <!--2-->
+                <ul class="clearfix">
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <!--3-->
+                <ul class="clearfix">
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22928335-1_l.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <img width="150" height="150" src="./imags/images/22499729-1_l_5.jpg" alt="">
+                        </p>
+                        <p class="p2">
+                            查理斯秘书
+                        </p>
+                        <p class="p3">
+                            中国邮电出版社
+                        </p>
+                        <p class="p4">
+                            <span style="color: red">￥49</span>
+                            &nbsp;
+                            <del>￥79</del>
+                        </p>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--guangg-->
+    <section class="jinxuan wrapper">
+        <ul class="clearfix">
+            <li>
+                <img src="./imags/images/renwen.png" alt="">
+            </li>
+            <li>
+                <img src="./imags/images/renwen.png" alt="">
+            </li>
+            <li>
+                <img src="./imags/images/renwen.png" alt="">
+            </li>
+            <li>
+                <img src="./imags/images/renwen.png" alt="">
+            </li>
+            <li>
+                <img src="./imags/images/renwen.png" alt="">
+            </li>
+            <li>
+                <img src="./imags/images/renwen.png" alt="">
+            </li>
+        </ul>
+
+    </section>
+    <!--广告-->
+    <section class="moshoushijie wrapper">
+        <img src="./imags/images/minbanner.jpg" alt="">
+    </section>
+
+    <!-- 尾部 -->
+    <footer class="footer">
+        <div class="footerContent">
+            <ul class="clearfix">
+                <li>
+                    <img src="./imags/images/222_11.png" alt="">
+                </li>
+                <li>
+                    <img src="./imags/images/222_13.png" alt="">
+                </li>
+                <li>
+                    <img src="./imags/images/222_15.png" alt="">
+                </li>
+                <li>
+                    <img src="./imags/images/222_17.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="footerYejiao">
+            <div class="footerNei">
+                <ul class="clearfix">
+                    <li>
+                        购物指南 <br>
+                        购物流程 <br>
+                        发票制度 <br>
+                        账户管理 <br>
+                        会员管理 <br>
+                    </li>
+                    <li>
+                        支付方式 <br>
+                        货到付款 <br>
+                        网上支付 <br>
+                        铃皮卡支付 <br>
+                        网上转账 <br>
+                    </li>
+                    <li>
+                        订单服务 <br>
+                        订单配送查询 <br>
+                        订单配送查询 <br>
+                        订单配送查询 <br>
+                        订单配送查询 <br>
+                    </li>
+                    <li>
+                        退换货 <br>
+                        退换货政策 <br>
+                        退换货政策 <br>
+                        退换货政策 <br>
+                        退换货政策 <br>
+                    </li>
+                    <li>
+                        商家服务 <br>
+                        商家中旬 <br>
+                        商家中旬 <br>
+                        商家中旬 <br>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <img  src="./imags/images/logo_00.png" alt="">
+            </div>
+            <div class="clear"></div>
+            <div class="footerNx">
+                公司简介  |  Investor Relations  |  网站联盟  |  乐购招商  |  机构销售  |  手机乐购  |  官方Blog   |  热词搜索
+            </div>
+            <div class="fooetNl">
+                Copyright (C) 乐购网 2004-2016, All Rights Reserved
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+<script src="./js/jquery-1.11.0.js"></script>
+<script src="./js/shopcart.js"></script>
+</body>
+</html>

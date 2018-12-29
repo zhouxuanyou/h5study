@@ -1,0 +1,168 @@
+.shop{
+    margin: 30px auto;
+}
+.shop h2{
+    font-size: 20px;
+    color: #666;
+}
+.shop table{
+    width: 1200px;
+}
+.shop table thead{
+    width: 1200px;
+    height: 60px;
+    background-color: #f2f2f2;
+}
+
+.shop table thead>tr{
+    height: 60px;
+    color: #808080;
+}
+
+.shop table tbody{
+    width: 1200px;
+}
+
+.shop table tbody>tr{
+    height: 185px;
+    width: 1200px;
+    font-size: 16px;
+    color: #4d4d4d;
+    /*text-indent: 34px;*/
+    text-align: center;
+    border-bottom: 2px solid #CCCCCC;
+}
+.shop table tbody>tr>td img{
+    border: 1px solid #CCCCCC;
+}
+.shop table tbody>tr>td .num{
+    width: 73px;
+    height: 24px;
+    border: 1px solid #999;
+    margin: 0 -1px;
+    text-align: center;
+    outline: none;
+}
+
+.shop table tbody tr .add, .shop  table tbody tr .reduce {
+    border:1px solid #999;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    padding: 1px auto;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.shop .account {
+    height: 60px;
+    line-height: 60px;
+    border:1px solid #f2f2f2;
+    margin: 30px auto;
+}
+
+.shop .account .accountLeft {
+    text-indent: 40px;
+}
+
+.shop .account .accountLeft > input {
+    vertical-align: middle;
+}
+
+.allNum, .allPrice {
+    color: #ff6700;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.balance {
+    width: 110px;
+    height: 60px;
+    background-color: #f60;
+    color: #fff;
+    font-size: 22px;
+    border: 1px solid #f60;
+}
+
+/*猜你喜欢样式*/
+.cainixihuan{
+    margin-top: 30px;
+    /*height: 543px;*/
+    border-bottom: 2px solid #ccc;
+}
+.cainixihuan .cainititle{
+    height: 44px;
+    border-bottom: 6px solid #f60;
+    font-size: 22px;
+}
+.cainixihuan .cainititle>span{
+    display: inline-block;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    width: 44px;
+    color: #fff;
+    background: #f60;
+    font-size: 28px;
+    /*padding-top: 10px;*/
+    padding-bottom: 2px;
+}
+
+.cainixihuan .cainititle .qiehuan{
+    color: #00a7ea;
+    margin-top: 10px;
+
+}
+.cainixihuan .cainititle .qiehuan:hover{
+    cursor: pointer;
+    color: hotpink;
+}
+
+.cainixihuan .cainineirong{
+    margin-top: 10px;
+    height: 481px;
+    overflow: hidden;
+}
+.cainixihuan .cainineirong .xihuanbox{
+    height: 1443px;
+    position: relative;
+    top: 0;
+}
+
+.cainixihuan .cainineirong ul>li{
+    width: 170px;
+    height: 220px;
+    float: left;
+    text-indent: 10px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.cainixihuan .cainineirong ul>li .p1{
+    text-align: center;
+}
+.cainixihuan .cainineirong ul>li .p2{
+    font-size: 14px;
+}
+.cainixihuan .cainineirong ul>li .p3{
+    color: #808080;
+}
+.cainixihuan .cainineirong ul>li .p4{
+    color: #808080;
+}
+/*劲炫样式*/
+.jinxuan{
+    margin-top: 20px;
+    height: 113px;
+
+}
+.jinxuan>ul>li{
+    width: 200px;
+    height: 110px;
+    float: left;
+}
+
+.moshoushijie {
+    margin-top: 20px;
+}
