@@ -36,7 +36,7 @@ img{
 	width: 100px;
 	height: 100px;
 	position: absolute;
-	background-image: url('../../icons/move-box.png');
+	background-image: url('../images/move-box.png');
 }
 .images-cover{
 	height: 100%;
@@ -55,7 +55,7 @@ img{
 }
 .magnifier-btn{
 	position: absolute;
-	font-family: "宋体";
+	font-family: "宋体", serif;
 	width: 100%;
 	top: 50%;
 	left: 0;
