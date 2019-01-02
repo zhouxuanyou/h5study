@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //创建ajax对像
+        let ajax = new XMLHttpRequest();
+        //配置请求方式和地址
+        ajax.open('get','./package.json');
+        //监听对象
+        ajax.onreadystatechange = function () {
+            //设置响应条件
+            if(ajax.readyState === 4 && ajax.status === 200){
+                let res = ajax.responseText;
+                console.log(JSON.parse(res));
+            }
+        };
+        //发送请求
+        ajax.send();
+    </script>
+
+</body>
+</html>

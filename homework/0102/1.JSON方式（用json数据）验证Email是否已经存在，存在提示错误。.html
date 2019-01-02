@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="">
+        <label>
+            邮箱：
+            <input type="text" name="emali" id="emali">
+            <span id="spn"></span>
+        </label>
+    </form>
+    <script>
+        //获取邮箱对象
+        let emali = document.querySelector('#emali');
+        let spn = document.querySelector('#spn');
+
+        //注册视角事件
+        emali.addEventListener('blur',function () {
+            //获取邮箱的值
+            let emalicnt = emali.value;
+
+            //注册ajax对象
+            let ajax = new XMLHttpRequest();
+
+            //配置
+            ajax.open('get','./package.json');
+
+            //设置监听
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState === 4 && ajax.status === 200){
+                    //设置json响应内容
+                    let data = JSON.parse(ajax.responseText);
+
+                    //判断
+                    if (data){
+                        emali.style.border = '1px solid green';
+                        spn.innerHTML = data.msg;
+                        spn.style.color = 'green';
+                    }else {
+                        emali.style.border = '1px solid red';
+                        spn.innerHTML = data.msg;
+                        spn.style.color = 'red';
+                    }
+                }
+            }
+
+            //发送请求
+            ajax.send();
+        })
+    </script>
+</body>
+</html>

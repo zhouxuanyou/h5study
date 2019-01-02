@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //get请求
+        // let ajax = new XMLHttpRequest();
+
+        // //配置
+        // ajax.open('get','./package.json');
+        //
+        // //监听状态
+        // ajax.onreadystatechange= function () {
+        //     if (ajax.readyState === 4 && ajax.status === 200){
+        //         let data = ajax.responseText;
+        //         console.log(data);
+        //     }
+        // };
+        //
+        // //发送请求
+        // ajax.send();
+
+
+        //post请求
+        let ajax = new XMLHttpRequest();
+
+        ajax.open('post','./package.json');
+
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState === 4 && ajax.status === 200){
+                let data = ajax.responseText;
+                console.log(data);
+            }
+        };
+
+        //设置请求头
+        ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
+        ajax.send('name=12121&pwd=111');
+
+
+    </script>
+
+</body>
+</html>

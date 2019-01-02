@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let ajax = new XMLHttpRequest();
+        ajax.open('post','./package.json');
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState ===4 && ajax.status === 200) {
+                let res = JSON.parse(ajax.responseText);
+                console.log(res);
+            }
+
+        };
+        ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+        ajax.send('name=adasd&pwd=adsds');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#">
+        <label>
+            用户名：
+            <input type="text" name="username" id="username">
+        </label>
+        <span id="span"></span>
+        <br>
+        <label>
+            密码：
+            <input type="text" id="pwd">
+        </label>
+        <br>
+        <button id="btn">注册</button>
+    </form>
+    <script>
+        let us = document.querySelector('#username');
+        let username = document.querySelector('#username').value;
+        let spn = document.querySelector('#span');
+        
+        us.addEventListener('blur',function () {
+            let ajax = new XMLHttpRequest();
+
+            ajax.open('post','./package.json');
+
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState === 4 && ajax.status === 200){
+                    let res = JSON.parse(ajax.responseText);
+                    if (res.isok){
+                        us.style.border = '1px solid green';
+                        spn.innerHTML = res.msg;
+                        spn.style.color = 'green'
+                    }else {
+                        us.style.border = '1px solid red';
+                        spn.innerHTML = res.msg;
+                        spn.style.color = 'red'
+                    }
+                }
+            };
+
+            ajax.setRequestHeader('Content-Type','application-/x-www-form-urlencoded');
+
+            ajax.send();
+        })
+
+    </script>
+</body>
+</html>
