@@ -35,13 +35,13 @@
                     let data = JSON.parse(ajax.responseText);
 
                     //判断
-                    if (data){
+                    if (data.emali === emalicnt){
                         emali.style.border = '1px solid green';
                         spn.innerHTML = data.msg;
                         spn.style.color = 'green';
                     }else {
                         emali.style.border = '1px solid red';
-                        spn.innerHTML = data.msg;
+                        spn.innerHTML = data.msg1;
                         spn.style.color = 'red';
                     }
                 }
