@@ -3,28 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        .box{
-            width: 200px;
-            height: 50px;
-            border-bottom: 4px dashed red;
-            margin: 0 auto;
-        }
-        .box2{
-            width: 100px;
-            height: 50px;
-            padding: 40px;
-            margin: 0 auto;
-            background: #fff;
-            text-align: center;
-        }
-    </style>
+
+
+
 </head>
 <body>
-    <div class="box">
-        <div class="box2">
-            我们的服务
-        </div>
-    </div>
-</body
+    <input type="checkbox" name="check" value="a"/>a
+    <input type="checkbox" name="check" value="b"/>b
+    <input type="checkbox" name="check" value="c"/>c
+    <input type="button" value="全选" id="btn"/>
+    <input type="button" value="全不选" id="btn1"/>
+    <input type="button" value="反选" id="btn2"/>
+    <script src="./jquery-1.11.3/jquery.js"></script>
+    <script>
+        $('#btn').on('click',function () {
+            $(':checkbox').prop('checked',true);
+
+        });
+        $('#btn1').on('click',function () {
+            // console.log(stus);
+            $(':checkbox').prop('checked',false);
+
+        });
+        $('#btn2').on('click',function () {
+            $.each($(':checkbox'),function(){
+                $(this).prop("checked",!$(this).prop("checked"));
+            });
+        });
+        let arr = [
+            ('小A','女',21,'大一'),  ('小B','男',23,'大三'),
+            ('小C','男',24,'大四'),  ('小D','女',21,'大一'),
+            ('小E','女',22,'大四'),  ('小F','男',21,'大一'),
+            ('小G','女',22,'大二'),  ('小H','女',20,'大三'),
+            ('小I','女',20,'大一'),  ('小J','男',20,'大三')
+        ];
+        function select(array){
+
+            for(var i=0;i<array.length;i++){
+
+                var str=array[i].join();
+
+                if(str.indexOf("女")!==-1&&str.indexOf("大一")!==-1){
+
+                    document.write(array[i]+"<br>");
+
+                }
+
+            }
+
+        }
+
+        select(arr);
+
+    </script>
+</body>
 </html>
