@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt="男神笑川的头像" id="img">
+    <h2 id="name"></h2>
+    <h2 id="sex"></h2>
+    <h2>爱好</h2>
+    <ul id="hoppy"></ul>
+    <script>
+        let name = document.querySelector('#name');
+        let sex = document.querySelector('#sex');
+        let hoppy = document.querySelector('#hoppy');
+        let img = document.querySelector('#img');
+
+        
+        let ajax = new XMLHttpRequest();
+        
+        ajax.open('get','./cnt.json');
+        
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState === 4 && ajax.status === 200){
+                let data = JSON.parse(ajax.responseText);
+                // console.log(data);
+
+                name.innerHTML = data.name;
+                sex.innerHTML = data.sex;
+
+                let cnt = "";
+                for (let i = 0; i<data.hobby.length;i++) {
+                    cnt+= `<li>${data.hobby[i]}</li>`;
+                }
+
+                hoppy.innerHTML = cnt;
+                img.src= data.imgUrl;
+
+            }
+        };
+
+        ajax.send();
+    </script>
+</body>
+</html>
