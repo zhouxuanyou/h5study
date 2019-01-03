@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/mock-min.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        h2{
+            margin: 0 auto;
+            text-align: center;
+        }
+        table{
+            width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th{
+            background: #f60;
+        }
+        tr,td,th{
+            border: 1px solid #ccc;
+        }
+        tr,td{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2>会员信息</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>会员id</th>
+            <th>会员姓名</th>
+            <th>会员性别</th>
+            <th>会员年龄</th>
+            <th>会员身份信息</th>
+            <th>会员等级</th>
+        </tr>
+        </thead>
+        <tbody id="info">
+
+        </tbody>
+    </table>
+    <script type="text/html" id="muban">
+        {{each vipinfo as v i}}
+        <tr>
+            <td>{{v.vipid}}</td>
+            <td>{{v.name}}</td>
+            <td>{{v.sex}}</td>
+            <td>{{v.age}}</td>
+            <td>{{v.idcard}}</td>
+            <td>{{v.leval}}</td>
+        </tr>
+        {{/each}}
+    </script>
+    <script>
+        Mock.mock('http://www.woaini.cn/vip.json',{
+            "vipinfo|100":[
+                {
+                    "vipid|+1":1,
+                    "name":'@cname',
+                    "sex|1":['男','女'],
+                    "age|18-30":10,
+                    "idcard":"@id",
+                    "leval|1":['VIP1','VIP2','VIP3','VIP4']
+                }
+            ]
+        });
+        $.get('http://www.woaini.cn/vip.json',function (data) {
+            let datas = $.parseJSON(data);
+            // console.log(datas);
+            let reshtml = template('muban',datas);
+            $('#info').html(reshtml);
+        })
+    </script>
+</body>
+</html>
