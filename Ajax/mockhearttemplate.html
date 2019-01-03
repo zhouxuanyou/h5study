@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="mock.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <style>
+        h2{
+            text-align: center;
+        }
+        table{
+            margin: 0 auto;
+            width: 600px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr,td,th{
+            width: 600px;
+            border: 1px solid #ccc;
+            /*background: #ccc;*/
+        }
+
+    </style>
+</head>
+<body>
+<h2>用户信息</h2>
+<table>
+    <theade>
+        <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>身份证</th>
+            <th>职位</th>
+        </tr>
+    </theade>
+    <tbody id="nihao"></tbody>
+</table>
+<script type="text/html" id="muban">
+    {{each user as v i}}
+        <tr>
+            <td>{{v.userId}}</td>
+            <td>{{v.name}}</td>
+            <td>{{v.sex}}</td>
+            <td>{{v.age}}</td>
+            <td>{{v.idcard}}</td>
+            <td>{{v.jobs}}</td>
+        </tr>
+    {{/each}}
+</script>
+<script>
+    //注册mocl模板
+    Mock.mock('http://www.test.cn/tes.json',{
+        "user|100000":[{
+            "userId|+1":1,
+            "name":"@cname",
+            "sex|1":["男","女"],
+            "age|18-60":10,
+            "idcard":"@id",
+            "jobs|1":['前端开发','后端开发','软件测试','项目经理','产品经理']
+        }]
+    });
+    $.get('http://www.test.cn/tes.json',function (data) {
+        let datas = $.parseJSON(data);
+        let reshtml = template('muban',datas);
+        // console.log(reshtml)
+        $('#nihao').html(reshtml);
+    })
+</script>
+
+</body>
+</html>

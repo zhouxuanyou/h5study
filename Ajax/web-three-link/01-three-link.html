@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+
+        fieldset {
+            width: 800px;
+            height: 100px;
+            padding: 40px;
+            margin: 0 auto;
+        }
+        select {
+            width: 200px;
+            height: 40px;
+        }
+    
+    </style>
+    <!-- jquery.min.js -->
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+
+    <fieldset>
+        <legend>三级联动</legend>
+
+        <!-- 省 -->
+        <select name="province" id="province" onchange="showCity(this)">
+            <option>请选择省份</option>
+        </select>
+        <!-- 市 -->
+        <select name="city" id="city" onchange="showArea(this)">
+            <option>请选择城市</option>
+        </select>
+        <!-- 区县 -->
+        <select name="country" id="country">
+            <option>请选择区县</option>
+        </select>
+        
+    </fieldset>
+
+
+    <script>
+        // 获取dom
+        var provinceDom = document.getElementById('province');
+        var cityDom = document.getElementById('city');
+        var countryDom = document.getElementById('country');
+
+        // 当前选中索引对象
+        var currentObj = {
+            currentProv: '',
+            // currentCity: ''
+        };
+
+
+        // 请求所有数据
+        $.get('./data/area.json', function (data) {
+            // 缓存数据
+            var areaData = data === 'string'?JSON.parse(data).area:data.area;
+
+            // 页面加载完成 渲染省份
+            $(function () {
+                for (var i in areaData) {
+                    console.log(areaData[i]);
+                    var provinceName = areaData[i].name;
+                    var provinceOption = document.createElement('option');
+                    provinceOption.innerText = provinceName;
+                    provinceOption.value = i;
+                    provinceDom.appendChild(provinceOption);
+                }
+            });
+
+            // 根据省份 显示城市数据
+            function showCity (obj) {
+                // 选中的省份的索引
+                var val = obj.options[obj.selectedIndex].value;
+                // 当前省份索引保留
+                currentObj.currentProv = val;
+
+                // 根据选中索引取城市数据
+                var selectProvinceToCityData = areaData[val].city;
+
+                // 城市下拉框长度重置为1
+                cityDom.options.length = 1;
+                
+                // 循环城市数据
+                for (var i in selectProvinceToCityData) {
+                    var cityName = selectProvinceToCityData[i].name
+                    var cityOption = document.createElement('option');
+                    cityOption.innerText = cityName;
+                    cityOption.value = i;
+                    cityDom.appendChild(cityOption);
+                }
+
+                // 区县下拉框长度重置为1
+                countryDom.options.length = 1;
+            }
+
+            // 根据城市 显示对应区县
+            function showArea (obj) {
+                // 选中城市的索引
+                val = obj.options[obj.selectedIndex].value;
+                console.log('省份索引:', currentObj.currentProv);
+                console.log('城市索引:', val);
+                // 对应区县数据
+                var selectCuntoryData = areaData[currentObj.currentProv].city[val].districtAndCounty;
+                // console.log(selectCuntoryData);
+
+                // 区县下拉框长度重置为1
+                countryDom.options.length = 1;
+
+                // 循环区县数据
+                for (var i in selectCuntoryData) {
+                    var countryName = selectCuntoryData[i];
+                    var countryOption = document.createElement('option');
+                    countryOption.innerText = countryName;
+                    countryOption.value = i;
+                    countryDom.appendChild(countryOption);
+                }
+            }
+
+            // 方法暴露
+            window.showCity = showCity;
+            window.showArea = showArea;
+        });
+    
+    </script>
+    
+    
+</body>
+</html>
