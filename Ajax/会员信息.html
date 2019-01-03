@@ -23,13 +23,14 @@
         tr,td,th{
             border: 1px solid #ccc;
         }
-        tr,td{
-            background: #000;
-            color: #fff;
-        }
+        /*tr,td{*/
+            /*background: #000;*/
+            /*color: #fff;*/
+        /*}*/
     </style>
 </head>
 <body>
+
     <h2>会员信息</h2>
     <table>
         <thead>
@@ -48,19 +49,21 @@
     </table>
     <script type="text/html" id="muban">
         {{each vipinfo as v i}}
-        <tr>
-            <td>{{v.vipid}}</td>
-            <td>{{v.name}}</td>
-            <td>{{v.sex}}</td>
-            <td>{{v.age}}</td>
-            <td>{{v.idcard}}</td>
-            <td>{{v.leval}}</td>
-        </tr>
+            <tr class="lala">
+                <td>{{v.vipid}}</td>
+                <td>{{v.name}}</td>
+                <td>{{v.sex}}</td>
+                <td>{{v.age}}</td>
+                <td>{{v.idcard}}</td>
+                <td>{{v.leval}}</td>
+            </tr>
         {{/each}}
+
     </script>
     <script>
+
         Mock.mock('http://www.woaini.cn/vip.json',{
-            "vipinfo|100":[
+            "vipinfo|10000":[
                 {
                     "vipid|+1":1,
                     "name":'@cname',
@@ -72,11 +75,36 @@
             ]
         });
         $.get('http://www.woaini.cn/vip.json',function (data) {
+
             let datas = $.parseJSON(data);
             // console.log(datas);
             let reshtml = template('muban',datas);
+
             $('#info').html(reshtml);
-        })
+            let trs = document.querySelectorAll('.lala');
+            console.log(trs);
+            for (let i = 0; i <trs.length;i++){
+                trs[i].style.backgroundColor = getColor();
+            }
+
+
+
+        });
+
+
+
+
+        function getColor()
+        {
+            var colorArray =["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+            var color="#";
+            for(var i=0;i<6;i++)
+            {
+                color+=colorArray[Math.floor(Math.random()*16)];
+            }
+            return color;
+        }
+
     </script>
 </body>
 </html>
