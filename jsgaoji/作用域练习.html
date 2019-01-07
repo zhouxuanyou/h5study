@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var a = 100;
+        (function(){
+            console.log(a);
+            // var a = 10;
+        })();
+    //   因为在function中声明变量a提升到该作用域最顶端 赋值原地不动 所以为undefined
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var xianjia = (function () {
+            let i = 100;
+            return function () {
+                console.log (i*5);
+            }
+        })();
+        xianjia();
+        // 外层函数立即执行得到返回函数，再加一个括号就是调用内层函数
+
+
+        //第二种标准闭包
+        (function () {
+            let num = 10;
+            window.getnum = function () {
+                return num++;//num++ 先返回  后加加
+            }
+        })();
+        console.log(getnum());//10
+        console.log(getnum());//11
+        console.log(getnum());//12
+
+        //闭包    变量不会被销毁  被保存到内存  下一次调用还是这个变量
+        //不是闭包  函数调用一次  变量被销毁一次  下一次就是重新声明一个变量
+
+
+        // 在全局作用域内声明一个变量值
+        var outerValue = 10;
+        // 在全局作用域内声明一个函数
+        function outerFunction() {
+            console.log('我能看到你，'+ outerValue++ );
+        }
+        // 执行该函数
+        outerFunction();
+        outerFunction();
+        outerFunction();
+        //变量被下一个函数内部调用  没被回收
+</script>
+</body>
+</html>
