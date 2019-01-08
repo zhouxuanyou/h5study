@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var name="张三";
+        var obj={};
+        obj.name="李四";
+        obj.showName=function(){
+            return function(){
+                return this.name;
+            }
+        };
+        console.log(obj.showName()());
+        //因为showName下面的function（）return this点name，它是匿名函数，调用的对象是window，而不是obj，所以this指向的指针是全局，所以此时的name是全局变量name的值张三
+    </script>
+</body>
+</html>

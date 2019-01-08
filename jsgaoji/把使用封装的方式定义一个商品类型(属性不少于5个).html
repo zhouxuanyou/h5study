@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let Shop = function(shopid,shopname,shopprice,shopproduction,shopshow){
+            this.shopid = shopid;
+            this.shopname = shopname;
+            this.shopprice = shopprice;
+            this.shopprodcution = shopproduction;
+            this.shopshow = function () {
+                console.log(`${this.shopname}:是人世间最好的商品`)
+            }
+        };
+
+        let shop = new Shop(1,'牛奶',100,'新西兰');
+        shop.shopshow();
+        console.log(shop.shopid);
+        console.log(shop.shopname);
+        console.log(shop.shopprice);
+        console.log(shop.shopprodcution);
+
+
+
+    </script>
+
+
+</body>
+</html>
