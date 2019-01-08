@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //闭包写法
+        // (function () {
+        //     let num = 10;
+        //     //子函数
+        //     function getnum() {
+        //         return num;
+        //     }
+        //     window.getnum = getnum;
+        // })();
+        // (function () {
+        //     let num = 1;
+        //     window.getnum  = function getnum(){
+        //         return num;
+        //     }
+        // })()
+        // let getnum = (function () {
+        //     let num = 5;
+        //     return function () {
+        //         return num;
+        //     }
+        // })();
+        //闭包实现计数器
+        // let getnum = (function () {
+        //     let num = 1;
+        //     return function () {
+        //         return num++;
+        //     }
+        // })();
+        //
+        // let res1 = getnum();
+        // let res2 = getnum();
+        // let res3 = getnum();
+        // let res4 = getnum();
+        // let res5 = getnum();
+        // let res6 = getnum();
+        //
+        // console.log(res1,res2,res3,res4,res5,res6);
+        //计时器问题
+        // for (var i = 0; i <5;i++){
+        //     console.log(i);
+        //     setTimeout(function () {
+        //         console.log(i);
+        //     },1000)
+        // }
+        for (let i = 0; i <5;i++){
+            // console.log(i);
+            setTimeout(function () {
+                console.log(i);
+            },1000)
+        }
+
+
+    </script>
+</body>
+</html>
