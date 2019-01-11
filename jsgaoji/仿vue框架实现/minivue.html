@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--//视图v-->
+    <div id="box">
+        <span v-text="message">我是原数据</span> <br>
+        <input type="text" v-model="datas">
+    </div>
+    <script src="./minVvm.js"></script>
+    <script>
+        //数据model
+        let model = {
+            message:'今天是个好日子，好嗨哦',
+            datas:'我要把数据放入数据库里'
+        };
+
+        //vm实例化对象构造方法
+        let vm = new minVvm({
+            el:'#box',
+            data:model
+        })
+    </script>
+</body>
+</html>
