@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //get方法封装
+        let getajax = (url) => new Promise((resolve, reject) => {
+            let ajax = new XMLHttpRequest();
+            ajax.open('get',url);
+            ajax.send();
+            ajax.onreadystatechange = ()=>{
+                if (ajax.readyState === 4){
+                    if (ajax.status === 200){
+                        resolve(JSON.parse(ajax.responseText));
+                    }else {
+                        //定一个错误信息
+                        let err = {'errs':ajax.readyState,'msg':ajax.status};
+                        reject(err);
+                    }
+                }
+            }
+        });
+
+        //调用
+        // getajax('./sever/package.json').then(data =>{
+        //     console.log(data);
+        // }).catch(err=>{
+        //     console.log(err);
+        // });
+
+        //post方法封装
+        let getpost = (url, prames = {}) => new Promise((resolve, reject) => {
+            let ajax = new XMLHttpRequest();
+            ajax.open('post',url);
+            ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            //处理post传入的数据
+            let strs = '';
+            for (let i in prames){
+                // console.log(i);
+                // console.log(prames[i]);
+                strs += `&${i}=${prames[i]}`;
+            }
+            // console.log(strs);
+            ajax.send(strs.substr(1));
+            ajax.onreadystatechange = () =>{
+                if (ajax.readyState === 4){
+                    if (ajax.status === 200){
+                        resolve(JSON.parse(ajax.responseText));
+                    }else {
+                        let err = {'errs':ajax.readyState,'msg':ajax.status};
+                        reject(err)
+                    }
+                }
+            }
+        });
+
+        getpost('./sever/package.json',{
+            username : '周杰伦',
+            sex:'男',
+        })
+            .then(data =>{
+                console.log(data)
+            })
+            .catch(err =>{
+                console.log(err);
+            })
+    </script>
+
+</body>
+</html>
