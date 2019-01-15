@@ -1,8 +1,8 @@
-;(function ($) {
+define(["jQuery"],function ($) {
     let _this;
     $.fn.extend({
         duilian :function (opts) {
-             _this = this;
+            _this = this;
 
             // 设置默认参数
             let defalut = {
@@ -40,8 +40,8 @@
             $(rightimg).appendTo(_this);
 
             return _this;
-    }
+        }
     });
+});
 
 
-})(jQuery);
