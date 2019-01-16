@@ -24,14 +24,14 @@
             }
         });
 
-        //调用
-        // getajax('./sever/package.json').then(data =>{
+        // // 调用
+        // getajax('./sever/package.json?username=zhan$password=123').then(data =>{
         //     console.log(data);
         // }).catch(err=>{
         //     console.log(err);
         // });
 
-        //post方法封装
+        // //post方法封装
         let getpost = (url, prames = {}) => new Promise((resolve, reject) => {
             let ajax = new XMLHttpRequest();
             ajax.open('post',url);
@@ -57,7 +57,7 @@
             }
         });
 
-        getpost('./sever1/package.json',{
+        getpost('./sever/package.json',{
             username : '周杰伦',
             sex:'男',
         })
