@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="usename">用户名：</label><input type="text" id="username">
+        <label for="pwd">密码：</label><input type="text" id="pwd">
+        <button type="button" id="btn">登录</button>
+    </form>
+
+    <script>
+        //获取按钮
+        let btn = document.querySelector('#btn');
+
+        //绑定事件
+        btn.addEventListener('click',()=>{
+            let username = document.querySelector('#username').value;
+            let pwd = document.querySelector('#pwd').value;
+
+            //ajax
+            let ajax = new XMLHttpRequest();
+            ajax.open('post','/login');
+            ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            ajax.send(`username=${username}&pwd=${pwd}`);
+            ajax.onreadystatechange=function () {
+                if (this.readyState === 4&&this.status===200){
+                    let data = JSON.parse(this.responseText);
+                    // console.log(data);
+                    data.islogin?alert(data.msg):alert(data.msg)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="username">用户名：</label><input type="text" id="username"><span id="info"></span><br>
+        <label for="pwd">密码：</label><input type="text" id="pwd">
+        <p><button type="button" id="btn">免费注册</button></p>
+    </form>
+
+    <script>
+        let username = document.querySelector('#username');
+        let info = document.querySelector('#info');
+
+        username.addEventListener('blur',()=>{
+            let userinfo = username.value;
+
+            let ajax = new XMLHttpRequest();
+            ajax.open('post','/register');
+            ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            ajax.send(`userinfo=${userinfo}`);
+            ajax.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200){
+                    let data = JSON.parse(this.responseText);
+                    if (data.isexist){
+                        info.innerHTML = data.msg;
+                        username.style.border = '2px solid green';
+                        info.style.color = 'green';
+                    }else {
+                        info.innerHTML = data.msg;
+                        username.style.border = '2px solid red';
+                        info.style.color = 'red';
+                    }
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
