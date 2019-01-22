@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				font-size: 14px;
+			}
+			#wrapper{
+				width: 1000px;
+				line-height: 24px;
+				margin: 0 auto;
+			}
+			#wrapper h1{
+				line-height: 35px;
+				text-align: center;
+				border-bottom: dashed 1px #eee;
+				padding-bottom: 10px;
+			}
+			#wrapper p{
+				line-height: 35px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1><%= title%></h1>
+			<p>作者：<%= author%> 来源：<%= source%> 发布时间：<%= ctime%></p>
+			<div>
+				<%= content%>
+			</div>	
+		</div>
+		
+	</body>
+</html>
