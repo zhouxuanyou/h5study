@@ -4,7 +4,7 @@ var router = express.Router();
 let mongo = require('mongoose');
 //连接数据库
 // mongo.Promise = global.Promise;
-mongo.connect('mongodb://localhost:27017/news',{useMongoClient: true},(err)=>{
+mongo.connect('mongodb://localhost/news',{useMongoClient: true},(err)=>{
   if (err) throw err;
   console.log('数据库连接成功');
 });
@@ -106,6 +106,7 @@ router.post('/saveedit',(req,res)=>{
         })
     })
 });
+
 
 
 //设置新闻详情
