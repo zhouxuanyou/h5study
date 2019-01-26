@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btns{
+            width: 300px;
+            height: 300px;
+            background: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" >
+        <!--{{ msg }}-->
+        <!--{{sayhello()}}-->
+        <!--<input type="text" v-model="msg">-->
+        <span v-text="msg"></span>
+        <span v-html="html"></span>
+        <button id="btn" @click="xianshi" ></button>
+        <div id="btns" v-show="flag"></div>
+        <h1 v-if="scroe>=90">优</h1>
+        <h1 v-else-if="scroe>=80">良</h1>
+        <h1 v-else-if="scroe>=70">不错</h1>
+        <h1 v-else-if="scroe>=60">及格</h1>
+        <h1 v-else>差</h1>
+
+        <ul>
+            <li v-for="(book,i) in books">
+                {{i}}{{book}}
+            </li>
+        </ul>
+
+
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <!--<script src="js/vue.js"></script>-->
+
+    <script>
+        let app = new Vue({
+            el:'#app',
+            data:{
+                msg:"你好啊dsdasdadads",
+                html:'<h1>nihaodasds</h1>',
+                flag:true,
+                scroe:90,
+                books:[
+                    'html','css','javascript','python'
+                ]
+            },
+            methods:{
+                sayhello(){
+                    console.log('hello');
+                },
+                xianshi(){
+                    this.flag = !this.flag;
+                }
+
+            }
+        });
+        app.sayhello();
+    </script>
+</body>
+</html>

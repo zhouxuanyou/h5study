@@ -40,8 +40,18 @@
 // z = add(x);
 // console.log(y);
 // console.log(z);
-for(i=0, j=0; i<10, j<6; i++, j++){
-    k = i + j;
-
-}
-console.log(k);
+// for(i=0, j=0; i<10, j<6; i++, j++){
+//     k = i + j;
+//
+// }
+// console.log(k);
+// var arr=[{a:1},{}];
+// arr.forEach(function(item,idx){
+//     item.b=idx;
+// });
+//
+// console.log(arr);
+// var f = function g() {
+//     return 23;
+// };
+// typeof g();

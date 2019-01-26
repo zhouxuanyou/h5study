@@ -57,7 +57,7 @@ router.post('/fabunews',(req,res)=>{
     // console.log(news);
     //保存到数据库
     news.save((err)=>{
-        if (err) res.send(`<script>alert("发布失败")</script>`);
+        if (err) res.send(`<script>alert("发布失败");location.href ="/newslist"</script>`);
         res.send(`<script>alert("成功");location.href ="/newslist" </script>`);
 
     })

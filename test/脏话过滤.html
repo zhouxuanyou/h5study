@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let str = '你妈死了，我艹你妈，老子在你妈坟头蹦迪';
+        let arrs = ['妈','艹','坟头蹦迪'];
+
+        for (let i = 0; i <arrs.length ; i++) {
+            str = str.replace(arrs[i],'*');
+        }
+        console.log(str);
+        let datenow = new Date();
+        let date = datenow.toLocaleString();
+        console.log(date);
+    </script>
+</body>
+</html>

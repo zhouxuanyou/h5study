@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <style>
+        .bg1{
+            background: #000;
+        }
+        .bg2{
+            background: red;
+        }
+        .bg3{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 v-bind:class="{'bg1':index === 1,'bg2':index === 2,'bg3':index === 3}">dasdsda</h1>
+    </div>
+    <script>
+        let app = new Vue({
+            el:"#app",
+            data:{
+                index:1
+            }
+        });
+        setInterval(()=>{
+            app.index++;
+            if (app.index === 4)
+            app.index = 1;
+
+
+
+        },200)
+    </script>
+</body>
+</html>

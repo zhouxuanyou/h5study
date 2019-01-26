@@ -33,8 +33,8 @@ router.post('/liuyanadd',(req,res)=>{
     liuyan.ctime = new Date().toLocaleString();
     // console.log(liuyan);
     liuyan.save((err)=>{
-        if (err) res.send(`<script>alert("发布失败")</script>`);
-        res.send(`<script>alert("成功");location.href ="/" </script>`);
+        if (err) return res.send(`<script>alert("发布失败");location.href ="/"</script>`);
+        return res.send(`<script>alert("成功");location.href ="/" </script>`);
 
     })
 });

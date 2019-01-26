@@ -16,9 +16,16 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="2">
+          <list size="9">
             <item index="0" class="java.lang.String" itemvalue="type" />
             <item index="1" class="java.lang.String" itemvalue="v-text" />
+            <item index="2" class="java.lang.String" itemvalue="v-html" />
+            <item index="3" class="java.lang.String" itemvalue="v-show" />
+            <item index="4" class="java.lang.String" itemvalue="@click" />
+            <item index="5" class="java.lang.String" itemvalue="v-if" />
+            <item index="6" class="java.lang.String" itemvalue="v-else-if" />
+            <item index="7" class="java.lang.String" itemvalue="v-else" />
+            <item index="8" class="java.lang.String" itemvalue="v-for" />
           </list>
         </value>
       </option>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./js/axios.js"></script>
+    <style>
+
+        h1{
+            text-align:center;
+            margin: 0 auto;
+        }
+        table{
+            width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+
+        }
+        tr th, tr td{
+            border:1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>用胡萝卜</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>技能</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{users.name}}</td>
+                <td>{{users.sex}}</td>
+                <td>{{users.age}}</td>
+                <td>{{users.jineng}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:'#app',
+            data:{
+                users:[]
+            }
+        });
+
+        axios.get('./userinfo.json')
+            .then(response=>{
+                vm.users = response.data.user;
+            })
+            .cache(err=>{
+                console.log(err);
+            })
+    </script>
+</body>
+</html>
