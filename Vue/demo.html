@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <style>
+        #app{
+            margin: 0 auto;
+            text-align: center;
+        }
+        table{
+            width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        tr th,tr td{
+            border:1px solid #ccc;
+            text-align: center;
+        }
+        tr td>button{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1>学籍管理系统</h1>
+    <form action="/infoadd" method="post">
+        <label>
+            姓名
+            <input type="text">
+        </label>
+        <br>
+        <label>
+            年龄
+            <input type="text">
+        </label>
+        <br>
+        <label>
+            性别
+            <input type="text">
+        </label>
+        <br>
+        <label>
+            手机
+            <input type="text">
+        </label>
+        <br>
+        <button type="button">保存</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>手机</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>张珊</td>
+            <td>18</td>
+            <td>男</td>
+            <td>1232321</td>
+            <td><button>删除</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

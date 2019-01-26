@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <
+    <title></title>
+
+    <style>
+      #app{
+        margin: 0 auto;
+        text-align: center;
+      }
+      table{
+        width: 600px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      tr th,tr td{
+        border:1px solid #ccc;
+        text-align: center;
+      }
+      tr td>button>a{
+        background: blue;
+        color: #0f0f0f;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="app">
+    <h1>学籍管理系统</h1>
+    <form action="/infoadd" method="post">
+      <label>
+        姓名
+        <input type="text" name="name">
+      </label>
+      <br>
+      <label>
+        年龄
+        <input type="text" name="age">
+      </label>
+      <br>
+      <label>
+        性别
+        <input type="text" name="sex">
+      </label>
+      <br>
+      <label>
+        手机
+        <input type="text" name="tel">
+      </label>
+      <br>
+      <button type="submit">保存</button>
+    </form>
+    <table>
+      <thead>
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>手机</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+          <% for (let i = 0; i<users.length;i++){ %>>
+          <tr v-for="user in users">
+            <td><%= users[i].name%></td>
+            <td><%= users[i].age%></td>
+            <td><%= users[i].sex%></td>
+            <td><%= users[i].tel%></td>
+            <td><button type="button" ><a href="/delinfo?id=<%= users[i]._id%>">删除</a></button></td>
+
+          </tr>
+        <%}%>
+      </tbody>
+    </table>
+  </div>
+  </body>
+
+</html>
