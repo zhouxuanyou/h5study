@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <father :msg="msg"></father>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                msg:'nihao'
+            },
+            components:{
+
+                'father':{
+                    props:['msg'],
+                    template:`<div><h1>我是父节点{{msg}} </h1><son :msg1="msg1"></son></div>`,
+                    data(){
+                        return{
+                            msg1:'hello'
+                        }
+                    },
+                    components: {
+
+                        'son':{
+                            props:['msg1'],
+                            template: `<p>我是子节点{{msg1}}</p>`
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

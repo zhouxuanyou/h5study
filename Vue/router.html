@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="./js/vue-router.js"></script>
+    <style>
+        .router-link-active{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>
+            <router-link to="/home">首页</router-link>
+            <router-link to="/about">关于</router-link>
+            <router-link to="/news">新闻</router-link>
+        </p>
+        <!--//路由出口-->
+        <router-view></router-view>
+    </div>
+    <script>
+        //定义组件模板
+        let home = {
+            template:`<div>我是首页内容</div>`
+        };
+        let about = {
+            template:`<div>
+                            我是关于我们
+                            <p>
+                                <router-link to="/about/us">关于我们</router-link>
+                                <router-link to="/about/compy">关于公司</router-link>
+                            </p>
+                            <router-view></router-view>
+                        </div>`
+        };
+        let us = {
+            template:`<div>这是关于我们</div>`
+        };
+        let compy = {
+          template:`<div>这是关于公司</div>`
+        };
+        let news = {
+            template:`<div>我是新闻中心</div>`
+        };
+
+        //配置路由
+        let routes = [
+            {path:'/home',component:home},
+            {path:'/about',component:about,
+                children: [
+                    {path:'/about/us',component:us},
+                    {path:'/about/compy',component:compy}
+                ]
+            },
+            {path:'/news',component:news}
+        ];
+        //创建路由实例
+        let router = new VueRouter({
+            routes
+        });
+
+        new Vue({
+            el:'#app',
+            router
+        })
+    </script>
+</body>
+</html>

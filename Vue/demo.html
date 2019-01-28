@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="./js/qs.js"></script>
     <style>
         #app{
             margin: 0 auto;
@@ -26,51 +28,87 @@
     </style>
 </head>
 <body>
-<div id="app">
-    <h1>学籍管理系统</h1>
-    <form action="/infoadd" method="post">
-        <label>
-            姓名
-            <input type="text">
-        </label>
-        <br>
-        <label>
-            年龄
-            <input type="text">
-        </label>
-        <br>
-        <label>
-            性别
-            <input type="text">
-        </label>
-        <br>
-        <label>
-            手机
-            <input type="text">
-        </label>
-        <br>
-        <button type="button">保存</button>
-    </form>
-    <table>
-        <thead>
-            <tr>
-                <th>姓名</th>
-                <th>年龄</th>
-                <th>性别</th>
-                <th>手机</th>
-                <th>操作</th>
+    <div id="app">
+        <h1>学籍管理系统</h1>
+        <form action="#" method="post">
+            <label>
+                姓名
+                <input type="text">
+            </label>
+            <br>
+            <label>
+                年龄
+                <input type="text" >
+            </label>
+            <br>
+            <label>
+                性别
+                <input type="text" >
+            </label>
+            <br>
+            <label>
+                手机
+                <input type="text" >
+            </label>
+            <br>
+            <button @click="submitinfo">保存</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                    <th>手机</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr v-for="us in user" id="shuju">
+                <td>{{us.name}}</td>
+                <td>{{us.age}}</td>
+                <td>{{us.sex}}</td>
+                <td>{{us.tel}}</td>
+                <td><button @click="removechild">删除</button></td>
             </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>张珊</td>
-            <td>18</td>
-            <td>男</td>
-            <td>1232321</td>
-            <td><button>删除</button></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let vm = new Vue({
+            el:'#app',
+            data:{
+                user:{
+
+                }
+            },
+            methods:{
+                removechild(){
+                    let li = document.querySelector('#shuju');
+                    li.remove();
+                },
+                submitinfo(){
+                    axios.post('./nihao.php',Qs.stringify(this.user))
+                        .then(response => {
+                            console.log(response.data);
+                            vm.user = response.data;
+                        })
+                        .catch(err => {
+                            console.log(err)
+                        });
+
+                }
+            }
+        });
+        axios.get('./userinfo.json')
+            .then(response => {
+                vm.user = response.data.user;
+            })
+            .catch(err => {
+                console.log(err)
+            });
+
+
+    </script>
 </body>
 </html>
