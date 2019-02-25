@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #clearfix div{
+            float: left;
+        }
+
+        #clearfix:after {
+            content: "";
+            width: 0;
+            height: 0;
+            clear: both;
+            display: block;
+        }
+        /*柠檬*/
+        #frist {
+
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            background: #fffd41;
+            border-radius: 110px 0px;
+        }
+
+        /* 1/4圆*/
+
+        #last {
+
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            background: #fffd41;
+            border-radius: 200px 0 0 0;
+            /*border-radius:
+    0 0 0 200px ;*/
+        }
+
+        /*上半圆*/
+
+        #nth {
+
+            width: 200px;
+            height: 100px;
+            border: 1px solid;
+            background: #fffd41;
+            border-radius: 200px 200px 0 0;
+            /*border-radius: 0 0 0 200px ;*/
+        }
+
+        /*圆角矩形*/
+
+        #app {
+
+            width: 200px;
+            height: 100px;
+            border: 1px solid;
+            background: #fffd41;
+            border-radius: 10px;
+        }
+
+        /*正圆*/
+
+        #add {
+
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            background: #fffd41;
+            border-radius: 100px;
+        }
+
+        /*椭圆*/
+
+        #odd {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            background: #fffd41;
+            border-radius: 160px 50px ;
+        }
+    </style>
+</head>
+
+<body>
+<section id="clearfix">
+    <!-- 柠檬 -->
+    <div id="frist"></div>
+    <!-- 1/4圆 -->
+    <div id="last"></div>
+    <!-- 半圆 -->
+    <div id="nth"></div>
+    <!-- 圆角矩形、、 -->
+    <div id="app"></div>
+    <!--正圆  -->
+    <div id="add"></div>
+    <!-- 椭圆 -->
+    <div id="odd"></div>
+
+
+
+
+
+
+
+</section>
+
+
+
+</body>
+
+</html>

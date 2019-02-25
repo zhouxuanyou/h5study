@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style type="text/css">
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    header {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        background-color: dodgerblue;
+    }
+
+    nav {
+        background-color: gray;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    nav input {
+        background-color: #555;
+        color: white;
+        border: none;
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 5px 6px;
+        margin: 0px 8px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    nav input.current {
+        background-color: #222;
+        color: deepskyblue;
+    }
+    /*添加到父容器*/
+
+    .clear:after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        display: block;
+        clear: both;
+    }
+
+    section {
+        padding: 15px 20px;
+        display: none;
+    }
+
+    .grayDate {
+        color: gainsboro;
+    }
+
+    #showTask .taskList>* {
+        float: left;
+    }
+
+    #showTask div {
+        margin-left: 20px;
+        min-width: 60%;
+        max-width: 90%;
+    }
+
+    #showTask .delTask {
+        float: right;
+        background-color: darkred;
+        color: white;
+        border: none;
+        font-size: 16px;
+        border-radius: 10px;
+        padding: 5px 10px;
+    }
+
+    #addTask p input {
+        width: 100%;
+        border: solid 1px darkgray;
+        margin: 10px 0px;
+    }
+
+    #addTask #taskTitle,
+    #addTask #taskDate {
+        height: 36px;
+    }
+
+    #addTask #btnAddTask {
+        height: 50px;
+        font-size: 26px;
+        color: #fff;
+        background-color: orangered;
+    }
+</style>
+</head>
+
+<body>
+<!--页头-->
+<header>任务清单</header>
+<!--导航-->
+<nav>
+    <input class="current" type="button" value="任务列表" />
+    <input type="button" value="添加任务" />
+    <input type="button" value="系统设置" />
+</nav>
+<!--显示任务-->
+<section id="showTask" style="display: block;">
+</section>
+<!--添加任务-->
+<section id="addTask">
+    <h2>任务标题</h2>
+    <p><input id="taskTitle" type="text" placeholder="输入任务名称" /></p>
+    <h2>完成日期</h2>
+    <p><input id="taskDate" type="date" /></p>
+    <h2>是否完成 <input id="isComplete" type="checkbox" /></h2>
+    <p><input type="button" id="btnAddTask" value="添加任务" /></p>
+</section>
+<!--系统设置-->
+<section id="settingSystem">
+    <h2>系统设置</h2>
+</section>
+
+<script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/jquery.tmpl.js" type="text/javascript" charset="utf-8"></script>
+<!--定义显示任务的模板-->
+<script id="showTaskTemplate" type="text/html">
+    <div class="taskList clear">
+        {{if isComplete}}
+        <input type="checkbox" value="" checked="checked" />
+        {{else}}
+        <input type="checkbox" value="" />
+        {{/if}}
+        <div>
+            <h4>{{= title}}</h4>
+            <p class="grayDate">{{= taskDate}}</p>
+        </div>
+        <input type="button" onclick="delTask('{{= title}}')" class="delTask" value="删除" />
+    </div>
+</script>
+<script type="text/javascript">
+    //1.菜单与内容的切换
+    $("nav input").on("click", function() {
+        //菜单
+        $(this).addClass("current").siblings().removeClass("current");
+        //内容
+        var index = $(this).index();
+        $("section").eq(index).show().siblings("section").hide();
+
+        //切换到显示任务时自动更新一次
+        if(index==0)
+        {
+            showTaskFn();
+        }
+    });
+
+    //2. 添加任务
+    $("#btnAddTask").click(function() {
+        //2-1. 获取表单值
+        var title = $("#taskTitle").val();
+        var taskDate = $("#taskDate").val();
+        var isComplete = $("#isComplete").prop("checked"); //true || flase
+
+        //2-2. 封装json格式
+        var userJson = {
+            "title": title,
+            "taskDate": taskDate,
+            "isComplete": isComplete
+        };
+
+        //console.log(userJson);
+
+        //2-3. 存储之前应判断一下有没有旧的信息
+        var oldUserInfo = localStorage.getItem("userInfo");
+        //console.log(oldUserInfo);
+        var userArray;
+        if(oldUserInfo!=null)
+        {
+            userArray=JSON.parse(oldUserInfo); //如果存在就转换为json数组
+        }
+        else
+        {
+            userArray=[];
+        }
+
+        userArray.push(userJson); //把新任务的json当成一个元素添加到数组中
+
+        //2-4. 把json数组转换为字符串存入本地存储
+        localStorage.setItem("userInfo",JSON.stringify(userArray));
+    });
+
+
+    //3. 显示任务
+    $(function () {
+        showTaskFn();
+    });
+
+
+    //4. 封装通用显示函数
+    function showTaskFn() {
+        //3-1. 获取数据
+        var getUser=localStorage.getItem("userInfo");
+
+        //3-2. 转换为json数组
+        getUser=JSON.parse(getUser);
+
+        //3-3. 渲染模板
+        var result=$("#showTaskTemplate").tmpl(getUser);
+        console.log(result);
+
+        $("#showTask").html(result);
+    }
+
+
+    //5. 删除任务(了解)
+    //思路: 要根据任务名称找到json在数组中的索引,然后调用数组的slice(索引,1)
+    //onclick="delTask()"   或者   使用事件委派机制
+
+    function delTask(taskTitle) {
+        var getUserArray=JSON.parse(localStorage.getItem("userInfo"));
+        var delIndex;
+
+        //通过循环找到要删除的索引
+        for (var x in getUserArray) {
+            //{"title":"html5","taskDate":"2017-12-27","isComplete":true}
+            if(getUserArray[x].title==taskTitle)
+            {
+                delIndex=x;
+                break;
+            }
+        }
+
+        //执行数组中的删除操作
+        getUserArray.splice(delIndex,1);
+
+        //存入删除后的
+        localStorage.setItem("userInfo",JSON.stringify(getUserArray));
+
+        //重新调用显示
+        showTaskFn();
+    }
+</script>
+</body>
+</html>

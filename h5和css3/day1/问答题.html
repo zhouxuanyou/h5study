@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 1）	什么是HTML5？什么是HTML标签语义化？
+答：h5一般是指2014年10月28日，W3C推荐标准的HTML中的最新版本，实际指的是包括 HTML、CSS 和 JavaScript 在内的一套技术组合。
+2）	HTML5和HTML4有哪些区别？
+答：h5增加了一些新的特性和api，比如一些语义化的标签header nav main aside..，HTML4中的三种HTML文档类型（Strict、Transitional 以及 Frameset）在 HTML 5 中只有一种文档类型：
+<!DOCTYPE HTML>
+
+3）	怎么解决HTML5的兼容性问题？
+答： 引入google的html5shiv.js库文件
+4）	HTML5有哪些新特性？
+答： 语义（语义化标签）：能够让你更恰当地描述你的内容是什么。
+    连通性（websocket 双向通信协议。可用于实现即时通讯，例如：qq、微信...）：能够让你和服务器之间通过创新的新技术方法进行通信。
+    离线 & 存储（本地存储）：能够让网页在客户端本地存储数据以及更高效地离线运行。
+    多媒体（音频、视频播放器）：使 video 和 audio 成为了在所有 Web 中的一等公民。
+    2D/3D 绘图 & 效果（canvas绘图&SVG）：提供了一个更加分化范围的呈现选择。
+    性能 & 集成（webworks“多线程”）：提供了非常显著的性能优化和更有效的计算机硬件使用。
+    设备访问 Device Access（mediaquery 响应式设计）：能够处理各种输入和输出设备。
+    样式设计（css3）: 让作者们来创作更加复杂的主题吧
+
+5）	HTML5新增了哪些元素？哪些新表单属性？
+答：header nav aside article section footer
+datalist数据列表  output输出
+<form>新属性：
+ novalidate    取消浏览器验证，默认验证开启
+
+表单输入类型type
+<input type='color' />
+Color  		  颜色选择器
+Date  	 		  日期选择框
+Datetime        日期时间选择框
+datetime-local    日期和时间 (无时区)选择框
+month          月份选择器
+time            时间选择框
+week           周和年选择框
+email          电子邮件
+number         数值的输入域
+range           区间选择器
+search          搜索框
+tel             电话号码
+url             url地址
+
+<input>新属性：
+autocomplete  输入框的自动补全；
+autofocus  	 页面加载完毕后自动获取焦点；
+form 		 指定输入框属于那一个表单，输入框不在<form>内部也会进行提交；
+multiple  	 文件选择框为多选；(<input type=’file’ multiple>)
+pattern       输入框验证的正则表达式;  [0-9]{6} 输入0-9直接的字符，并且字符串长度为6位。
+placeholder    输入框提示，描述输入域所期待的值；
+required      输入框是否是必填项；
+formnovalidate   设置给提交按钮可以跳过浏览器表单验证（input type=’submit’ formonvalidate）
+
+
+
+6）	什么是自定义属性，HTML5怎么获取和修改自定义属性？
+答：原本不存在的属性，data-*是一种以“键（key）/值（value）”对方式来描述HTML TAG的扩展属性；
+获取：dom.dataset.键名
+设置：dom.dataset.键名 ='值'
+7）	什么是web存储，sesstionStorage和LocalStorage有什么区别？
+答：客户端（浏览器）
+sessionStorage
+        容量：5M左右
+        生命周期：仅在当前会话下有效，关闭页面或浏览器后被清除
+        用法：
+            a) setItem('key', value)  // 设置
+            b) getItem('key')  // 获取
+            c) removeItem('key') // 删除指定的
+            d) clear() // 清除所有
+
+localStorage
+        容量：5M左右
+        生命周期： 除非手动清除，否则永久保存
+        用法：
+            a) setItem('key', value)  // 设置
+            b) getItem('key')  // 获取
+            c) removeItem('key') // 删除指定的
+            d) clear() // 清除所有
+8）	HTML5新增了哪些新的DOM API？
+答：自定义数据属性
+document.querySelector()和document.querySelectorAll()方法
+HTML5之全屏 element.requestFullscreen()
+
+9）怎么去获取当前地理位置的信息？
+答：navigator.geolocation.getCurrentPosition（successCallback, errorCallback, options）
+
+10）Audio和video分别是什么标签？有哪些常用的属性和方法？
+答：音频和视频
+属性名	------值	 --------       描述
+autoplay	autoplay		如果出现该属性，则视频在就绪后马上播放。
+controls	controls	如果出现该属性，则向用户显示控件，比如播放按钮。
+height	pixels		设置视频播放器的高度。
+loop	loop		如果出现该属性，则当媒介文件完成播放后再次开始播放。
+muted	muted	如果出现该属性，视频的音频输出为静音。
+poster	url	规定视频正在下载时显示的图像，直到用户点击播放按钮。
+preload	auto
+meta
+none	如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 "autoplay"，则忽略该属性。
+src	URL	要播放的视频的 URL。
+width	pixels	设置视频播放器的宽度。
+方法名	--------------描述
+addTextTrack()	向音频/视频添加新的文本轨道（字幕）
+canPlayType() 	检测浏览器是否能播放指定的音频/视频类型
+            document.createElement("video").canPlayType("video/webM")
+            document.createElement("video").canPlayType("video/ogg")
+            document.createElement("video").canPlayType("video/mp4")
+load()	重新加载音频/视频元素
+play()	开始播放音频/视频
+pause()	暂停当前播放的音频/视频
+
+11）什么是svg图片？和位图有什么区别？
+答：SVG 意为可缩放矢量图形(Scalable Vector Graphics)。
+
+位图 VS 矢量图
+位图  ： 由一个个像素点构成的图片。（普通图片）。
+矢量图： 内部是XML结构。由数学公式计算得到的图形。永久高清。
+
+
+</body>
+</html>
