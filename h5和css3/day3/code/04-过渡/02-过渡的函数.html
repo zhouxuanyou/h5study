@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /* 设置过渡效果 */
+            transition: all 3s cubic-bezier(.05,1.12,0,-0.01);
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div id="box">
+    </div>
+    <button id="btn">
+        走你
+    </button>
+
+    <script>
+        // 获取dom
+        const btn = document.getElementById('btn');
+        const box = document.getElementById('box');
+
+        // 绑定事件
+        btn.addEventListener('click', () => {
+            box.style.marginLeft = '1000px';
+        })
+        
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,102 @@
+1 什么是flex布局？
+    flex布局就是可伸缩盒子模型 或 弹性盒子模型 是css3的一种新的布局方式。
+    注意***： 本来一个盒子是一个普通的盒子，但是一旦添加一个样式，就变成了弹性盒子。
+
+    display: flex;
+
+    兼容性写法：
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+
+2 几个术语：
+    主轴： 默认从左到由
+    主轴的长度： 起点到终点
+    主轴起点： 主轴和盒子的左侧交叉点
+    主轴终点： 主轴和盒子的右侧交叉点
+
+    侧轴：和主轴垂直交叉，默认从上到下
+    侧轴的长度： 起点到终点
+    侧轴起点： 侧轴和盒子的上侧交叉点
+    侧轴终点： 侧轴和盒子的下侧交叉点
+
+3 flex布局容器属性
+    1）flex-direction 主轴方向
+        flex-direction: row | row-reverse | column | column-reverse;
+        row: 从左往右 (默认)
+        row-reverse: 从右往左
+        column: 从上往下
+        column-reverse: 从下往上
+
+    2）flex-wrap 定义如何换行
+        flex-wrap: nowrap | wrap | wrap-reverse;
+        nowrap: 不换行（默认）
+        wrap: 换行
+        wrap-reverse: 换行 且 换顺序
+
+    3）flex-flow 复合属性
+        flex-flow: <flex-direction> || <flex-wrap>;
+        <flex-direction>： 主轴方向
+        <flex-wrap>：      换行方式
+
+    4）justify-content  主轴的对齐方式
+        justify-content: flex-start | flex-end | center | space-between | space-around;
+        flex-start: 左对齐
+        flex-end: 右对齐
+        center: 居中
+        space-between: 每两个元素之间间距相同。
+        space-around: 每一个元素左右间距相同。
+
+    5）align-items 侧轴上的对齐方式
+        flex-start | flex-end | center | baseline | stretch;
+        flex-start: 顶部对齐 (如果项目item有高度 默认顶部对齐)
+        flex-end:  底部对齐
+        center:    垂直方向居中对齐
+        baseline:  文本基线（下划线）对齐
+        stretch:   拉伸铺满。（如果item没有高度 就默认拉伸铺满）
+
+    6）align-content 定义了多根轴线（多行）的对齐方式
+        align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+        flex-start: 整体顶部对齐
+        flex-end: 整体底部对齐
+        center: 整体居中
+        space-between: 每两行之间距离相同
+        space-around: 每一行的上下间距相同
+        stretch: 拉伸铺满（默认）如果没有高度 撑满  如果有高度 高度不够的地方 空白占位。
+
+
+4 flex的项目属性。
+    1）order  定义项目的顺序 （每什么用）
+
+    2）flex-grow  自动增长（定义项目的放大比例）
+        a) 默认是0 （默认不增长）
+        b) 如果值是1 那么 就会自动占满剩余空间。 （常用）
+        c) 如果只是2 那么增长的速度快。
+
+    3）flex-shrink
+        a) 默认是1 等比压缩
+        b) 如果设置为0 那么就不压缩,其他的等比压缩
+
+    4）flex-basis  基础值（宽度或高度）
+        a) 设置自动增长的时候 它是最小值。如果不设置 相当于给定一个宽度。
+        b) 设置自动压缩（默认就是） 它是最大值。
+        c) 一般就是用来设置固定宽度。
+
+    5）flex （工作中都写这个 它是以上三个属性的复合属性）
+        flex: [<'flex-grow'> <'flex-shrink'>? || <'flex-basis'>]
+        flex-grow： 增长比 默认0
+        flex-shrink: 收缩比 默认1 
+        flex-basis: 基准值 默认auto
+
+    6）align-self 单个项目自定义的对齐方式
+        align-self: auto | flex-start | flex-end | center | baseline | stretch;
+        auto: 默认
+
+5 过渡
+    transition: property duration timing-function delay;
+    property： 需要参与过渡的属性
+    duration:  整个过渡过程的时间
+    timing-function: 过渡的函数
+    delay： 延迟多久 才触发过渡

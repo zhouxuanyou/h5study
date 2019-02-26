@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul li:nth-of-type(odd) {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        ul li:nth-of-type(even) {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        ul {
+            list-style: none;
+            background-color: #ccc;
+            width: 900px;
+            height: 900px;
+            margin: 0 auto;
+
+            /* 设置为flex盒子 */
+            display: flex;
+
+            /* flex-flow */
+            /* flex-flow: row nowrap;
+            flex-flow: row-reverse nowrap;
+            flex-flow: column nowrap;
+            flex-flow: column-reverse nowrap; */
+
+            /* flex-flow: row wrap; */
+            /* flex-flow: row-reverse wrap; */
+            /* flex-flow: column-reverse wrap; */
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    
+</body>
+</html>

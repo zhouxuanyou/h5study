@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,body {
+            height: 100%;
+        }
+
+        body {
+            /* 方式三 */
+            /* 变成flex盒子 */
+            display: flex;
+            /* 水平居中 */
+            justify-content: center;
+            /* 垂直居中 */
+            align-items: center;
+        }
+
+        div {
+            width: 350px;
+            height: 350px;
+            background-color: #ff6700;
+
+            /* 方式一 */
+            /* position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto; */
+
+            /* 方式二 */
+            /* position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .shaizi{
+            width: 200px;
+            height: 200px;
+            background: #c0c0c0;
+            border-radius:8px;
+            margin-bottom: 20px;
+            display: flex;
+            /*flex-direction: row;*/
+        }
+        #one div{
+            width: 60px;
+            height: 60px;
+            background: red;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #ccc inset;
+        }
+        #one{
+            justify-content: center;
+            align-items: center;
+        }
+        #two div{
+            width: 60px;
+            height: 60px;
+            background: red;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #ccc inset;
+        }
+        #two{
+            width: 180px;
+
+            padding: 0 10px;
+
+            flex-direction: column;
+            justify-content: space-around;
+
+        }
+        #two div:nth-of-type(2){
+            align-self: flex-end;
+        }
+        #three div{
+            width: 60px;
+            height: 60px;
+            background: red;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #ccc inset;
+        }
+        #three{
+            width: 180px;
+
+            padding: 0 10px;
+
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+        #three div:nth-of-type(2){
+            align-self: center;
+        }
+        #three div:nth-of-type(3){
+            align-self: flex-end;
+        }
+        #four div{
+            width: 70px;
+            height: 70px;
+            background: red;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #ccc inset;
+        }
+        #four{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+        #five div {
+            width: 60px;
+            height: 60px;
+            background: red;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #ccc inset;
+        }
+        #five{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+        #five div {
+            margin: 0 5px;
+        }
+
+        #five div:nth-of-type(3){
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+        #six div {
+            width: 60px;
+            height: 60px;
+            background: red;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #ccc inset;
+        }
+        #six{
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="shaizi" id="one">
+        <div></div>
+    </div>
+    <div class="shaizi" id="two">
+        <div></div>
+        <div></div>
+
+
+    </div>
+    <div class="shaizi" id="three">
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+    </div>
+    <div class="shaizi" id="four">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="shaizi" id="five">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="shaizi" id="six">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

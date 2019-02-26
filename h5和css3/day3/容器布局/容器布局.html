@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            background: #ccc;
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+            display: flex;
+            text-align: center;
+            line-height: 100px;
+            /*flex-direction: row-reverse;*/
+            /*flex-direction: column;*/
+            /*flex-direction: column-reverse;*/
+            flex-wrap: wrap;
+            /*flex-wrap: nowrap;*/
+            /*flex-wrap: wrap-reverse;*/
+            /*复合属性*/
+            /*flex-flow: row wrap;*/
+            /*flex-flow: column-reverse nowrap;*/
+            /*justify-content  主轴的对齐方式*/
+            /*justify-content: center;*/
+            /*justify-content: flex-start;*/
+            /*justify-content: flex-end;*/
+            /*justify-content: space-between;*/
+            /*justify-content: space-around;*/
+            /*align-items 侧轴上的对齐方式
+        flex-start | flex-end | center | baseline | stretch;
+        flex-start: 顶部对齐 (如果项目item有高度 默认顶部对齐)
+        flex-end:  底部对齐
+        center:    垂直方向居中对齐
+        baseline:  文本基线（下划线）对齐
+        stretch:   拉伸铺满。（如果item没有高度 就默认拉伸铺满）*/
+            /*align-items: flex-end;*/
+            /*align-items: flex-start;*/
+            /*align-items: center;*/
+            /*align-items: baseline;*/
+            /*align-items: stretch;*/
+            /*align-content 定义了多根轴线（多行）的对齐方式
+        align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+        flex-start: 整体顶部对齐
+        flex-end: 整体底部对齐
+        center: 整体居中
+        space-between: 每两行之间距离相同
+        space-around: 每一行的上下间距相同
+        stretch: 拉伸铺满（默认）如果没有高度 撑满  如果有高度 高度不够的地方 空白占位。*/
+            /*align-content: flex-start;*/
+            /*align-content: space-between;*/
+            /*align-content: flex-start;*/
+            /*align-content: flex-end;*/
+            /*align-content: center;*/
+            /*align-content: space-around;*/
+        }
+        ul li:nth-of-type(odd){
+            width: 200px;
+            height: 100px;
+            background: pink;
+        }
+        ul li:nth-of-type(even){
+            width: 200px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+</body>
+</html>
