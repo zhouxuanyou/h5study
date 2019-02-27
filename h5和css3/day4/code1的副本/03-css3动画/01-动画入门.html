@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color:red;
+
+            /* 使用关键帧 */
+            animation: changeColor 5s;
+        }
+
+        /* 1- 定义关键帧 */
+        @keyframes changeColor {
+            from { background-color: red; transform: translate(0); }
+            to { background-color: green; transform: translate(1000px);}
+        }
+
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="box">
+    </div>
+    
+</body>
+</html>

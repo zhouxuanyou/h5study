@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color:green;
+
+            /* 使用关键帧 */
+            /* animation: changeColor 2s ease 0s 1 alternate running backwards; */
+
+
+            /* 常用以下属性即可 */
+            animation: changeColor 2s ease infinite;
+        }
+
+        /* 1- 定义关键帧 */
+        @keyframes changeColor {
+           0% { background-color: green; transform: translate(0); }
+           25% { background-color: yellow; transform: translateX(500px); }
+           50% {  background-color: blue; transform: translate(500px, 500px); }
+           75% {   background-color: deeppink; transform: translateY(500px);  }
+           100% { background-color: red; transform: translate(0);}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+    </div>
+    <button id="btn">停止</button>
+
+    <script>
+        // 获取dom
+        const box = document.querySelector('.box');
+        const btn = document.querySelector('#btn');
+
+        // 监听事件
+        box.addEventListener('animationstart', () => {
+            console.log('动画开始!')
+        }) 
+
+        box.addEventListener('animationiteration', () => {
+            console.log('动画重复!')
+        }) 
+
+        box.addEventListener('animationend', () => {
+            console.log('动画结束!')
+        }) 
+
+        let flag = true;
+        // 监听事件 停止动画
+        btn.addEventListener('click', () => {
+            if (flag) {
+                box.style.animationPlayState = "paused";
+                btn.innerHTML = '播放';
+                flag = !flag;
+
+            } else {
+                box.style.animationPlayState = "running";
+                btn.innerHTML = '暂停';
+                flag = !flag;
+            }
+        })
+
+    
+    </script>
+
+</body>
+</html>

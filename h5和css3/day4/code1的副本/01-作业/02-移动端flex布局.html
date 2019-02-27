@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 定义视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+
+        .container {
+            height: 100%;
+            background-color: #f1f1f1;
+
+            display: flex;
+            flex-direction: column;
+        }
+        .top {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav {
+            flex: 0 0 40px;
+            background-color: deeppink;
+        }
+
+        .nav > ul {
+            display: flex;
+            list-style: none;
+            height: 100%;
+        }
+
+        .nav > ul > li {
+            text-align: center;
+            line-height: 40px;
+            flex: 1;
+            color:#fff;
+            /* height: 40px; */
+            align-items: center
+        }
+
+        .banner {
+            flex: 0 0 100px;
+            background-color: pink;
+        }
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu {
+            flex: 0 0 120px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu > ul {
+            display: flex;
+            list-style: none;
+            background-color: red;
+            flex: 1;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .menu > ul > li {
+            background-color: #ccc;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .list {
+            flex: 1;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .list .item {
+            width: 90%;
+            height: 60px;
+            background-color: green;
+            display: flex;
+            line-height: 60px;
+        }
+
+        .list .item .right {
+            flex: 0 0 20px;
+            background-color: red;
+            text-align: center;
+            color: #fff;
+        }
+
+        .list .item .left {
+            flex: 1;
+            text-indent: 10px;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="banner">
+            </div>
+            <div class="main">
+                <div class="menu">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="list">
+                   <div class="item">
+                       <div class="left">发际线11</div>
+                       <div class="right"> > </div>
+                   </div>
+                   <div class="item">
+                       <div class="left">发际线</div>
+                       <div class="right"> > </div>
+                   </div>
+                   <div class="item">
+                       <div class="left">发际线</div>
+                       <div class="right"> > </div>
+                   </div>
+                   <div class="item">
+                       <div class="left">发际线</div>
+                       <div class="right"> > </div>
+                   </div>
+                   <div class="item">
+                       <div class="left">发际线</div>
+                       <div class="right"> > </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>首页</li>
+                <li>发现</li>
+                <li>购物</li>
+                <li>我的</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

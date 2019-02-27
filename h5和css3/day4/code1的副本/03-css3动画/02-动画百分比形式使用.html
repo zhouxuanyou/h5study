@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color:green;
+
+            /* 使用关键帧 */
+            animation: changeColor 5s;
+        }
+
+        /* 1- 定义关键帧 */
+        @keyframes changeColor {
+           0% { background-color: green; transform: translate(0); }
+           25% { background-color: yellow; transform: translateX(1200px); }
+           50% {  background-color: blue; transform: translate(1200px, 500px); }
+           75% {   background-color: deeppink; transform: translateY(500px);  }
+           100% { background-color: green; transform: translate(0);}
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div class="box">
+    </div>
+    
+</body>
+</html>

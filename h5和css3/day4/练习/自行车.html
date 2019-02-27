@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+    <style>
+        .move, .run {
+            width: 240px;
+            height: 240px;
+        }
+
+        .run {
+            background-image: url('./img/t0000.jpg') ;
+            background-size: cover;
+
+            /* 执行动画 */
+            animation: run 0.5s infinite, move 5s infinite;
+        }
+
+        /* 定义关键帧 - 跑 */
+        @keyframes run {
+            0% {  background-image: url('./img/t0000.jpg') ;background-size: cover }
+            8.3% {  background-image: url('./img/t0001.jpg') ;background-size: cover }
+            16.6% {  background-image: url('./img/t0002.jpg') ;background-size: cover }
+            24.9% {  background-image: url('./img/t0003.jpg') ;background-size: cover }
+            33.2% {  background-image: url('./img/t0004.jpg') ;background-size: cover }
+            41.5% {  background-image: url('./img/t0005.jpg') ;background-size: cover }
+            49.8% {  background-image: url('./img/t0006.jpg') ;background-size: cover }
+            58.1% {  background-image: url('./img/t0007.jpg') ;background-size: cover }
+            66.4% {  background-image: url('./img/t0008.jpg') ;background-size: cover }
+            74.7% {  background-image: url('./img/t0009.jpg') ;background-size: cover }
+            83% {  background-image: url('./img/t0010.jpg') ;background-size: cover }
+            91.3% {  background-image: url('./img/t0011.jpg') ;background-size: cover }
+            100% {  background-image: url('./img/t0000.jpg') ;background-size: cover }
+
+        }
+
+        /* 定义关键帧 - 移动 */
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translate(1200px); }
+            50.001% { transform: translate(1200px) rotateY(180deg);  }
+            99.99% { transform: translateX(0) rotateY(180deg); }
+            100% { transform: translateX(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="move">
+    <div class="run">
+    </div>
+</div>
+
+<script>
+    // 获取dom
+    const run = document.querySelector('.run');
+    // 监听动画结束事件
+    run.addEventListener('animationend', () => {
+        // 结束动画
+        run.style.animationPlayState = 'paused';
+    })
+
+</script>
+
+</body>
+</html>

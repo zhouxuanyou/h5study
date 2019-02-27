@@ -1,0 +1,66 @@
+1 css3变形
+    1） css变形都是使用一个属性：
+        transform: 变形函数
+
+        说明：变形函数有四种：
+            平移 缩放 斜切 旋转。
+
+    2）平移
+       a) translateX(x) x轴平移
+       b) translateY(y) y轴平移
+       c) translate(x, y) x和y轴都平移  如果x和y的值一样 只需要写一个
+
+
+    3) 缩放
+        a) scaleX(x) 在x轴缩放
+        b) scaleY(y) 在y轴缩放
+        c) scale(x, y) 在x和y轴都缩放  如果x和y的值一样 只需要写一个
+
+    4) 旋转
+        a) rotateX()
+        b) rotateY()
+        c) rotateZ()
+        d) rotate(x, y, z)  如果只是写一个 默认是z
+
+
+    5) 斜切
+        a) skewX(x)
+        b) skewY(y)
+        c) skew(x, y) 如果只有一个参数  默认是x
+
+    6) 设置对象的原点 (设置要变形的容器的原点)
+        transform-origin: x , y; 
+
+
+2 css3动画
+    A css3动画的基本使用步骤：
+
+        1） 定义关键帧
+            a) 入门方式
+                @keyframes 关键帧的名字 {
+                    from { 开始的样式 }
+                    to { 结束的样式 }
+                }
+
+            b) 标准方式（百分比方式）
+                @keyframes 关键帧的名字 {
+                    0% {  }
+                    20% {  }
+                    40% {  }
+                    60% {  }
+                    80% {  }
+                    100% {  }
+                }
+
+        2）使用关键帧
+            选择器: {
+                animation: 关键帧的名字 时间;
+            }
+
+        
+    B css3动画属性 animation详解：
+        a) animation: 关键帧名 时间 运动函数 延迟 循环次数 是否反向 播放状态 封面（第一个或最后一个）
+        b) 一般使用：
+            animation: 关键帧名 时间 运动函数 循环次数;
+
+        

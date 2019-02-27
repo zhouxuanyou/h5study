@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        .box {
+            width: 600px;
+            margin: 200px auto;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .box span {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            display: inline-block;
+            border-radius: 50%;
+            box-shadow: 5px 5px 5px #000 inset;
+        }
+
+        /* 定义关键帧 - 左侧球动画 */
+        @keyframes l_bal {
+            0% { transform: translate(0) }
+            50% { transform: translate(-500px, -100px); }
+            99% { transform: translateX(20px); }
+            100% { transform: translate(0) }
+        }
+
+        /* 定义关键帧 - 右侧球动画 */
+        @keyframes r_bal {
+            0% { transform: translate(0) }
+            50% { transform: translate(500px, -100px); }
+            99% { transform: translate(-20px); }
+            100% { transform: translate(0) }
+        }
+
+        /* 执行动画 */
+        .left_box {
+            animation: l_bal 1s ease-out;
+        }
+        .right_box {
+            animation: r_bal 1s  ease-out;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <span id="left" class="left_box"></span>
+        <span id="right"></span>
+    </div>
+
+    <script>
+        // 获取dom
+        const left = document.querySelector('#left');
+        const right = document.querySelector('#right');
+        
+        // 监听左侧小球的动画结束事件
+        left.addEventListener('animationend', () => {
+            // 左侧清除类 left_move; 右侧添加类 right_move
+            left.className = "";
+            right.className = "right_box";
+        })
+        // 监听右侧小球的动画结束事件
+        right.addEventListener('animationend', () => {
+            // 右侧清除类 right_move; 左侧添加类 left_move
+            right.className = "";
+            left.className = "left_box";
+        })
+    
+    </script>
+    
+</body>
+</html>

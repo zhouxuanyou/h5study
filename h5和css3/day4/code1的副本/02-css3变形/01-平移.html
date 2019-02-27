@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 设置过渡 */
+            transition: all 1s linear;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="box">
+    </div>
+    <button id="btn">走你</button>
+    <script>
+        // 获取dom
+        const btn = document.querySelector('#btn');
+        const box = document.querySelector('#box');
+
+        btn.addEventListener('click', () => {
+            // box.style.transform = 'translateX(1000px)';
+            // box.style.transform = 'translateY(500px)';
+            box.style.transform = 'translate(1000px, 500px)';
+        })
+    
+    </script>
+    
+</body>
+</html>

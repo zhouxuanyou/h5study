@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+    <style>
+        .move, .run {
+            width: 240px;
+            height: 240px;
+        }
+
+        .run {
+            background: url('./img/1.jpeg') no-repeat;
+
+            /* 执行动画 */  
+            animation: run 0.5s infinite, move 5s;
+        }
+
+        /* 定义关键帧 - 跑 */
+        @keyframes run {
+            0% {  background: url('./img/1.jpeg') no-repeat; }
+            12.5% { background: url('./img/2.jpeg') no-repeat; }
+            25% { background: url('./img/3.jpeg') no-repeat; }
+            37.5% { background: url('./img/4.jpeg') no-repeat; }
+            50% { background: url('./img/5.jpeg') no-repeat; }
+            62.5% { background: url('./img/6.jpeg') no-repeat; }
+            75% { background: url('./img/7.jpeg') no-repeat; }
+            87.5% { background: url('./img/8.jpeg') no-repeat; }
+            100% { background: url('./img/1.jpeg') no-repeat; }
+        }
+
+        /* 定义关键帧 - 移动 */
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translate(1200px); }
+            50.001% { transform: translate(1200px) rotateY(180deg);  }
+            99.99% { transform: translateX(0) rotateY(180deg); }
+            100% { transform: translateX(0); }
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div class="move">
+        <div class="run">
+        </div>
+    </div>
+
+    <script>
+        // 获取dom
+        const run = document.querySelector('.run');
+        // 监听动画结束事件
+        run.addEventListener('animationend', () => {
+            // 结束动画
+            run.style.animationPlayState = 'paused';
+        })
+    
+    </script>
+    
+</body>
+</html>

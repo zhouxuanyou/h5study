@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #000;
+            transition: all 2s ease;
+        }
+    </style>
+</head>
+<body>
+    <!--1） css变形都是使用一个属性：
+        transform: 变形函数
+
+        说明：变形函数有四种：
+            平移 缩放 斜切 旋转。
+
+    2）平移
+       a) translateX(x) x轴平移
+       b) translateY(y) y轴平移
+       c) translate(x, y) x和y轴都平移  如果x和y的值一样 只需要写一个
+
+
+    3) 缩放
+        a) scaleX(x) 在x轴缩放
+        b) scaleY(y) 在y轴缩放
+        c) scale(x, y) 在x和y轴都缩放  如果x和y的值一样 只需要写一个
+
+    4) 旋转
+        a) rotateX()
+        b) rotateY()
+        c) rotateZ()
+        d) rotate(x, y, z)  如果只是写一个 默认是z
+
+
+    5) 斜切
+        a) skewX(x)
+        b) skewY(y)
+        c) skew(x, y) 如果只有一个参数  默认是x
+
+    6) 设置对象的原点 (设置要变形的容器的原点)
+        transform-origin: x , y; -->
+
+    <div class="box">
+
+    </div>
+    <button class="btn">点击</button>
+    <script>
+        let box = document.querySelector('.box');
+        let btn = document.querySelector('.btn');
+        btn.addEventListener('click',()=>{
+            // box.style.transform = 'translateX(1200px)';
+            // box.style.transform = 'translateY(1200px)';
+            // box.style.transform = 'translate(1200px) scaleX(2)';
+            // box.style.transform = 'translate(1200px) scaleY(2)';
+            // box.style.transform = 'translate(1200px) scaleY(2) rotateX(90deg)';
+            // box.style.transform = 'translate(1200px) scaleY(2) rotateY(90deg)';
+            // box.style.transform = 'translate(1200px) scaleY(2) rotateZ(90deg)';
+            // box.style.transform = 'translate(1200px) scaleY(2) rotateZ(90deg) skewX(12deg)';
+            box.style.transform = 'translate(1200px) scaleY(2) rotateZ(90deg) skewY(50deg)';
+
+        })
+    </script>
+
+</body>
+</html>

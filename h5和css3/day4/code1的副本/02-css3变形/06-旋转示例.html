@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        #boxInner {
+            width: 100px;
+            height: 100px;
+            /* 过渡 */
+            transition: all 1s linear ;
+        }
+
+        #boxInner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #boxOut {
+            /* 过渡 */
+            transition: all 1s cubic-bezier(.23,1.71,.94,-0.43);
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div id="boxOut">
+        <div id="boxInner">
+            <img src="./img/zq.png" alt="">
+        </div>
+    </div>
+
+    <button id="btn">射门</button>
+    <script>
+        const btn = document.querySelector('#btn');
+        const boxInner = document.querySelector('#boxInner');
+        const boxOut = document.querySelector('#boxOut');
+        btn.addEventListener('click', () => {
+            // 旋转
+            boxInner.style.transform = `rotate(1360deg)`;
+            // 平移
+            boxOut.style.transform = `translate(1200px, 500px)`;
+        })
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .touzi {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-left: 20px;
+            padding: 10px;
+
+            /* flex布局 */
+            display: flex;
+        }
+
+        .item {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            box-shadow: 5px 5px 10px #333 inset;
+            border-radius: 50%;
+        }
+
+        .touzi1 {
+            /* 水平居中 */
+            justify-content: center;
+            /* 垂直居中 */
+            align-items: center;
+        }
+
+        .touzi2 {
+            justify-content: space-between;
+        }
+
+        .touzi2 .item:nth-of-type(2) {
+            align-self: flex-end;
+        }
+
+        .touzi3 {
+            justify-content: space-between;
+        }
+
+        .touzi3 .item:nth-of-type(2) {
+            align-self: center;
+        }
+
+        .touzi3 .item:nth-of-type(3) {
+            align-self: flex-end;
+        }
+
+        .touzi4, .touzi6 {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .touzi5 {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .touzi5 .row:nth-of-type(2) {
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="touzi touzi1">
+        <div class="item"></div>
+    </div>
+
+    <div class="touzi touzi2">
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="touzi touzi3">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="touzi touzi4">
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+    <div class="touzi touzi5">
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="row">
+            <div class="item">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+    <div class="touzi touzi6">
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
