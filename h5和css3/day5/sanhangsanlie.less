@@ -1,0 +1,25 @@
+body{margin:0;padding:0;}
+@aside:200px;
+
+//定义一个公共的混合
+.layer(@w:1200px,@c:#FF6700){
+  header,nav,section,footer{width:@w;margin:0 auto;text-align:center;}
+  header,nav,footer,aside,main{background:#FF6700;}
+  header,footer{height:100px;}
+  nav,section{margin:10px auto;}
+  section{display:flex;height:300px;}
+  section>aside{width:@aside;}
+  section>main{width:@w - @aside*2 - 20px;margin:0 10px; background:@c;}
+}
+
+.layer();
+
+@media(max-width:1280px){
+  .layer(1000px,#0f0);
+}
+@media(max-width:1024px){
+  .layer(800px,#00f);
+}
+@media(max-width:800px){
+  .layer(100%,#f0f);
+}

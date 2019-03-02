@@ -1,0 +1,16 @@
+.common(1,@s:40px){
+  font-size: @s;
+}
+.common(2,@s:80px){
+  font-size: @s;
+}.common(3,@s:120px){
+  font-size: @s;
+}.common(@_,@s:40px){
+  background: #00cc00;
+}
+h1{
+  .common(3);
+}
+h2{
+  .common(2);
+}
