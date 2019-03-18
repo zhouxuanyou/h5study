@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .chou{
+            width: 606px;
+            height: 606px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:space-around ;
+            align-content: space-around;
+        }
+        .chou li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            /*background: #000;*/
+            border: 1px solid #ff00cc;
+            text-align: center;
+            line-height: 200px;
+        }
+        #btn{
+            width: 200px;
+            height: 200px;
+        }
+        .active{
+            background: #f0ad4e;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="chou">
+            <li>谢谢惠顾</li>
+            <li>谢谢惠顾</li>
+            <li>谢谢惠顾</li>
+            <li>谢谢惠顾</li>
+            <li><button id="btn">点击抽奖</button></li>
+            <li>谢谢惠顾</li>
+            <li>中奖</li>
+            <li>谢谢惠顾</li>
+            <li>谢谢惠顾</li>
+        </ul>
+    </div>
+    <script>
+        let btn = document.querySelector('#btn');
+        let lis = document.querySelectorAll('li');
+        // console.log(lis);
+        btn.addEventListener('click',chujian);
+        var a;
+        function chujian() {
+            var b = setInterval(function () {
+                function randomNum(minNum,maxNum){
+                    switch(arguments.length){
+                        case 1:
+                            return parseInt(Math.random()*minNum+1,10);
+                            break;
+                        case 2:
+                            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10);
+                            break;
+                        default:
+                            return 0;
+                            break;
+                    }
+                }
+                let num = randomNum(0,9);
+
+                if (a || a===0){
+                    lis[a].classList.remove('active');
+                }
+
+                lis[num].classList.add('active');
+                a = num;
+            },500);
+            setTimeout(function () {
+                clearInterval(b);
+            },2000)
+
+        }
+
+
+    </script>
+
+</body>
+</html>
